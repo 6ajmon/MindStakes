@@ -11,9 +11,35 @@ config_version=5
 [application]
 
 config/name="MindStakes"
-config/features=PackedStringArray("4.5", "Forward Plus")
+run/main_scene="uid://dv21t8t45si2"
+config/features=PackedStringArray("4.5", "C#", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*res://Source/Managers/GameManager.tscn"
+SignalManager="*res://Source/Managers/SignalManager.tscn"
+SceneManager="*res://Source/Managers/SceneManager.cs"
+TeamsManager="*res://Source/Managers/TeamsManager.tscn"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 
 [dotnet]
 
 project/assembly_name="MindStakes"
+
+[input]
+
+GoBack={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":128,"position":Vector2(163, 44),"global_position":Vector2(177, 117),"factor":1.0,"button_index":8,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
+GoForward={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":256,"position":Vector2(223, 34),"global_position":Vector2(237, 107),"factor":1.0,"button_index":9,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}

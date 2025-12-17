@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://diaf2slniox2o"]
+
+[ext_resource type="Script" uid="uid://cpk0a3qvxaryt" path="res://Source/Components/Buttons/CategoryButton/CategoryButton.cs" id="1_us1gl"]
+
+[node name="CategoryButton" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "Category 1"
+script = ExtResource("1_us1gl")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bld3e051apkai"]
+
+[ext_resource type="Script" uid="uid://bw4jbn4q7wp50" path="res://Source/Managers/SceneManager.cs" id="1_owhda"]
+
+[node name="SceneManager" type="Node"]
+script = ExtResource("1_owhda")
