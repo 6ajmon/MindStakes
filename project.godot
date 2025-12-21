@@ -31,6 +31,10 @@ window/size/viewport_height=1080
 
 project/assembly_name="MindStakes"
 
+[gui]
+
+theme/default_font_multichannel_signed_distance_field=true
+
 [input]
 
 GoBack={

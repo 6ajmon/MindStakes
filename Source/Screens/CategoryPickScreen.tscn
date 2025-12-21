@@ -45,19 +45,13 @@ size_flags_horizontal = 3
 [node name="TeamCard" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer/MarginContainer" instance=ExtResource("1_5xaqw")]
 layout_mode = 2
 
-[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer"]
+[node name="Title" type="Label" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-
-[node name="VBoxContainer2" type="HBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Title" type="Label" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
 theme_override_font_sizes/font_size = 64
 text = "PICK CATEGORY"
+horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/VBoxContainer"]
