@@ -8,6 +8,8 @@ public partial class TeamCard : Panel
     [Export] public ColorPickerButton ColorPicker;
     public override void _Ready()
     {
+        TeamNameLineEdit.TextChanged += OnTeamNameLabelTextChanged;
+        ColorPicker.ColorChanged += OnColorPickerColorChanged;
         if (TeamNameLineEdit != null)
         {
             TeamNameLineEdit.Text = TeamData.TeamName;
@@ -17,6 +19,13 @@ public partial class TeamCard : Panel
             ColorPicker.Color = TeamData.Color;
         }
     }
+
+    public override void _ExitTree()
+    {
+        TeamNameLineEdit.TextChanged -= OnTeamNameLabelTextChanged;
+        ColorPicker.ColorChanged -= OnColorPickerColorChanged;
+    }
+    
     public void OnTeamNameLabelTextChanged(string newText)
     {
         TeamData.TeamName = newText;

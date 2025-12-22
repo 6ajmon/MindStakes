@@ -11,7 +11,7 @@ public partial class Question : Resource
     [Export]
     public Godot.Collections.Array<string> AnswersText { get; set; }
     [Export]
-    public bool IsAuctionGameQuestion { get; set; } = false;
+    public bool IsBettingGameQuestion { get; set; } = false;
     [Export]
     public bool IsSabotageGameQuestion { get; set; } = false;
     [Export]

@@ -1,8 +1,14 @@
-[gd_resource type="Resource" script_class="Question" load_steps=2 format=3 uid="uid://wvceujh4y38c"]
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://wvceujh4y38c"]
 
 [ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="1_f8e5o"]
+[ext_resource type="Resource" uid="uid://ddfttrqxb8ege" path="res://Resources/Categories/Minecraft.tres" id="1_x7fyi"]
 
 [resource]
 script = ExtResource("1_f8e5o")
-AnswersText = Array[String](["", "", "", ""])
+QuestionText = "Jaki jest obecnie rekord świata w Minecraft (RSG)?"
+AnswersText = Array[String](["6m 50s", "7m 01s", "8m 18s", "9m 33s"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_x7fyi")
 metadata/_custom_type_script = "uid://d1obhtdryuoak"

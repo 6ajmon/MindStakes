@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://hsae23h4mvxc"]
+
+[node name="AnswerBox" type="PanelContainer"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Letter" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "A"
+horizontal_alignment = 1
+
+[node name="Answer" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 6.0
+text = "YES"
+horizontal_alignment = 1

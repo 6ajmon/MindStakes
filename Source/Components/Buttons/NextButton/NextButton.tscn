@@ -5,5 +5,5 @@
 [node name="ReadyButton" type="Button"]
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 48
-text = "READY"
+text = "DALEJ"
 script = ExtResource("1_qy1ux")

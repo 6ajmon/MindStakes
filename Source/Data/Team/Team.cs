@@ -12,4 +12,6 @@ public partial class Team : Resource
     public Color Color { get; set; }
     [Export]
     public float Score { get; set; }
+    [Export]
+    public int CurrentBet { get; set; }
 }

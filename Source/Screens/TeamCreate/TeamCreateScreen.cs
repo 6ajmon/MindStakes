@@ -3,9 +3,10 @@ using System;
 
 public partial class TeamCreateScreen : Control
 {
-    [Export] HBoxContainer TeamCardsContainer;
-    [Export] PackedScene TeamCardScene;
-    [Export] Button ReadyButton;
+    [Export] public HBoxContainer TeamCardsContainer;
+    [Export] public PackedScene TeamCardScene;
+    [Export] public Button ReadyButton;
+
     int initialTeamCount = 4;
     public override void _Ready()
     {
