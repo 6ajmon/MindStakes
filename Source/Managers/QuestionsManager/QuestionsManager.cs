@@ -1,6 +1,7 @@
 using Godot;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 public partial class QuestionsManager : Node
 {
@@ -8,6 +9,7 @@ public partial class QuestionsManager : Node
 
     public List<Question> Questions { get; private set; } = new();
     public Question RandomQuestion { get; private set; }
+    private bool _questionsLoaded = false;
 
     public override void _Ready()
     {
@@ -17,6 +19,8 @@ public partial class QuestionsManager : Node
 
     private void LoadQuestions()
     {
+        if (_questionsLoaded) return;
+        
         var dir = DirAccess.Open("res://Resources/Questions");
         if (dir != null)
         {
@@ -37,6 +41,7 @@ public partial class QuestionsManager : Node
                 }
                 fileName = dir.GetNext();
             }
+            _questionsLoaded = true;
         }
         else
         {
@@ -44,14 +49,31 @@ public partial class QuestionsManager : Node
         }
     }
 
+    public bool HasQuestionsForCategory(Category category)
+    {
+        if (!_questionsLoaded) LoadQuestions();
+        return Questions.Any(q => q.Category == category);
+    }
+
     public void SetRandomQuestion()
     {
-        if (Questions.Count == 0)
+        var currentCategory = CategoriesManager.Instance.RandomCategory;
+        if (currentCategory == null)
         {
             RandomQuestion = null;
             return;
         }
-        var randomIndex = GD.Randi() % Questions.Count;
-        RandomQuestion = Questions[(int)randomIndex];
+
+        var availableQuestions = Questions.Where(q => q.Category == currentCategory).ToList();
+
+        if (availableQuestions.Count == 0)
+        {
+            RandomQuestion = null;
+            return;
+        }
+
+        var randomIndex = GD.Randi() % availableQuestions.Count;
+        RandomQuestion = availableQuestions[(int)randomIndex];
+        Questions.Remove(RandomQuestion);
     }
 }

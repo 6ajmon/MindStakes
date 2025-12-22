@@ -1,7 +1,6 @@
 using Godot;
 using System;
-using System.Collections.Generic;
-
+using System.Collections.Generic;using System.Linq;
 public partial class CategoriesManager : Node
 {
     public static CategoriesManager Instance => ((SceneTree)Engine.GetMainLoop()).Root.GetNode<CategoriesManager>("CategoriesManager");
@@ -47,12 +46,24 @@ public partial class CategoriesManager : Node
 
     public void SetRandomCategory()
     {
-        if (Categories.Count == 0 || RerollsLeft <= 0)
+        var validCategories = Categories.Where(c => QuestionsManager.Instance.HasQuestionsForCategory(c)).ToList();
+
+        if (validCategories.Count == 0 || RerollsLeft <= 0)
         {
             RandomCategory = null;
             return;
         }
-        var randomIndex = GD.Randi() % Categories.Count;
-        RandomCategory = Categories[(int)randomIndex];
+
+        if (RandomCategory != null && validCategories.Count > 1)
+        {
+            var available = validCategories.Where(c => c != RandomCategory).ToList();
+            var idx = GD.Randi() % available.Count;
+            RandomCategory = available[(int)idx];
+        }
+        else
+        {
+            var randomIndex = GD.Randi() % validCategories.Count;
+            RandomCategory = validCategories[(int)randomIndex];
+        }
     }
 }
