@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dv21t8t45si2"]
 
-[ext_resource type="Script" uid="uid://bf53vey4vxjg2" path="res://Source/Screens/TeamCreateScreen.cs" id="1_mpcp3"]
+[ext_resource type="Script" uid="uid://bf53vey4vxjg2" path="res://Source/Screens/TeamCreate/TeamCreateScreen.cs" id="1_mpcp3"]
 [ext_resource type="Theme" uid="uid://befyp5hugoswj" path="res://Assets/Themes/MainTheme.tres" id="1_nikqu"]
 [ext_resource type="PackedScene" uid="uid://bhv0mk0v5xf3p" path="res://Source/Components/TeamCard/TeamCard.tscn" id="1_t3c45"]
 [ext_resource type="PackedScene" uid="uid://ba1ry0xlyp0ir" path="res://Source/Components/Buttons/NextButton/NextButton.tscn" id="2_58tjv"]

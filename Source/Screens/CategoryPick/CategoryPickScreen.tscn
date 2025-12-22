@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dgfhb2eeni3rs"]
 
 [ext_resource type="PackedScene" uid="uid://bhv0mk0v5xf3p" path="res://Source/Components/TeamCard/TeamCard.tscn" id="1_5xaqw"]
-[ext_resource type="Script" uid="uid://cyd7y2rq1qvna" path="res://Source/Screens/CategoryPickScreen.cs" id="1_orqqi"]
+[ext_resource type="Script" uid="uid://cyd7y2rq1qvna" path="res://Source/Screens/CategoryPick/CategoryPickScreen.cs" id="1_orqqi"]
 [ext_resource type="PackedScene" uid="uid://diaf2slniox2o" path="res://Source/Components/Buttons/CategoryButton/CategoryButton.tscn" id="2_ly0pc"]
 
 [node name="CategoryPickScreen" type="Control" node_paths=PackedStringArray("TeamCardContainer")]
