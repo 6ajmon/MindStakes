@@ -41,7 +41,7 @@ public partial class TeamsManager : Node
             Id = Teams.Count,
             TeamName = "Team " + (Teams.Count + 1),
             Color = UniqueColors[Teams.Count % UniqueColors.Count],
-            Score = 0f
+            Score = 100f
         };
         Teams.Add(newTeam);
         return newTeam;

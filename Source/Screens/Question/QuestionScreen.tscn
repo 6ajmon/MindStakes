@@ -161,3 +161,4 @@ theme_override_constants/separation = 64
 
 [node name="ReadyButton" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer/HBoxContainer2" instance=ExtResource("3_vl5k2")]
 layout_mode = 2
+ScenePath = "uid://dccjx4kb6nd00"

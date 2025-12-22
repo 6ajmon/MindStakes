@@ -11,7 +11,7 @@ public partial class Team : Resource
     [Export]
     public Color Color { get; set; }
     [Export]
-    public float Score { get; set; }
+    public float Score { get; set; } = 100f;
     [Export]
     public int CurrentBet { get; set; }
 }
