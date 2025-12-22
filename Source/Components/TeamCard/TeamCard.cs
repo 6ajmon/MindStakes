@@ -17,7 +17,7 @@ public partial class TeamCard : Panel
             ColorPicker.Color = TeamData.Color;
         }
     }
-    public void OnTeamNameLabelTextSubmitted(string newText)
+    public void OnTeamNameLabelTextChanged(string newText)
     {
         TeamData.TeamName = newText;
     }

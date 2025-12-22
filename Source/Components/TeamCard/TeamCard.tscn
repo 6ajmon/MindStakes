@@ -55,4 +55,6 @@ color = Color(0, 0.9019608, 0.4627451, 1)
 layout_mode = 2
 size_flags_horizontal = 3
 
+[connection signal="text_changed" from="VBoxContainer/MarginContainer/TeamNameLineEdit" to="." method="OnTeamNameLabelTextChanged"]
+[connection signal="text_submitted" from="VBoxContainer/MarginContainer/TeamNameLineEdit" to="." method="OnTeamNameLabelTextSubmitted"]
 [connection signal="color_changed" from="VBoxContainer/MarginContainer2/HBoxContainer/ColorPickerButton" to="." method="OnColorPickerColorChanged"]

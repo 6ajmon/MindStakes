@@ -33,22 +33,9 @@ public partial class TeamCreateScreen : Control
         TeamCardsContainer.AddChild(teamCard);
     }
 
-    public Team CreateNewTeam()
-    {
-        Team newTeam = new Team
-        {
-            Id = TeamsManager.Instance.Teams.Count,
-            TeamName = "Team " + (TeamsManager.Instance.Teams.Count + 1),
-            Color = TeamsManager.Instance.UniqueColors[TeamsManager.Instance.Teams.Count % TeamsManager.Instance.UniqueColors.Count],
-            Score = 0f
-        };
-        TeamsManager.Instance.Teams.Add(newTeam);
-        return newTeam;
-    }
-
     public void OnAddButtonPressed()
     {
-        AddTeamCard(CreateNewTeam());
+        AddTeamCard(TeamsManager.Instance.CreateNewTeam());
     }
 
     public void OnRemoveButtonPressed()

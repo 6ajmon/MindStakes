@@ -22,4 +22,28 @@ public partial class TeamsManager : Node
         Colors.Brown
     };
     public Team CurrentTeam { get; set; }
+    public int InitialTeamsCount { get; set; } = 4;
+    public override void _Ready()
+    {
+        CreateTeams(InitialTeamsCount);
+    }
+    public void CreateTeams(int numberOfTeams)
+    {
+        for (int i = 0; i < numberOfTeams; i++)
+        {
+            CreateNewTeam();
+        }
+    }
+    public Team CreateNewTeam()
+    {
+        Team newTeam = new Team
+        {
+            Id = Teams.Count,
+            TeamName = "Team " + (Teams.Count + 1),
+            Color = UniqueColors[Teams.Count % UniqueColors.Count],
+            Score = 0f
+        };
+        Teams.Add(newTeam);
+        return newTeam;
+    }
 }
