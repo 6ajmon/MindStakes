@@ -23,7 +23,7 @@ corner_radius_bottom_left = 32
 [sub_resource type="Theme" id="Theme_nikqu"]
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_nikqu")
 
-[node name="TeamCreateScreen" type="Control"]
+[node name="TeamCreateScreen" type="Control" node_paths=PackedStringArray("TeamCardsContainer", "ReadyButton")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -32,6 +32,9 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_nikqu")
 script = ExtResource("1_mpcp3")
+TeamCardsContainer = NodePath("PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/ScrollContainer/TeamCardsContainer")
+TeamCardScene = ExtResource("1_t3c45")
+ReadyButton = NodePath("PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/HBoxContainer3/ReadyButton")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -85,26 +88,11 @@ theme_override_constants/margin_bottom = 16
 [node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/VBoxContainer/PanelContainer2/MarginContainer"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/ScrollContainer"]
+[node name="TeamCardsContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 8
-
-[node name="TeamCard" parent="PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/ScrollContainer/HBoxContainer" instance=ExtResource("1_t3c45")]
-layout_mode = 2
-
-[node name="TeamCard2" parent="PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/ScrollContainer/HBoxContainer" instance=ExtResource("1_t3c45")]
-layout_mode = 2
-
-[node name="TeamCard3" parent="PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/ScrollContainer/HBoxContainer" instance=ExtResource("1_t3c45")]
-layout_mode = 2
-
-[node name="TeamCard4" parent="PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/ScrollContainer/HBoxContainer" instance=ExtResource("1_t3c45")]
-layout_mode = 2
-
-[node name="TeamCard5" parent="PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/ScrollContainer/HBoxContainer" instance=ExtResource("1_t3c45")]
-layout_mode = 2
 
 [node name="ButtonsContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 160)
@@ -149,3 +137,7 @@ size_flags_horizontal = 3
 [node name="ReadyButton" parent="PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/HBoxContainer3" instance=ExtResource("2_58tjv")]
 layout_mode = 2
 ScenePath = "uid://dgfhb2eeni3rs"
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer/HBoxContainer2/RemoveButton" to="." method="OnRemoveButtonPressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer/HBoxContainer2/AddButton" to="." method="OnAddButtonPressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/HBoxContainer3/ReadyButton" to="." method="OnReadyButtonPressed"]

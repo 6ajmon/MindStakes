@@ -3,12 +3,14 @@
 [ext_resource type="Theme" uid="uid://befyp5hugoswj" path="res://Assets/Themes/MainTheme.tres" id="1_5ftts"]
 [ext_resource type="Script" uid="uid://cohehnr7q4v1v" path="res://Source/Components/TeamCard/TeamCard.cs" id="1_12n43"]
 
-[node name="TeamCard" type="Panel"]
+[node name="TeamCard" type="Panel" node_paths=PackedStringArray("TeamNameLineEdit", "ColorPicker")]
 custom_minimum_size = Vector2(450, 450)
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.25
 theme = ExtResource("1_5ftts")
 script = ExtResource("1_12n43")
+TeamNameLineEdit = NodePath("VBoxContainer/MarginContainer/TeamNameLineEdit")
+ColorPicker = NodePath("VBoxContainer/MarginContainer2/HBoxContainer/ColorPickerButton")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -21,7 +23,7 @@ grow_vertical = 2
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="LineEdit" parent="VBoxContainer/MarginContainer"]
+[node name="TeamNameLineEdit" type="LineEdit" parent="VBoxContainer/MarginContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 placeholder_text = "TEAM 1"
@@ -52,3 +54,5 @@ color = Color(0, 0.9019608, 0.4627451, 1)
 [node name="Button2" type="Button" parent="VBoxContainer/MarginContainer2/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[connection signal="color_changed" from="VBoxContainer/MarginContainer2/HBoxContainer/ColorPickerButton" to="." method="OnColorPickerColorChanged"]

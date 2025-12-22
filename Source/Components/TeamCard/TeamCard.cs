@@ -3,9 +3,26 @@ using System;
 
 public partial class TeamCard : Panel
 {
-    public Team TeamData { get; set; }
+    public Team TeamData { get; set; } = new();
+    [Export] LineEdit TeamNameLineEdit;
+    [Export] ColorPickerButton ColorPicker;
+    public override void _Ready()
+    {
+        if (TeamNameLineEdit != null)
+        {
+            TeamNameLineEdit.Text = TeamData.TeamName;
+        }
+        if (ColorPicker != null)
+        {
+            ColorPicker.Color = TeamData.Color;
+        }
+    }
     public void OnTeamNameLabelTextSubmitted(string newText)
     {
-        GD.Print($"Team name changed to: {newText}");
+        TeamData.TeamName = newText;
+    }
+    public void OnColorPickerColorChanged(Color newColor)
+    {
+        TeamData.Color = newColor;
     }
 }

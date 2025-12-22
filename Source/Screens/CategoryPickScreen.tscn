@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cyd7y2rq1qvna" path="res://Source/Screens/CategoryPickScreen.cs" id="1_orqqi"]
 [ext_resource type="PackedScene" uid="uid://diaf2slniox2o" path="res://Source/Components/Buttons/CategoryButton/CategoryButton.tscn" id="2_ly0pc"]
 
-[node name="CategoryPickScreen" type="Control"]
+[node name="CategoryPickScreen" type="Control" node_paths=PackedStringArray("TeamCardContainer")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,6 +12,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_orqqi")
+TeamCardContainer = NodePath("PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer/TeamCardContainer")
+TeamCardScene = ExtResource("1_5xaqw")
 
 [node name="PanelContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -38,12 +40,9 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer"]
+[node name="TeamCardContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-
-[node name="TeamCard" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer/MarginContainer" instance=ExtResource("1_5xaqw")]
-layout_mode = 2
 
 [node name="Title" type="Label" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
