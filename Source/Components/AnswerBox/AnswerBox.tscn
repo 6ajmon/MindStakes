@@ -1,8 +1,13 @@
-[gd_scene format=3 uid="uid://hsae23h4mvxc"]
+[gd_scene load_steps=2 format=3 uid="uid://hsae23h4mvxc"]
 
-[node name="AnswerBox" type="PanelContainer"]
+[ext_resource type="Script" uid="uid://dx7c0lyxjv4gx" path="res://Source/Components/AnswerBox/AnswerBox.cs" id="1_rpr26"]
+
+[node name="AnswerBox" type="PanelContainer" node_paths=PackedStringArray("LetterLabel", "AnswerLabel")]
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("1_rpr26")
+LetterLabel = NodePath("HBoxContainer/Letter")
+AnswerLabel = NodePath("HBoxContainer/Answer")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2

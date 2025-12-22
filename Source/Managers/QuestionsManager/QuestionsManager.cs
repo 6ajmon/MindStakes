@@ -7,10 +7,12 @@ public partial class QuestionsManager : Node
     public static QuestionsManager Instance => ((SceneTree)Engine.GetMainLoop()).Root.GetNode<QuestionsManager>("QuestionsManager");
 
     public List<Question> Questions { get; private set; } = new();
+    public Question RandomQuestion { get; private set; }
 
     public override void _Ready()
     {
         LoadQuestions();
+        SetRandomQuestion();
     }
 
     private void LoadQuestions()
@@ -40,5 +42,16 @@ public partial class QuestionsManager : Node
         {
             GD.PrintErr("Failed to open Resources/Questions directory.");
         }
+    }
+
+    public void SetRandomQuestion()
+    {
+        if (Questions.Count == 0)
+        {
+            RandomQuestion = null;
+            return;
+        }
+        var randomIndex = GD.Randi() % Questions.Count;
+        RandomQuestion = Questions[(int)randomIndex];
     }
 }

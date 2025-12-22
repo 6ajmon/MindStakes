@@ -8,7 +8,7 @@ public partial class CategoriesManager : Node
 
     public List<Category> Categories { get; private set; } = new();
     public Category RandomCategory {get; private set; }
-    public int RerollsLeft { get; set; } = 1;
+    public int RerollsLeft { get; set; } = 166;
     public override void _Ready()
     {
         LoadCategories();
