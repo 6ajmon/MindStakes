@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dmt7srjgl41ts"]
 
-[ext_resource type="Script" uid="uid://cy3kwoxcekduj" path="res://Source/Managers/GameManager.cs" id="1_itnt6"]
+[ext_resource type="Script" uid="uid://cy3kwoxcekduj" path="res://Source/Managers/GameManager/GameManager.cs" id="1_itnt6"]
 
 [node name="GameManager" type="Node"]
 script = ExtResource("1_itnt6")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ggcb8mc24peo"]
+
+[ext_resource type="Script" uid="uid://24loi722tnv0" path="res://Source/Managers/CategoriesManager/CategoriesManager.cs" id="1_f5d3l"]
+
+[node name="CategoriesManager" type="Node"]
+script = ExtResource("1_f5d3l")

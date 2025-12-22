@@ -17,10 +17,12 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GameManager="*res://Source/Managers/GameManager.tscn"
-SignalManager="*res://Source/Managers/SignalManager.tscn"
-SceneManager="*res://Source/Managers/SceneManager.cs"
-TeamsManager="*res://Source/Managers/TeamsManager.tscn"
+GameManager="*res://Source/Managers/GameManager/GameManager.tscn"
+SignalManager="*res://Source/Managers/SignalManager/SignalManager.tscn"
+SceneManager="*res://Source/Managers/SceneManager/SceneManager.cs"
+TeamsManager="*res://Source/Managers/TeamsManager/TeamsManager.tscn"
+CategoriesManager="*res://Source/Managers/CategoriesManager/CategoriesManager.tscn"
+QuestionsManager="*res://Source/Managers/QuestionsManager/QuestionsManager.tscn"
 
 [display]
 
