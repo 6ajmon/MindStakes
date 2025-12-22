@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Category" load_steps=2 format=3 uid="uid://ccpvx1k2it03b"]
+
+[ext_resource type="Script" uid="uid://clol452ofmkx2" path="res://Source/Data/Category/Category.cs" id="1_c07hv"]
+
+[resource]
+script = ExtResource("1_c07hv")
+CategoryName = "Peter Explain The Joke"
+metadata/_custom_type_script = "uid://clol452ofmkx2"

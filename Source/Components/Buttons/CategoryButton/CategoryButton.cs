@@ -7,11 +7,14 @@ public partial class CategoryButton : Button
     public override void _Ready()
     {
         Pressed += OnPressed;
+        UpdateButton();
     }
-    public void SetCategoryDisplayName(string displayName)
+    public void UpdateButton()
     {
-        Category.CategoryName = displayName;
-        Text = displayName;
+        if (Category != null)
+        {
+            Text = Category.CategoryName;
+        }
     }
     public void OnPressed()
     {

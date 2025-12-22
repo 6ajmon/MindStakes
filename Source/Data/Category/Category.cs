@@ -1,7 +1,13 @@
 using Godot;
 using System;
 
-public partial class Category : Node
+[GlobalClass]
+public partial class Category : Resource 
 {
+    [Export]
     public string CategoryName { get; set; }
+    [Export]
+    public bool IsEnabled { get; set; } = true;
+    [Export]
+    public Texture2D Icon { get; set; }
 }

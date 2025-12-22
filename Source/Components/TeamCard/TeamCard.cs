@@ -4,8 +4,8 @@ using System;
 public partial class TeamCard : Panel
 {
     public Team TeamData { get; set; } = new();
-    [Export] LineEdit TeamNameLineEdit;
-    [Export] ColorPickerButton ColorPicker;
+    [Export] public LineEdit TeamNameLineEdit;
+    [Export] public ColorPickerButton ColorPicker;
     public override void _Ready()
     {
         if (TeamNameLineEdit != null)
