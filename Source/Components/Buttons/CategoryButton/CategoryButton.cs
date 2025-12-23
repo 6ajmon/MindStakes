@@ -8,6 +8,8 @@ public partial class CategoryButton : Button
     public string QuestionScenePath { get; set; }
     [Export(PropertyHint.File, "*.tscn")]
     public string BettingScenePath { get; set; }
+    [Export(PropertyHint.File, "*.tscn")]
+    public string SabotageScenePath { get; set; }
     public override void _Ready()
     {
         Pressed += OnPressed;
@@ -37,7 +39,7 @@ public partial class CategoryButton : Button
                 SceneManager.Instance.ReplaceWithNewScene(BettingScenePath);
                 break;
             case (int)GameManager.GameModeEnum.Sabotage:
-                SceneManager.Instance.ReplaceWithNewScene(QuestionScenePath);
+                SceneManager.Instance.ReplaceWithNewScene(SabotageScenePath);
                 break;
             case (int)GameManager.GameModeEnum.Fraud:
                 SceneManager.Instance.ReplaceWithNewScene(QuestionScenePath);

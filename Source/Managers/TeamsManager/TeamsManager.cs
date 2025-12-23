@@ -60,4 +60,25 @@ public partial class TeamsManager : Node
             team.CurrentBet = 0;
         }
     }
+    public void CycleToNextTeam()
+    {
+        if (Teams.Count == 0) return;
+        int currentIndex = Teams.IndexOf(CurrentTeam);
+        int nextIndex = (currentIndex + 1) % Teams.Count;
+        CurrentTeam = Teams[nextIndex];
+    }
+    public void CycleToPreviousTeam()
+    {
+        if (Teams.Count == 0) return;
+        int currentIndex = Teams.IndexOf(CurrentTeam);
+        int previousIndex = (currentIndex - 1 + Teams.Count) % Teams.Count;
+        CurrentTeam = Teams[previousIndex];
+    }
+    public void SetCurrentTeamByIndex(int index)
+    {
+        if (index >= 0 && index < Teams.Count)
+        {
+            CurrentTeam = Teams[index];
+        }
+    }
 }

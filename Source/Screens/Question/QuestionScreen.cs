@@ -11,8 +11,6 @@ public partial class QuestionScreen : Control
     [Export] public Label QuestionTextLabel { get; set; }
     [Export] public MarginContainer QuestionImageContainer { get; set; }
     [Export] public GridContainer AnswersContainer { get; set; }
-    [Export] public MarginContainer TeamCardContainer { get; set; }
-    [Export] public PackedScene TeamCardScene { get; set; }
     [Export] public PackedScene AnswerBoxScene { get; set; }
     [Export] public Button CheckButton { get; set; }
     [Export] public Button ResetTimerButton { get; set; }
@@ -25,14 +23,6 @@ public partial class QuestionScreen : Control
 
     public override void _Ready()
     {
-        if (TeamCardContainer != null)
-        {
-            TeamCard teamCard = TeamCardScene.Instantiate<TeamCard>();
-            teamCard.TeamData = TeamsManager.Instance.CurrentTeam;
-            TeamCardContainer.AddChild(teamCard);
-            teamCard.TeamNameLineEdit.Editable = false;
-        }
-
         _timeLeft = TotalTime;
         _isTimerRunning = AutostartTimer;
         if (TimeProgressBar != null)
