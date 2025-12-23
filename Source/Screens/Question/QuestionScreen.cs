@@ -7,6 +7,7 @@ public partial class QuestionScreen : Control
 {
     [Export] public ProgressBar TimeProgressBar { get; set; }
     [Export] public Label TimeLabel { get; set; }
+    [Export] public Label CategoryLabel { get; set; }
     [Export] public Label QuestionTextLabel { get; set; }
     [Export] public MarginContainer QuestionImageContainer { get; set; }
     [Export] public GridContainer AnswersContainer { get; set; }
@@ -42,6 +43,7 @@ public partial class QuestionScreen : Control
             
             UpdateTimerLabel();
         }
+        UpdateCategoryLabel();
 
         UpdateQuestionData();
         
@@ -61,6 +63,15 @@ public partial class QuestionScreen : Control
                 TimeProgressBar.Value = _timeLeft;
                 UpdateTimerLabel();
             }
+        }
+    }
+
+    private void UpdateCategoryLabel()
+    {
+        var question = QuestionsManager.Instance.RandomQuestion;
+        if (question != null && CategoryLabel != null)
+        {
+            CategoryLabel.Text = "KATEGORIA: " + question.Category.CategoryName;
         }
     }
 

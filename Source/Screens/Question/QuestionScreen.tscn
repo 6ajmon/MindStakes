@@ -18,7 +18,7 @@ corner_radius_top_right = 32
 corner_radius_bottom_right = 32
 corner_radius_bottom_left = 32
 
-[node name="QuestionScreen" type="Control" node_paths=PackedStringArray("TimeProgressBar", "TimeLabel", "QuestionTextLabel", "QuestionImageContainer", "AnswersContainer", "TeamCardContainer", "CheckButton", "ResetTimerButton")]
+[node name="QuestionScreen" type="Control" node_paths=PackedStringArray("TimeProgressBar", "TimeLabel", "CategoryLabel", "QuestionTextLabel", "QuestionImageContainer", "AnswersContainer", "TeamCardContainer", "CheckButton", "ResetTimerButton")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -29,10 +29,11 @@ theme = ExtResource("1_lns2c")
 script = ExtResource("2_jthmp")
 TimeProgressBar = NodePath("Panel/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer/TimeProgressBar")
 TimeLabel = NodePath("Panel/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer/TimeLabel")
+CategoryLabel = NodePath("Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/CategoryLabel")
 QuestionTextLabel = NodePath("Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/QuestionTextLabel")
 QuestionImageContainer = NodePath("Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/ImageContainer")
 AnswersContainer = NodePath("Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/AnswersContainer")
-TeamCardContainer = NodePath("Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer/TeamCardContainer")
+TeamCardContainer = NodePath("Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/TeamCardContainer")
 TeamCardScene = ExtResource("3_qjiql")
 AnswerBoxScene = ExtResource("3_o5drp")
 CheckButton = NodePath("Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer3/HBoxContainer2/CheckButton")
@@ -107,7 +108,20 @@ layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
 
-[node name="TeamCardContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CategoryLabel" type="Label" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "category: 456fhhf"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TeamCardContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_left = 16

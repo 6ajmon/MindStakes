@@ -51,6 +51,16 @@ public partial class AnswerBox : PanelContainer
 
     public void MarkAsCorrect()
     {
-        SelfModulate = Colors.Green;
+        var tween = CreateTween();
+        tween.SetTrans(Tween.TransitionType.Sine);
+        tween.SetEase(Tween.EaseType.InOut);
+        
+        // Blink effect
+        for (int i = 0; i < 3; i++)
+        {
+            tween.TweenProperty(this, "self_modulate", Colors.Green, 0.15f);
+            tween.TweenProperty(this, "self_modulate", Colors.White, 0.15f);
+        }
+        tween.TweenProperty(this, "self_modulate", Colors.Green, 0.15f);
     }
 }
