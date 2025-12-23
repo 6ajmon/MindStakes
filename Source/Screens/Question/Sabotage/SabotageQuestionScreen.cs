@@ -9,13 +9,15 @@ public partial class SabotageQuestionScreen : QuestionScreen
     [Export] public Button CycleTeamLeftButton { get; set; }
     [Export] public Button CycleTeamRightButton { get; set; }
     [Export] public SpinBox TeamIndexSpinBox { get; set; }
+    [Export] public int AnswerPoints { get; set; } = 20;
     public override void _Ready()
     {
         base._Ready();
+        TeamsManager.Instance.CurrentTeam = TeamsManager.Instance.InitialTeam;
         if (TeamCardContainer != null)
         {
             TeamCard teamCard = TeamCardScene.Instantiate<TeamCard>();
-            teamCard.TeamData = TeamsManager.Instance.CurrentTeam;
+            teamCard.TeamData = TeamsManager.Instance.InitialTeam;
             TeamCardContainer.AddChild(teamCard);
             teamCard.TeamNameLineEdit.Editable = false;
         }
@@ -63,6 +65,20 @@ public partial class SabotageQuestionScreen : QuestionScreen
             teamCard.TeamData = TeamsManager.Instance.CurrentTeam;
             TeamCardContainer.AddChild(teamCard);
             teamCard.TeamNameLineEdit.Editable = false;
+        }
+    }
+    private void OnReadyButtonPressed()
+    {
+        var initialTeam = TeamsManager.Instance.InitialTeam;
+        var currentTeam = TeamsManager.Instance.CurrentTeam;
+        if (initialTeam == currentTeam)
+        {
+            initialTeam.CurrentBet = AnswerPoints;
+        }
+        else
+        {
+            currentTeam.CurrentBet = AnswerPoints;
+            initialTeam.CurrentBet = AnswerPoints/2;
         }
     }
 }

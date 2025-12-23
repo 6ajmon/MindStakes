@@ -22,6 +22,7 @@ public partial class TeamsManager : Node
         Colors.Brown
     };
     public Team CurrentTeam { get; set; }
+    public Team InitialTeam { get; set; }
     public int InitialTeamsCount { get; set; } = 4;
     public override void _Ready()
     {
@@ -46,12 +47,12 @@ public partial class TeamsManager : Node
         Teams.Add(newTeam);
         return newTeam;
     }
-    public void NextCurrentTeam()
+    public void NextInitialTeam()
     {
         if (Teams.Count == 0) return;
-        int currentIndex = Teams.IndexOf(CurrentTeam);
+        int currentIndex = Teams.IndexOf(InitialTeam);
         int nextIndex = (currentIndex + 1) % Teams.Count;
-        CurrentTeam = Teams[nextIndex];
+        InitialTeam = Teams[nextIndex];
     }
     public void ResetBets()
     {

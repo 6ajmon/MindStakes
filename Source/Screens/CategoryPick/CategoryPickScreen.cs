@@ -13,7 +13,7 @@ public partial class CategoryPickScreen : Control
         if (TeamCardContainer != null)
         {
             TeamCard teamCard = TeamCardScene.Instantiate<TeamCard>();
-            teamCard.TeamData = TeamsManager.Instance.CurrentTeam;
+            teamCard.TeamData = TeamsManager.Instance.InitialTeam;
             TeamCardContainer.AddChild(teamCard);
             teamCard.TeamNameLineEdit.Editable = false;
         }

@@ -29,6 +29,7 @@ public partial class GameManager : Node
     public void OnTeamsCreated()
     {
         TeamsManager.Instance.CurrentTeam = TeamsManager.Instance.Teams[0];
+        TeamsManager.Instance.InitialTeam = TeamsManager.Instance.Teams[0];
     }
 
     public void NextRound()

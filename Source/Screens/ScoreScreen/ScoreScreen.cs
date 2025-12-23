@@ -36,13 +36,13 @@ public partial class ScoreScreen : Control
         ScoreTeamCard teamCard = ScoreTeamCardScene.Instantiate<ScoreTeamCard>();
         teamCard.TeamData = newTeam;
         TeamCardsContainer.AddChild(teamCard);
-        teamCard.UpdateButtons();
+        teamCard.UpdateButtonsAndText();
     }
 
     private void OnReadyButtonPressed()
     {
         GameManager.Instance.NextRound();
-        TeamsManager.Instance.NextCurrentTeam();
+        TeamsManager.Instance.NextInitialTeam();
         TeamsManager.Instance.ResetBets();
     }
 }

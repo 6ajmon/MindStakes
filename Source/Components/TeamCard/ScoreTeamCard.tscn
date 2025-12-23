@@ -127,7 +127,9 @@ data = PackedByteArray("AAEAAAAWAQAABABgR0RFRn392MUAADm4AAAPfUdQT1NRX4NiAACT9AAA
 font_name = "Inconsolata"
 style_name = "Regular"
 font_style = 4
+subpixel_positioning = 0
 msdf_pixel_range = 8
+msdf_size = 128
 cache/0/16/0/ascent = 14.0
 cache/0/16/0/descent = 4.0
 cache/0/16/0/underline_position = 3.59375
@@ -932,13 +934,23 @@ ColorPickerButton/styles/pressed = SubResource("StyleBoxFlat_lvlbj")
 Panel/styles/panel = SubResource("StyleBoxFlat_1of73")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_uuho2")
 
-[node name="ScoreTeamCard" node_paths=PackedStringArray("RemovePointsButton", "PointsSpinBox", "AddPointsButton") instance=ExtResource("1_pcjgc")]
+[node name="ScoreTeamCard" node_paths=PackedStringArray("RemovePointsButton", "PointsSpinBox", "AddPointsButton", "TeamTypeLabel") instance=ExtResource("1_pcjgc")]
 script = ExtResource("2_ff8v7")
 RemovePointsButton = NodePath("VBoxContainer/PanelContainer/HBoxContainer/RemovePointsButton")
 PointsSpinBox = NodePath("VBoxContainer/PanelContainer/HBoxContainer/SpinBox")
 AddPointsButton = NodePath("VBoxContainer/PanelContainer/HBoxContainer/AddPointsButton")
+TeamTypeLabel = NodePath("VBoxContainer/MarginContainer3/TeamTypeLabel")
 
-[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer" index="3"]
+[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer" index="1"]
+layout_mode = 2
+
+[node name="TeamTypeLabel" type="Label" parent="VBoxContainer/MarginContainer3" index="0"]
+layout_mode = 2
+text = "wybrany"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer" index="4"]
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer" index="0"]
