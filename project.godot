@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="MindStakes"
-run/main_scene="uid://dv21t8t45si2"
+run/main_scene="uid://c864wsxq4to5s"
 config/features=PackedStringArray("4.5", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 

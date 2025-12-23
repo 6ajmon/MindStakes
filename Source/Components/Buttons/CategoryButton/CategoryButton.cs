@@ -22,7 +22,6 @@ public partial class CategoryButton : Button
     }
     public void OnPressed()
     {
-        SignalManager.Instance.EmitSignal(nameof(SignalManager.CategorySelected), Category);
         ChangeScene();
     }
 
@@ -34,13 +33,13 @@ public partial class CategoryButton : Button
         }
         switch (GameManager.Instance.CurrentGameModeIndex)
         {
-            case (int)GameManager.GameModes.Betting:
+            case (int)GameManager.GameModeEnum.Betting:
                 SceneManager.Instance.ReplaceWithNewScene(BettingScenePath);
                 break;
-            case (int)GameManager.GameModes.Sabotage:
+            case (int)GameManager.GameModeEnum.Sabotage:
                 SceneManager.Instance.ReplaceWithNewScene(QuestionScenePath);
                 break;
-            case (int)GameManager.GameModes.Fraud:
+            case (int)GameManager.GameModeEnum.Fraud:
                 SceneManager.Instance.ReplaceWithNewScene(QuestionScenePath);
                 break;
             default:

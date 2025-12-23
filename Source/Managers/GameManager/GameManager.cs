@@ -5,7 +5,7 @@ public partial class GameManager : Node
 {
     public static GameManager Instance => ((SceneTree)Engine.GetMainLoop()).Root.GetNode<GameManager>("GameManager");
 
-    public enum GameModes
+    public enum GameModeEnum
     {
         Betting = 0,
         Sabotage = 1,
@@ -13,6 +13,9 @@ public partial class GameManager : Node
     }
 
     public int CurrentGameModeIndex { get; set; } = 0;
+
+    public int RoundCount { get; set; } = 0;
+    public int MaxRounds { get; set; } = 10;
 
     public ulong GameSeed { get; private set; }
 
@@ -26,5 +29,20 @@ public partial class GameManager : Node
     public void OnTeamsCreated()
     {
         TeamsManager.Instance.CurrentTeam = TeamsManager.Instance.Teams[0];
+    }
+
+    public void NextRound()
+    {
+        RoundCount++;
+        if (RoundCount >= MaxRounds) 
+        {
+            FinishGame();
+        }
+    }
+
+    private void FinishGame()
+    {
+        SceneManager.Instance.ChangeScene("res://Source/Screens/GameModePick/GameModePickScreen.tscn");
+        RoundCount = 10;
     }
 }

@@ -46,4 +46,18 @@ public partial class TeamsManager : Node
         Teams.Add(newTeam);
         return newTeam;
     }
+    public void NextCurrentTeam()
+    {
+        if (Teams.Count == 0) return;
+        int currentIndex = Teams.IndexOf(CurrentTeam);
+        int nextIndex = (currentIndex + 1) % Teams.Count;
+        CurrentTeam = Teams[nextIndex];
+    }
+    public void ResetBets()
+    {
+        foreach (var team in Teams)
+        {
+            team.CurrentBet = 0;
+        }
+    }
 }

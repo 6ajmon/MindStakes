@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://dccjx4kb6nd00"]
 
-[ext_resource type="Theme" uid="uid://befyp5hugoswj" path="res://Assets/Themes/MainTheme.tres" id="1_8fifp"]
-[ext_resource type="Script" uid="uid://chgnu5ok343mi" path="res://Source/Screens/BettingScoreScreen/BettingScoreScreen.cs" id="2_iurfl"]
-[ext_resource type="PackedScene" uid="uid://ba1ry0xlyp0ir" path="res://Source/Components/Buttons/NextButton/NextButton.tscn" id="2_sba4d"]
-[ext_resource type="PackedScene" uid="uid://3jda22dyfmvv" path="res://Source/Components/TeamCard/ScoreTeamCard.tscn" id="3_iurfl"]
+[ext_resource type="Theme" uid="uid://befyp5hugoswj" path="res://Assets/Themes/MainTheme.tres" id="1_r684w"]
+[ext_resource type="Script" uid="uid://chgnu5ok343mi" path="res://Source/Screens/ScoreScreen/ScoreScreen.cs" id="2_f66h6"]
+[ext_resource type="PackedScene" uid="uid://3jda22dyfmvv" path="res://Source/Components/TeamCard/ScoreTeamCard.tscn" id="3_ykrth"]
+[ext_resource type="PackedScene" uid="uid://ba1ry0xlyp0ir" path="res://Source/Components/Buttons/NextButton/NextButton.tscn" id="4_os0li"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ilaee"]
 bg_color = Color(0.043137256, 0.0627451, 0.14901961, 1)
@@ -23,17 +23,18 @@ corner_radius_bottom_left = 32
 [sub_resource type="Theme" id="Theme_nikqu"]
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_nikqu")
 
-[node name="BettingScoreScreen" type="Control" node_paths=PackedStringArray("TeamCardsContainer")]
+[node name="ScoreScreen" type="Control" node_paths=PackedStringArray("TeamCardsContainer", "ReadyButton")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_8fifp")
-script = ExtResource("2_iurfl")
-ScoreTeamCardScene = ExtResource("3_iurfl")
+theme = ExtResource("1_r684w")
+script = ExtResource("2_f66h6")
+ScoreTeamCardScene = ExtResource("3_ykrth")
 TeamCardsContainer = NodePath("PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/ScrollContainer/TeamCardsContainer")
+ReadyButton = NodePath("PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/HBoxContainer3/ReadyButton")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -121,8 +122,8 @@ theme_override_constants/separation = 64
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="ReadyButton" parent="PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/HBoxContainer3" instance=ExtResource("2_sba4d")]
+[node name="ReadyButton" parent="PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/HBoxContainer3" instance=ExtResource("4_os0li")]
 layout_mode = 2
-ScenePath = "uid://be1t67hhlom6s"
+ScenePath = "uid://dgfhb2eeni3rs"
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/HBoxContainer3/ReadyButton" to="." method="OnReadyButtonPressed"]

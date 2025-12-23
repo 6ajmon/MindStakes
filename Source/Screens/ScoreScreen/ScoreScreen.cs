@@ -1,14 +1,28 @@
-using Godot;
+ using Godot;
 using System;
 
-public partial class BettingScoreScreen : Control
+public partial class ScoreScreen : Control
 {
     [Export] public PackedScene ScoreTeamCardScene;
     [Export] public HBoxContainer TeamCardsContainer;
+    [Export] public NextButton ReadyButton;
     public override void _Ready()
     {
         LoadTeamCards();
+        CheckGameEnd();
     }
+
+    private void CheckGameEnd()
+    {
+        if (GameManager.Instance.RoundCount + 1 >= GameManager.Instance.MaxRounds)
+        {
+            if (ReadyButton != null)
+            {
+                ReadyButton.ScenePath = "";
+            }
+        }
+    }
+
     public void LoadTeamCards()
     {
         for (int i = 0; i < TeamsManager.Instance.Teams.Count; i++)
@@ -23,5 +37,12 @@ public partial class BettingScoreScreen : Control
         teamCard.TeamData = newTeam;
         TeamCardsContainer.AddChild(teamCard);
         teamCard.UpdateButtons();
+    }
+
+    private void OnReadyButtonPressed()
+    {
+        GameManager.Instance.NextRound();
+        TeamsManager.Instance.NextCurrentTeam();
+        TeamsManager.Instance.ResetBets();
     }
 }

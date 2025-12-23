@@ -28,9 +28,9 @@ public partial class QuestionScreen : Control
         var gameMode = GameManager.Instance.CurrentGameModeIndex;
         string modeText = gameMode switch
         {
-            (int)GameManager.GameModes.Betting => "OBSTAWIANIE",
-            (int)GameManager.GameModes.Sabotage => "SABOTAŻ",
-            (int)GameManager.GameModes.Fraud => "OSZUST",
+            (int)GameManager.GameModeEnum.Betting => "OBSTAWIANIE",
+            (int)GameManager.GameModeEnum.Sabotage => "SABOTAŻ",
+            (int)GameManager.GameModeEnum.Fraud => "OSZUST",
             _ => "Unknown Mode"
         };
         GameModeLabel.Text = $"Game Mode: {modeText}";
