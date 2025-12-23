@@ -48,4 +48,9 @@ public partial class AnswerBox : PanelContainer
             LetterLabel.Text = letterText;
         }
     }
+
+    public void MarkAsCorrect()
+    {
+        SelfModulate = Colors.Green;
+    }
 }

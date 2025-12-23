@@ -18,7 +18,7 @@ corner_radius_top_right = 32
 corner_radius_bottom_right = 32
 corner_radius_bottom_left = 32
 
-[node name="QuestionScreen" type="Control" node_paths=PackedStringArray("GameModeLabel", "QuestionTextLabel", "QuestionImageContainer", "AnswersContainer", "TeamCardContainer")]
+[node name="QuestionScreen" type="Control" node_paths=PackedStringArray("TimeProgressBar", "TimeLabel", "QuestionTextLabel", "QuestionImageContainer", "AnswersContainer", "TeamCardContainer", "CheckButton", "ResetTimerButton")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -27,13 +27,16 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_lns2c")
 script = ExtResource("2_jthmp")
-GameModeLabel = NodePath("Panel/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer/GameMode")
+TimeProgressBar = NodePath("Panel/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer/TimeProgressBar")
+TimeLabel = NodePath("Panel/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer/TimeLabel")
 QuestionTextLabel = NodePath("Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/QuestionTextLabel")
 QuestionImageContainer = NodePath("Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/ImageContainer")
 AnswersContainer = NodePath("Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/AnswersContainer")
 TeamCardContainer = NodePath("Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer/TeamCardContainer")
 TeamCardScene = ExtResource("3_qjiql")
 AnswerBoxScene = ExtResource("3_o5drp")
+CheckButton = NodePath("Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer3/HBoxContainer2/CheckButton")
+ResetTimerButton = NodePath("Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer2/HBoxContainer2/ResetTimeButton")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -66,18 +69,23 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_1qknh")
 [node name="VBoxContainer" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/PanelContainer"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer"]
+[node name="VBoxContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="GameMode" type="Label" parent="Panel/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer"]
+[node name="TimeProgressBar" type="ProgressBar" parent="Panel/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 2.0
-theme_override_font_sizes/font_size = 64
-text = "BETTING"
-horizontal_alignment = 1
-vertical_alignment = 1
+size_flags_vertical = 1
+theme = ExtResource("1_lns2c")
+value = 50.0
+show_percentage = false
+
+[node name="TimeLabel" type="Label" parent="Panel/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 40
+text = "65"
 
 [node name="PanelContainer2" type="PanelContainer" parent="Panel/PanelContainer/VBoxContainer"]
 layout_mode = 2
@@ -138,13 +146,43 @@ layout_mode = 2
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 16
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_constants/separation = 64
+
+[node name="ResetTimeButton" type="Button" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer2/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 48
+text = "START / RESET"
+
+[node name="MarginContainer3" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 16
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 64
+
+[node name="CheckButton" type="Button" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer3/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 48
+text = "SPPRAWDŹ"
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer"]
 layout_mode = 2
