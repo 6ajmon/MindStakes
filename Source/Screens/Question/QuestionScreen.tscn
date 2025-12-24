@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://be1t67hhlom6s"]
+[gd_scene load_steps=8 format=3 uid="uid://be1t67hhlom6s"]
 
 [ext_resource type="Theme" uid="uid://befyp5hugoswj" path="res://Assets/Themes/MainTheme.tres" id="1_lns2c"]
 [ext_resource type="Script" uid="uid://tai2u1ap1bj1" path="res://Source/Screens/Question/QuestionScreen.cs" id="2_jthmp"]
 [ext_resource type="PackedScene" uid="uid://hsae23h4mvxc" path="res://Source/Components/AnswerBox/AnswerBox.tscn" id="3_o5drp"]
 [ext_resource type="PackedScene" uid="uid://ba1ry0xlyp0ir" path="res://Source/Components/Buttons/NextButton/NextButton.tscn" id="3_vl5k2"]
+[ext_resource type="PackedScene" uid="uid://0lg2utkqus1f" path="res://Source/Components/Labels/RoundCountLabel/RoundCountLabel.tscn" id="4_qjiql"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8yhwj"]
 bg_color = Color(0.043137256, 0.0627451, 0.14901961, 1)
@@ -70,6 +71,7 @@ layout_mode = 2
 [node name="VBoxContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_stretch_ratio = 6.0
 
 [node name="TimeProgressBar" type="ProgressBar" parent="Panel/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -84,6 +86,9 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 40
 text = "65"
+
+[node name="RoundCountLabel" parent="Panel/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer" instance=ExtResource("4_qjiql")]
+layout_mode = 2
 
 [node name="PanelContainer2" type="PanelContainer" parent="Panel/PanelContainer/VBoxContainer"]
 layout_mode = 2

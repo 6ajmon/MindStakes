@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://dgpuc3ryck7u8"]
+
+[ext_resource type="Resource" uid="uid://cqoriyv3t234d" path="res://Resources/Categories/PolskiYouTube.tres" id="1_uh40r"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_fcj7i"]
+
+[resource]
+script = ExtResource("2_fcj7i")
+QuestionText = "Ile wynosił rekord toru (zjeżdżalni wodnej), który próbował pobić Pan Marcin w filmie ŚLIZG?"
+AnswersText = Array[String](["23 sekundy", "36 sekund", "17 sekund", "29 sekund"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_uh40r")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

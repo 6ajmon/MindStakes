@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://drroclbuw21jp"]
+
+[ext_resource type="Resource" uid="uid://ddfttrqxb8ege" path="res://Resources/Categories/Minecraft.tres" id="1_7r557"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_q6olb"]
+
+[resource]
+script = ExtResource("2_q6olb")
+QuestionText = "Czym ładuje się Respawn Anchor?"
+AnswersText = Array[String](["Glowstone", "Glowstone Dust", "Blaze Rod", "Blaze Powder"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_7r557")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://c7wssf6dm7bsg"]
+[gd_scene load_steps=9 format=3 uid="uid://c7wssf6dm7bsg"]
 
 [ext_resource type="Theme" uid="uid://befyp5hugoswj" path="res://Assets/Themes/MainTheme.tres" id="1_tih6c"]
 [ext_resource type="Script" uid="uid://bkuul38p4afig" path="res://Source/Screens/Betting/BettingScreen.cs" id="2_28s67"]
 [ext_resource type="PackedScene" uid="uid://ba1ry0xlyp0ir" path="res://Source/Components/Buttons/NextButton/NextButton.tscn" id="3_n0b6d"]
 [ext_resource type="PackedScene" uid="uid://b41v0hfwix5gm" path="res://Source/Components/TeamCard/BettingTeamCard.tscn" id="4_n0b6d"]
+[ext_resource type="PackedScene" uid="uid://0lg2utkqus1f" path="res://Source/Components/Labels/RoundCountLabel/RoundCountLabel.tscn" id="4_wsi0i"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ilaee"]
 bg_color = Color(0.043137256, 0.0627451, 0.14901961, 1)
@@ -63,14 +64,22 @@ layout_mode = 2
 [node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Title" type="RichTextLabel" parent="PanelContainer/VBoxContainer/PanelContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer"]
 layout_mode = 2
+
+[node name="Title" type="RichTextLabel" parent="PanelContainer/VBoxContainer/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 6.0
 theme_override_font_sizes/bold_font_size = 64
 bbcode_enabled = true
 text = "[b]OBSTAWIANIE[/b]"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="RoundCountLabel" parent="PanelContainer/VBoxContainer/PanelContainer/HBoxContainer" instance=ExtResource("4_wsi0i")]
+layout_mode = 2
 
 [node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2

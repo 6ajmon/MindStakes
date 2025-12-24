@@ -44,5 +44,7 @@ public partial class ScoreScreen : Control
         GameManager.Instance.NextRound();
         TeamsManager.Instance.NextInitialTeam();
         TeamsManager.Instance.ResetBets();
+        CategoriesManager.Instance.SetRandomCategory();
+        QuestionsManager.Instance.SetRandomQuestion();
     }
 }

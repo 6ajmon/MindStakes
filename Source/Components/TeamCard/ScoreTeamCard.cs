@@ -24,6 +24,11 @@ public partial class ScoreTeamCard : TeamCard
         RemovePointsButton.Text = $"- {betPoints}"; 
         AddPointsButton.Text = $"+ {betPoints}";
         PointsSpinBox.Value = TeamData.Score;
+        if (GameManager.Instance.CurrentGameModeIndex != (int)GameManager.GameModeEnum.Fraud)
+        {
+            TeamTypeLabel.Visible = false;
+            return;
+        }
         if (TeamData.Id == TeamsManager.Instance.CurrentTeam.Id && 
             TeamData.Id == TeamsManager.Instance.InitialTeam.Id)
         {

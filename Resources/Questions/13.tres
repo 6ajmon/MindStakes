@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://dges1es4ysj1m"]
+
+[ext_resource type="Resource" uid="uid://ckepbdgtnrrh4" path="res://Resources/Categories/Anime.tres" id="1_b0y2n"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_p40mr"]
+
+[resource]
+script = ExtResource("2_p40mr")
+QuestionText = "Jaki jest tytuł pierwszego openingu Tokyo Ghoul, śpieanego przez TK?"
+AnswersText = Array[String](["Unravel", "Again", "Oshiete yo", "Nightmare"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_b0y2n")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

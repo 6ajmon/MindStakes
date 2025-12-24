@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://bhfemw72sqdm1"]
+
+[ext_resource type="Resource" uid="uid://ckepbdgtnrrh4" path="res://Resources/Categories/Anime.tres" id="1_w8wwr"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_xawtb"]
+
+[resource]
+script = ExtResource("2_xawtb")
+QuestionText = "Które anime NIE jest zrobione przez studio bones?"
+AnswersText = Array[String](["Chainsaw Man", "My Hero Academia", "Fullmetal Alchemist", "Fullmetal Alchemist: Brotherhood"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_w8wwr")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

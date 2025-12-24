@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://dh4rvxjk1ofhm"]
+
+[ext_resource type="Resource" uid="uid://cqoriyv3t234d" path="res://Resources/Categories/PolskiYouTube.tres" id="1_50sk6"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_xiqb5"]
+
+[resource]
+script = ExtResource("2_xiqb5")
+QuestionText = "Z jakiej okazji został opowiedziany żart Brzuch boli od pizzy?"
+AnswersText = Array[String](["Prima Aprilis", "Bez okazji", "Walentynki", "Tłusty czwartek"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_50sk6")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://botjsf0ggp25r"]
+
+[ext_resource type="Resource" uid="uid://cqoriyv3t234d" path="res://Resources/Categories/PolskiYouTube.tres" id="1_b4evt"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_e81av"]
+
+[resource]
+script = ExtResource("2_e81av")
+QuestionText = "Jak został pokonany Cowiek Maupa, największy zbrodniarz wojenny?"
+AnswersText = Array[String](["zamknięty w skrzynce na bezpieczniki", "spadł z 4 piętra z okna", "zamknięty w śmietniku osiedlowym", "spalony razem z blokiem"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_b4evt")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dgfhb2eeni3rs"]
+[gd_scene load_steps=8 format=3 uid="uid://dgfhb2eeni3rs"]
 
 [ext_resource type="PackedScene" uid="uid://bhv0mk0v5xf3p" path="res://Source/Components/TeamCard/TeamCard.tscn" id="1_5xaqw"]
 [ext_resource type="Theme" uid="uid://befyp5hugoswj" path="res://Assets/Themes/MainTheme.tres" id="1_8yhwj"]
 [ext_resource type="Script" uid="uid://cyd7y2rq1qvna" path="res://Source/Screens/CategoryPick/CategoryPickScreen.cs" id="1_orqqi"]
 [ext_resource type="PackedScene" uid="uid://diaf2slniox2o" path="res://Source/Components/Buttons/CategoryButton/CategoryButton.tscn" id="2_ly0pc"]
+[ext_resource type="PackedScene" uid="uid://0lg2utkqus1f" path="res://Source/Components/Labels/RoundCountLabel/RoundCountLabel.tscn" id="5_1qknh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8yhwj"]
 bg_color = Color(0.043137256, 0.0627451, 0.14901961, 1)
@@ -70,15 +71,19 @@ size_flags_horizontal = 3
 [node name="TeamCardContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
 
 [node name="Title" type="Label" parent="Panel/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 2.0
+size_flags_stretch_ratio = 3.0
 theme_override_font_sizes/font_size = 64
 text = "PICK CATEGORY"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="RoundCountLabel" parent="Panel/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer" instance=ExtResource("5_1qknh")]
+layout_mode = 2
 
 [node name="PanelContainer2" type="PanelContainer" parent="Panel/PanelContainer/VBoxContainer"]
 layout_mode = 2

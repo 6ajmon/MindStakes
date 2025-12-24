@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://doxyjjk02olx7"]
+
+[ext_resource type="Resource" uid="uid://ddfttrqxb8ege" path="res://Resources/Categories/Minecraft.tres" id="1_ivsvy"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_u26ik"]
+
+[resource]
+script = ExtResource("2_u26ik")
+QuestionText = "Jaka jest najnowsza wersja Minecraft Java Edition, która wyszła 09.12.2025?"
+AnswersText = Array[String](["1.21.11", "1.21.10", "1.21.1", "1.22.1"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_ivsvy")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

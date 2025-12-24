@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://bkhrsew2agagk"]
+
+[ext_resource type="Resource" uid="uid://ddfttrqxb8ege" path="res://Resources/Categories/Minecraft.tres" id="1_ycg6j"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_ppmd3"]
+
+[resource]
+script = ExtResource("2_ppmd3")
+QuestionText = "Ile razy usunięcie Herobrine zostało wspomniane w changelogach Java Edition?"
+AnswersText = Array[String](["35", "16", "30", "66"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_ycg6j")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

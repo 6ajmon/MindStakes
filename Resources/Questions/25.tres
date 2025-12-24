@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://dhju85s4qvtqn"]
+
+[ext_resource type="Resource" uid="uid://cqoriyv3t234d" path="res://Resources/Categories/PolskiYouTube.tres" id="1_yjlt6"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_apa13"]
+
+[resource]
+script = ExtResource("2_apa13")
+QuestionText = "W co udeżył się Jessi gdy opowiadał o tym, że nie jest psychic, psychiczny?"
+AnswersText = Array[String](["w doniczkę pierdoloną", "w pierdoloną nogę od stołu", "w jebaną ścianę", "we framugę od łóżka"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_yjlt6")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

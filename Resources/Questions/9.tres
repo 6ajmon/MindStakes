@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://cvh51twper6wt"]
+
+[ext_resource type="Resource" uid="uid://ddfttrqxb8ege" path="res://Resources/Categories/Minecraft.tres" id="1_o701c"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_armsc"]
+
+[resource]
+script = ExtResource("2_armsc")
+QuestionText = "Która z tych piosenek autorstwa C418 NIE jest na płycie muzycznej w grze?"
+AnswersText = Array[String](["Minecraft", "Blocks", "Cat", "Stal"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_o701c")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

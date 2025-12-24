@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://b8to3mqyedssb"]
+
+[ext_resource type="Resource" uid="uid://ckepbdgtnrrh4" path="res://Resources/Categories/Anime.tres" id="1_1ut86"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_pputx"]
+
+[resource]
+script = ExtResource("2_pputx")
+QuestionText = "Jakie jest najpopularniejsze anime na Anilist?"
+AnswersText = Array[String](["Attack on titan", "Demon Slayer", "Death Note", "Jujutsu Kaisen"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_1ut86")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

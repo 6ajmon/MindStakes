@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://bvxt1xk87qaxy"]
+
+[ext_resource type="Resource" uid="uid://ckepbdgtnrrh4" path="res://Resources/Categories/Anime.tres" id="1_0jf5y"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_852am"]
+
+[resource]
+script = ExtResource("2_852am")
+QuestionText = "Jaki wykonawca jest autorem piosenek z openingów: Call of the night, Mashle, Dan da Dan?"
+AnswersText = Array[String](["Creepy Nuts", "Asian Kung-Fu Generation", "SID", "Kenshi Yonezu"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_0jf5y")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

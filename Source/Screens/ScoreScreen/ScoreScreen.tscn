@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dccjx4kb6nd00"]
+[gd_scene load_steps=9 format=3 uid="uid://dccjx4kb6nd00"]
 
 [ext_resource type="Theme" uid="uid://befyp5hugoswj" path="res://Assets/Themes/MainTheme.tres" id="1_r684w"]
 [ext_resource type="Script" uid="uid://chgnu5ok343mi" path="res://Source/Screens/ScoreScreen/ScoreScreen.cs" id="2_f66h6"]
 [ext_resource type="PackedScene" uid="uid://3jda22dyfmvv" path="res://Source/Components/TeamCard/ScoreTeamCard.tscn" id="3_ykrth"]
 [ext_resource type="PackedScene" uid="uid://ba1ry0xlyp0ir" path="res://Source/Components/Buttons/NextButton/NextButton.tscn" id="4_os0li"]
+[ext_resource type="PackedScene" uid="uid://0lg2utkqus1f" path="res://Source/Components/Labels/RoundCountLabel/RoundCountLabel.tscn" id="4_wmctk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ilaee"]
 bg_color = Color(0.043137256, 0.0627451, 0.14901961, 1)
@@ -64,14 +65,22 @@ layout_mode = 2
 [node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Title" type="RichTextLabel" parent="PanelContainer/VBoxContainer/PanelContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer"]
 layout_mode = 2
+
+[node name="Title" type="RichTextLabel" parent="PanelContainer/VBoxContainer/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 6.0
 theme_override_font_sizes/bold_font_size = 64
 bbcode_enabled = true
 text = "[b]PUNKTACJA[/b]"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="RoundCountLabel" parent="PanelContainer/VBoxContainer/PanelContainer/HBoxContainer" instance=ExtResource("4_wmctk")]
+layout_mode = 2
 
 [node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2

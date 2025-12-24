@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://cgyo4jwxhbmnr"]
+
+[ext_resource type="Resource" uid="uid://ckepbdgtnrrh4" path="res://Resources/Categories/Anime.tres" id="1_32iwc"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_0qw28"]
+
+[resource]
+script = ExtResource("2_0qw28")
+QuestionText = "Jakie jest najwyżej oceniane anime na Anilist (TV Show)?"
+AnswersText = Array[String](["Frieren: Beyond Journey’s End ", "Fullmetal Alchemist: Brotherhood", "Attack on Titan Season 3 Part 2", "Gintama Season 3"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_32iwc")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

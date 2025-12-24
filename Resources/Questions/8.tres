@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://bfneylr44eqd8"]
+
+[ext_resource type="Resource" uid="uid://ddfttrqxb8ege" path="res://Resources/Categories/Minecraft.tres" id="1_k3pty"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_bl6hr"]
+
+[resource]
+script = ExtResource("2_bl6hr")
+QuestionText = "Które z tych rzeczy NIE jest efektem w Minecraft?"
+AnswersText = Array[String](["On Fire", "Wither", "Luck", "Haste"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_k3pty")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://d0nutmfegyjmt"]
+
+[ext_resource type="Resource" uid="uid://ckepbdgtnrrh4" path="res://Resources/Categories/Anime.tres" id="1_al5qk"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_lap3b"]
+
+[resource]
+script = ExtResource("2_lap3b")
+QuestionText = "Które anime NIE jest na podstawie mangi?"
+AnswersText = Array[String](["Scott Pilgrim Takes Off", "One Punch Man", "Akira", "Dr Stone"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_al5qk")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

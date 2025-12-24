@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://g4ihk6gdkbr0"]
+
+[ext_resource type="Resource" uid="uid://ckepbdgtnrrh4" path="res://Resources/Categories/Anime.tres" id="1_w44ee"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_y2w6u"]
+
+[resource]
+script = ExtResource("2_y2w6u")
+QuestionText = "Ile osób było w klasie 1A w My Hero Academia?"
+AnswersText = Array[String](["20", "19", "22", "24"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_w44ee")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

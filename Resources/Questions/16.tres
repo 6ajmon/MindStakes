@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://ciq3cedhholvw"]
+
+[ext_resource type="Resource" uid="uid://ckepbdgtnrrh4" path="res://Resources/Categories/Anime.tres" id="1_b76en"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_xi6i8"]
+
+[resource]
+script = ExtResource("2_xi6i8")
+QuestionText = "Która z tych postaci NIE ma głosu podkładanego przez Mamoru Miyano?"
+AnswersText = Array[String](["Shouto Todoroki (MHA)", "Light Yagami (Death Note)", "Ling Yao (FMAB)", "Okabe Rintarou (Steins;Gate)"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_b76en")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

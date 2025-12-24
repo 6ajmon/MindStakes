@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://cpu0cijcych0y"]
+
+[ext_resource type="Resource" uid="uid://ddfttrqxb8ege" path="res://Resources/Categories/Minecraft.tres" id="1_3fipu"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_lhgqu"]
+
+[resource]
+script = ExtResource("2_lhgqu")
+QuestionText = "Który z tych bloków daje najwięcej światła?"
+AnswersText = Array[String](["Beacon", "Pochodnia", "Piec (przepalający)", "Świeczki (4)"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_3fipu")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

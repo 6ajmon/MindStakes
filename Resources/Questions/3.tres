@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://dxx58clmsed20"]
+
+[ext_resource type="Resource" uid="uid://by4wilrchdfuh" path="res://Resources/Categories/Memy.tres" id="1_gvd1i"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_v03jw"]
+
+[resource]
+script = ExtResource("2_v03jw")
+QuestionText = "W którym roku zmarł aktor grający w Lazy Town który zaśpiewał numer We Are number one?"
+AnswersText = Array[String](["2018", "2019", "2020", "2017"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_gvd1i")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

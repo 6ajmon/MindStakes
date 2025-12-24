@@ -4,7 +4,7 @@ using System;
 [GlobalClass]
 public partial class Question : Resource
 {
-    [Export]
+    [Export(PropertyHint.MultilineText)]
     public string QuestionText { get; set; }
     [Export]
     public bool IsClosedQuestion { get; set; } = true;

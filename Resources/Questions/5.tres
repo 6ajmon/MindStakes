@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://onnbn6s1el53"]
+
+[ext_resource type="Resource" uid="uid://cqoriyv3t234d" path="res://Resources/Categories/PolskiYouTube.tres" id="1_rdebw"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_ahbxc"]
+
+[resource]
+script = ExtResource("2_ahbxc")
+QuestionText = "Jaki był dokładny adres, który zgłosiła Himel Jadwiga, gdzie paliła się styrta?"
+AnswersText = Array[String](["Lipinki Łużyckie, Łączna 43", "Łupinki Jeżyckie, Łączna 43", "Lipinki Łużyckie, Łączna 34", "Łupinki Jeżyckie, Łączna 34"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_rdebw")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://cugqorfdd6ahq"]
+
+[ext_resource type="Resource" uid="uid://cqoriyv3t234d" path="res://Resources/Categories/PolskiYouTube.tres" id="1_3jief"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_dimrk"]
+
+[resource]
+script = ExtResource("2_dimrk")
+QuestionText = "Jaki nick miał autor bloga na którym napisał PUZNO?"
+AnswersText = Array[String](["mały fan fnaf", "wojti2000", "Kropka308", "PUZNO_PL"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_3jief")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"
