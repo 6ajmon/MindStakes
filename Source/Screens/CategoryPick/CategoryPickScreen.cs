@@ -25,7 +25,7 @@ public partial class CategoryPickScreen : Control
         }
         if (RerollButton != null)
         {
-            RerollButton.Text = $"Reroll ({CategoriesManager.Instance.RerollsLeft})";
+            RerollButton.Text = $"Reroll ({GameManager.Instance.RerollCount})";
         }
     }
 
@@ -33,16 +33,16 @@ public partial class CategoryPickScreen : Control
     {
         if (RerollButton != null)
         {
-            RerollButton.Disabled = CategoriesManager.Instance.RerollsLeft <= 0;
+            RerollButton.Disabled = GameManager.Instance.RerollCount <= 0;
         }
     }
 
     public void OnRerollButtonPressed()
     {
-        if (CategoriesManager.Instance.RerollsLeft <= 0)
+        if (GameManager.Instance.RerollCount <= 0)
             return;
         CategoriesManager.Instance.SetRandomCategory();
-        CategoriesManager.Instance.RerollsLeft--;
+        GameManager.Instance.RerollCount--;
         if (CategoryButtonContainer != null)
         {
             CategoryButtonContainer.GetChild(0).QueueFree();
@@ -55,7 +55,7 @@ public partial class CategoryPickScreen : Control
         }
         if (RerollButton != null)
         {
-            RerollButton.Text = $"Reroll ({CategoriesManager.Instance.RerollsLeft})";
+            RerollButton.Text = $"Reroll ({GameManager.Instance.RerollCount})";
         }
     }
 }

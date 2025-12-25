@@ -7,7 +7,7 @@ public partial class BettingTeamCard : TeamCard
     public override void _Ready()
     {
         base._Ready();
-        BetAmountSpinBox.MaxValue = TeamData.Score > 10 ? 10 : TeamData.Score;
+        BetAmountSpinBox.MaxValue = TeamData.Score > GameManager.Instance.MaxBetAmount ? GameManager.Instance.MaxBetAmount : TeamData.Score;
     }
 
     public void OnBettingSpinBoxValueChanged(double value)

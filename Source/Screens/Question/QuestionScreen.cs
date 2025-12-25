@@ -131,7 +131,7 @@ public partial class QuestionScreen : Control
         }
     }
 
-    public async void RevealAnswer()
+    public void RevealAnswer()
     {
         if (_correctAnswerBox != null)
         {

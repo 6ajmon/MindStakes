@@ -41,6 +41,8 @@ public partial class ScoreScreen : Control
 
     private void OnReadyButtonPressed()
     {
+        QuestionsManager.Instance.RemoveCurrentQuestion();
+        GameManager.Instance.RerollCount = GameManager.Instance.InitialRerollCount;
         GameManager.Instance.NextRound();
         TeamsManager.Instance.NextInitialTeam();
         TeamsManager.Instance.ResetBets();

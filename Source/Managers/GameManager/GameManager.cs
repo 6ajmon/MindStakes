@@ -17,6 +17,11 @@ public partial class GameManager : Node
     public int RoundCount { get; set; } = 0;
     public int MaxRounds { get; set; } = 10;
 
+    public int MaxBetAmount { get; set; } = 20;
+    public float StartingScore { get; set; } = 100f;
+    public int InitialRerollCount { get; set; } = 3;
+    public int RerollCount { get; set; } = 3;
+
     public ulong GameSeed { get; private set; }
 
     public override void _Ready()

@@ -6,8 +6,7 @@ public partial class CategoriesManager : Node
     public static CategoriesManager Instance => ((SceneTree)Engine.GetMainLoop()).Root.GetNode<CategoriesManager>("CategoriesManager");
 
     public List<Category> Categories { get; private set; } = new();
-    public Category RandomCategory {get; private set; }
-    public int RerollsLeft { get; set; } = 166;
+    public Category RandomCategory {get; set; }
     public override void _Ready()
     {
         LoadCategories();
@@ -48,7 +47,7 @@ public partial class CategoriesManager : Node
     {
         var validCategories = Categories.Where(c => QuestionsManager.Instance.HasQuestionsForCategory(c)).ToList();
 
-        if (validCategories.Count == 0 || RerollsLeft <= 0)
+        if (validCategories.Count == 0 || GameManager.Instance.RerollCount <= 0)
         {
             RandomCategory = null;
             return;

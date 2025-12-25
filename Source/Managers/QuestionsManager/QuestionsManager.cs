@@ -74,6 +74,14 @@ public partial class QuestionsManager : Node
 
         var randomIndex = GD.Randi() % availableQuestions.Count;
         RandomQuestion = availableQuestions[(int)randomIndex];
-        Questions.Remove(RandomQuestion);
+    }
+
+    public void RemoveCurrentQuestion()
+    {
+        if (RandomQuestion != null)
+        {
+            Questions.Remove(RandomQuestion);
+            RandomQuestion = null;
+        }
     }
 }

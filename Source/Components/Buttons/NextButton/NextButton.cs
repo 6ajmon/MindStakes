@@ -11,7 +11,7 @@ public partial class NextButton : Button
     {
         Pressed += OnPressed;
     }
-    public async void OnPressed()
+    public void OnPressed()
     {
         if (!string.IsNullOrEmpty(ScenePath))
         {

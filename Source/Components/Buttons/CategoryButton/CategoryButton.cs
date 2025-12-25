@@ -24,6 +24,8 @@ public partial class CategoryButton : Button
     }
     public void OnPressed()
     {
+        CategoriesManager.Instance.RandomCategory = Category;
+        QuestionsManager.Instance.SetRandomQuestion();
         ChangeScene();
     }
 

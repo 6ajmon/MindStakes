@@ -42,7 +42,7 @@ public partial class TeamsManager : Node
             Id = Teams.Count,
             TeamName = "Team " + (Teams.Count + 1),
             Color = UniqueColors[Teams.Count % UniqueColors.Count],
-            Score = 100f
+            Score = GameManager.Instance.StartingScore
         };
         Teams.Add(newTeam);
         return newTeam;
