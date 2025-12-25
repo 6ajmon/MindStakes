@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://w2h3k833mfpi"]
+
+[ext_resource type="Resource" uid="uid://djtkty2kypfdw" path="res://Resources/Categories/LoreLeague.tres" id="1_lbqnd"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_rqebh"]
+
+[resource]
+script = ExtResource("2_rqebh")
+QuestionText = "Jaki gatunek NIE zaliczymy do Wyniesionych?"
+AnswersText = Array[String](["Aspekt", "God-warrior", "Darkin", "Baccai"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_lbqnd")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

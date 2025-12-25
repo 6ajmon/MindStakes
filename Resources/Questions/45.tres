@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://80s410cmg2c0"]
+
+[ext_resource type="Resource" uid="uid://ddfttrqxb8ege" path="res://Resources/Categories/Minecraft.tres" id="1_qc8sf"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_hhcvi"]
+
+[resource]
+script = ExtResource("2_hhcvi")
+QuestionText = "Ile minimum obsydianu potrzeba do zrobienia Enchanting Table i portalu do Netheru?"
+AnswersText = Array[String](["14", "18", "12", "16"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_qc8sf")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://bveu1oyed1tp0"]
+
+[ext_resource type="Resource" uid="uid://by4wilrchdfuh" path="res://Resources/Categories/Memy.tres" id="1_6u5du"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_2o07l"]
+
+[resource]
+script = ExtResource("2_2o07l")
+QuestionText = "Z czego była postać Ugandan Knuckles z mema Do you know da wae?"
+AnswersText = Array[String](["Sonic the Hedgehog", "Mario", "Pokemon", "Animal Crossing"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_6u5du")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://caqy4epjbmfc7"]
+
+[ext_resource type="Resource" uid="uid://djtkty2kypfdw" path="res://Resources/Categories/LoreLeague.tres" id="1_dwj8l"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_4rou1"]
+
+[resource]
+script = ExtResource("2_4rou1")
+QuestionText = "Która postać z League of Legends została hostem dla darkina Zaahen?"
+AnswersText = Array[String](["Xin Zhao", "Varus", "Darius", "Żadna grywalna postać"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_dwj8l")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

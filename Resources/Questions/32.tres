@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://bgasbukt0n4v"]
+
+[ext_resource type="Resource" uid="uid://djtkty2kypfdw" path="res://Resources/Categories/LoreLeague.tres" id="1_rqmow"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_hslun"]
+
+[resource]
+script = ExtResource("2_hslun")
+QuestionText = "Co jest uznawane za punkt orientacyjny (0) na skali czasu w kalendarzu używanym w uniwersum League of Legends?"
+AnswersText = Array[String](["Założenie Noxus", "Założenie Shurimy", "Narodzenie Ryze", "Zapieczętowanie Mordekaisera"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_rqmow")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

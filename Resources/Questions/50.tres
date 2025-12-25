@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://bse3lu3skuc5b"]
+
+[ext_resource type="Resource" uid="uid://b3frp322s3ofp" path="res://Resources/Categories/Muzyka.tres" id="1_d5yjm"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_ur3vc"]
+
+[resource]
+script = ExtResource("2_ur3vc")
+QuestionText = "Jakie zaburzenie miał Scatman Jhon?"
+AnswersText = Array[String](["Jąkanie", "Zespół Tourette'a", "Oligofazja", "Dyslalia"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_d5yjm")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

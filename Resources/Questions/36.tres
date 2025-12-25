@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://d0or358tptfu1"]
+
+[ext_resource type="Resource" uid="uid://cqoriyv3t234d" path="res://Resources/Categories/PolskiYouTube.tres" id="1_0eob4"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_3iva3"]
+
+[resource]
+script = ExtResource("2_3iva3")
+QuestionText = "Której czekolady bohaterem znanej reklamy był Wesoły Kostek?"
+AnswersText = Array[String](["Alpen Gold", "Schogetten", "Wedel", "Goplana"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_0eob4")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://b8ob2r4bdabtr"]
+
+[ext_resource type="Resource" uid="uid://cnp0tbt3ysi7e" path="res://Resources/Categories/RandomWikipedia.tres" id="1_fvppq"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_445e5"]
+
+[resource]
+script = ExtResource("2_445e5")
+QuestionText = "Kto jako pierwszy opisał fenomen odruchu kichania spowodowanego światłem słonecznym?"
+AnswersText = Array[String](["Arystoteles", "Sokrates", "Iwan Pawłow", "Achoris"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_fvppq")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

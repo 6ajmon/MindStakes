@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://3pw2xl44mxjx"]
+
+[ext_resource type="Resource" uid="uid://by4wilrchdfuh" path="res://Resources/Categories/Memy.tres" id="1_75es0"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_3uqt6"]
+
+[resource]
+script = ExtResource("2_3uqt6")
+QuestionText = "W którym roku został pierwszy raz upublicziony oryginalny rysunek Trollface?"
+AnswersText = Array[String](["2008", "2006", "2005", "2007"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_75es0")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

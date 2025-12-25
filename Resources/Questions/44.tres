@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://bnx1ogssmlgjm"]
+
+[ext_resource type="Resource" uid="uid://b3frp322s3ofp" path="res://Resources/Categories/Muzyka.tres" id="1_7skdt"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_ompqj"]
+
+[resource]
+script = ExtResource("2_ompqj")
+QuestionText = "Z jakich znanych artystów składa się muzyczna grupa hip-hopowa Tworzywo Sztuczne?"
+AnswersText = Array[String](["Fisz i Emade", "Mamut", "Słoń", "To jest ksywka jednego artysty"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_7skdt")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

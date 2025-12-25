@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://83vixunp48xu"]
+
+[ext_resource type="Resource" uid="uid://bpvkudokfmk2v" path="res://Resources/Categories/Polityka.tres" id="1_56myg"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_2mhp4"]
+
+[resource]
+script = ExtResource("2_2mhp4")
+QuestionText = "Który znany polityk był w programie Szansa na sukces?"
+AnswersText = Array[String](["Donald Tusk", "Szymon Hołownia", "Rafał Trzaskowski", "Radosław Sikorski"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_56myg")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

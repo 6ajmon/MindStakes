@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://chhat5ahwenqw"]
+
+[ext_resource type="Resource" uid="uid://djtkty2kypfdw" path="res://Resources/Categories/LoreLeague.tres" id="1_5o3gg"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_fxhfw"]
+
+[resource]
+script = ExtResource("2_fxhfw")
+QuestionText = "Który okres w Lore League of Legends był najwcześniej?"
+AnswersText = Array[String](["Założenie Freljordu", "Złota era Shurimy", "Wojny Pustki", "Wojny Runiczne"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_5o3gg")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

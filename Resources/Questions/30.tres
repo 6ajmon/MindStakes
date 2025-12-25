@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://glm40vvvfjvh"]
+
+[ext_resource type="Resource" uid="uid://cqoriyv3t234d" path="res://Resources/Categories/PolskiYouTube.tres" id="1_5qx47"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_ouvto"]
+
+[resource]
+script = ExtResource("2_ouvto")
+QuestionText = "W którym województwie skakał Paweł Jumper?"
+AnswersText = Array[String](["kujawsko-pomorskim", "pomorskim", "wielkopolskim", "zachodniopomorskim"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_5qx47")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

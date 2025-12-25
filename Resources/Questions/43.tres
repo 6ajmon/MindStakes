@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://c7qejxitc3gca"]
+
+[ext_resource type="Resource" uid="uid://cnp0tbt3ysi7e" path="res://Resources/Categories/RandomWikipedia.tres" id="1_0tjkj"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_r113l"]
+
+[resource]
+script = ExtResource("2_r113l")
+QuestionText = "Czy osoby LGBT mogą służyć w wojsku w Polsce?"
+AnswersText = Array[String](["Tylko LGB", "Tak", "Tylko GB", "Nie"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_0tjkj")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

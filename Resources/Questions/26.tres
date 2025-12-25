@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://7btxsn012w6q"]
+
+[ext_resource type="Resource" uid="uid://bpvkudokfmk2v" path="res://Resources/Categories/Polityka.tres" id="1_d1o1g"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_xjssh"]
+
+[resource]
+script = ExtResource("2_xjssh")
+QuestionText = "Który polityk pokazał się na konwencie fantastyki w Rękawicy Nieskonczoności?"
+AnswersText = Array[String](["Janusz Korwin-Mikke", "Mateusz Morawiecki", "Jarosław Kaczyński", "Grzegorz Braun"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_d1o1g")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

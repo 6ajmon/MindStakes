@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://5irtfbsvyomx"]
+
+[ext_resource type="Resource" uid="uid://cnp0tbt3ysi7e" path="res://Resources/Categories/RandomWikipedia.tres" id="1_brapb"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_g0wf2"]
+
+[resource]
+script = ExtResource("2_g0wf2")
+QuestionText = "Jak nazywa się muzułmańska alternatywa lalki Barbie?"
+AnswersText = Array[String](["Fulla", "Barbi", "Lueba", "Aimra"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_brapb")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://c4ccaa1anfhgx"]
+
+[ext_resource type="Resource" uid="uid://cnp0tbt3ysi7e" path="res://Resources/Categories/RandomWikipedia.tres" id="1_xll0k"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_bnpuw"]
+
+[resource]
+script = ExtResource("2_bnpuw")
+QuestionText = "Jaki wzór chemiczny ma Nadjodan potasu?"
+AnswersText = Array[String](["KIO4", "KClO4", "NaIO4", "KIO3"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_xll0k")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

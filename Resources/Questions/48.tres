@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://bvkoka8v35doe"]
+
+[ext_resource type="Resource" uid="uid://djtkty2kypfdw" path="res://Resources/Categories/LoreLeague.tres" id="1_01lup"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_o4hqy"]
+
+[resource]
+script = ExtResource("2_o4hqy")
+QuestionText = "Kto obecnie NIE należy do Zakonu Kinkou?"
+AnswersText = Array[String](["Akali", "Shen", "Yunara", "Kennen"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_01lup")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

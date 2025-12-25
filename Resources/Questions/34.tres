@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://b0vprlks4qsgo"]
+
+[ext_resource type="Resource" uid="uid://djtkty2kypfdw" path="res://Resources/Categories/LoreLeague.tres" id="1_pwxtr"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_lwl0k"]
+
+[resource]
+script = ExtResource("2_lwl0k")
+QuestionText = "Demonem czego nazywany jest Ashlesh z League of Legends?"
+AnswersText = Array[String](["Szczęścia", "Strachu", "Sekretów", "Uzależnień"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_pwxtr")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"
