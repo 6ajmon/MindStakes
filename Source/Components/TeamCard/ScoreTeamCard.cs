@@ -21,6 +21,7 @@ public partial class ScoreTeamCard : TeamCard
 
     public void UpdateButtonsAndText()
     {
+        bool isFraudMode = GameManager.Instance.CurrentGameModeIndex == (int)GameManager.GameModeEnum.Fraud;
         RemovePointsButton.Text = $"- {betPoints}"; 
         AddPointsButton.Text = $"+ {betPoints}";
         PointsSpinBox.Value = TeamData.Score;
@@ -32,15 +33,15 @@ public partial class ScoreTeamCard : TeamCard
         if (TeamData.Id == TeamsManager.Instance.CurrentTeam.Id && 
             TeamData.Id == TeamsManager.Instance.InitialTeam.Id)
         {
-            TeamTypeLabel.Text = "Początkowy, Wybrany";
+            TeamTypeLabel.Text = isFraudMode ? "Odpowiadający" : "Odpowiadający";
         }
         else if (TeamData.Id == TeamsManager.Instance.InitialTeam.Id)
         {
-            TeamTypeLabel.Text = "Początkowy";
+            TeamTypeLabel.Text = isFraudMode ? "Odpowiadający" : "Wyznaczający";
         }
         else if (TeamData.Id == TeamsManager.Instance.CurrentTeam.Id)
         {
-            TeamTypeLabel.Text = "Wybrany";
+            TeamTypeLabel.Text = isFraudMode ? "Sprawdzający" : "Odpowiadający";
         }
         else
         {

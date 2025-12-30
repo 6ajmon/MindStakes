@@ -59,6 +59,7 @@ layout_mode = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="Panel/PanelContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_1qknh")
 
 [node name="VBoxContainer" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/PanelContainer"]
@@ -85,7 +86,7 @@ vertical_alignment = 1
 [node name="RoundCountLabel" parent="Panel/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer" instance=ExtResource("5_1qknh")]
 layout_mode = 2
 
-[node name="PanelContainer2" type="PanelContainer" parent="Panel/PanelContainer/VBoxContainer"]
+[node name="PanelContainer2" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 metadata/_edit_use_anchors_ = true
@@ -103,7 +104,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 8
 
-[node name="Panel" type="Panel" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -111,11 +112,11 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Panel3" type="Panel" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="ButtonsContainer" type="PanelContainer" parent="Panel/PanelContainer/VBoxContainer"]
+[node name="ButtonsContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 160)
 layout_mode = 2
 

@@ -70,23 +70,23 @@ text = "PICK GAME MODE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PanelContainer2" type="PanelContainer" parent="Panel/PanelContainer/VBoxContainer"]
+[node name="PanelContainer2" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 metadata/_edit_use_anchors_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2"]
 layout_mode = 2
-theme_override_constants/margin_left = 16
+theme_override_constants/margin_left = 32
 theme_override_constants/margin_top = 16
-theme_override_constants/margin_right = 16
+theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 16
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_constants/separation = 8
+theme_override_constants/separation = 32
 
 [node name="Panel" type="Panel" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -111,30 +111,21 @@ size_flags_horizontal = 3
 layout_mode = 1
 GameModeType = 2
 
-[node name="ButtonsContainer" type="PanelContainer" parent="Panel/PanelContainer/VBoxContainer"]
+[node name="ButtonsContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 160)
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
 [node name="MarginContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_constants/margin_left = 64
-theme_override_constants/margin_top = 16
-theme_override_constants/margin_right = 64
-theme_override_constants/margin_bottom = 16
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_constants/separation = 64
+
+[node name="MarginContainer3" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3

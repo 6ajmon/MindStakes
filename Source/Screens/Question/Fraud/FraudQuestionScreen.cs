@@ -1,15 +1,15 @@
 using Godot;
 using System;
 
-public partial class SabotageQuestionScreen : QuestionScreen
+public partial class FraudQuestionScreen : QuestionScreen
 {
-    
     [Export] public MarginContainer TeamCardContainer { get; set; }
     [Export] public PackedScene TeamCardScene { get; set; }
     [Export] public Button CycleTeamLeftButton { get; set; }
     [Export] public Button CycleTeamRightButton { get; set; }
     [Export] public SpinBox TeamIndexSpinBox { get; set; }
     private int AnswerPoints { get; set; } = 20;
+
     public override void _Ready()
     {
         base._Ready();
@@ -25,7 +25,7 @@ public partial class SabotageQuestionScreen : QuestionScreen
         }
         else
         {
-            GD.PrintErr("TeamCardContainer is null in SabotageQuestionScreen");
+            GD.PrintErr("TeamCardContainer is null in FraudQuestionScreen");
         }
         CycleTeamLeftButton.Pressed += OnCycleTeamLeftButtonPressed;
         CycleTeamRightButton.Pressed += OnCycleTeamRightButtonPressed;
@@ -75,12 +75,12 @@ public partial class SabotageQuestionScreen : QuestionScreen
         var currentTeam = TeamsManager.Instance.CurrentTeam;
         if (initialTeam == currentTeam)
         {
-            initialTeam.CurrentBet = AnswerPoints;
+            initialTeam.CurrentBet = AnswerPoints / 2;
         }
         else
         {
-            currentTeam.CurrentBet = AnswerPoints;
-            initialTeam.CurrentBet = AnswerPoints/2;
+            currentTeam.CurrentBet = AnswerPoints / 2;
+            initialTeam.CurrentBet = AnswerPoints;
         }
     }
 }

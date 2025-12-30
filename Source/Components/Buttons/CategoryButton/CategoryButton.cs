@@ -10,6 +10,8 @@ public partial class CategoryButton : Button
     public string BettingScenePath { get; set; }
     [Export(PropertyHint.File, "*.tscn")]
     public string SabotageScenePath { get; set; }
+    [Export(PropertyHint.File, "*.tscn")]
+    public string FraudScenePath { get; set; }
     public override void _Ready()
     {
         Pressed += OnPressed;
@@ -44,7 +46,7 @@ public partial class CategoryButton : Button
                 SceneManager.Instance.ReplaceWithNewScene(SabotageScenePath);
                 break;
             case (int)GameManager.GameModeEnum.Fraud:
-                SceneManager.Instance.ReplaceWithNewScene(QuestionScenePath);
+                SceneManager.Instance.ReplaceWithNewScene(FraudScenePath);
                 break;
             default:
                 GD.PrintErr("Unknown Game Mode Index");

@@ -35,7 +35,7 @@ theme = ExtResource("1_r684w")
 script = ExtResource("2_f66h6")
 ScoreTeamCardScene = ExtResource("3_ykrth")
 TeamCardsContainer = NodePath("PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/ScrollContainer/TeamCardsContainer")
-ReadyButton = NodePath("PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/HBoxContainer3/ReadyButton")
+ReadyButton = NodePath("PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/HBoxContainer3/MarginContainer/ReadyButton")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -131,8 +131,16 @@ theme_override_constants/separation = 64
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="ReadyButton" parent="PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/HBoxContainer3" instance=ExtResource("4_os0li")]
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 16
+
+[node name="ReadyButton" parent="PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/HBoxContainer3/MarginContainer" instance=ExtResource("4_os0li")]
 layout_mode = 2
 ScenePath = "uid://dgfhb2eeni3rs"
 
-[connection signal="pressed" from="PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/HBoxContainer3/ReadyButton" to="." method="OnReadyButtonPressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/HBoxContainer3/MarginContainer/ReadyButton" to="." method="OnReadyButtonPressed"]

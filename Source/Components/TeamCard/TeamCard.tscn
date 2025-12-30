@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cohehnr7q4v1v" path="res://Source/Components/TeamCard/TeamCard.cs" id="1_12n43"]
 
 [node name="TeamCard" type="Panel" node_paths=PackedStringArray("TeamNameLineEdit", "ColorPicker")]
-custom_minimum_size = Vector2(450, 450)
+custom_minimum_size = Vector2(450, 300)
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.25
 theme = ExtResource("1_5ftts")
