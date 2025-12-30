@@ -22,7 +22,7 @@ public partial class GameManager : Node
     [Export] public int InitialRerollCount { get; set; } = 1;
     public int RerollCount { get; set; } = 1;
     [Export] public int QuestionTime { get; set; } = 6;
-
+    [Export] public bool IsShaderedBackgroundEnabled { get; set; } = true;
     public ulong GameSeed { get; private set; }
 
     public override void _Ready()

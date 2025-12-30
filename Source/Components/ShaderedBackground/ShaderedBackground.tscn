@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://gvqucvlox5kx"]
+[gd_scene load_steps=4 format=3 uid="uid://gvqucvlox5kx"]
 
 [ext_resource type="Shader" uid="uid://dhm07ouwcxicm" path="res://Source/Shaders/Background.gdshader" id="1_awdap"]
+[ext_resource type="Script" uid="uid://fqmms84dwy2f" path="res://Source/Components/ShaderedBackground/ShaderedBackground.cs" id="2_bpaqp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_t84kq"]
 shader = ExtResource("1_awdap")
@@ -16,10 +17,11 @@ shader_parameter/spin_amount = 0.25
 shader_parameter/pixel_filter = 740.0
 shader_parameter/is_rotating = false
 
-[node name="Panel" type="ColorRect"]
+[node name="ShaderedBackground" type="ColorRect"]
 material = SubResource("ShaderMaterial_t84kq")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("2_bpaqp")
