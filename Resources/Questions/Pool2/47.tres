@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://8sl7mfi8kxde"]
+
+[ext_resource type="Resource" uid="uid://b3frp322s3ofp" path="res://Resources/Categories/Muzyka.tres" id="1_x8olw"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="3_3qoah"]
+
+[resource]
+script = ExtResource("3_3qoah")
+QuestionText = " Jak nazywa się najlepiej sprzedający się album muzyczny wszech czasów?"
+AnswersText = Array[String](["Thriller", " Back in Black", " The Dark Side of the Moon", "Bad"])
+Category = ExtResource("1_x8olw")
+FunFact = " Wydana w 1982 roku płyta Michaela Jacksona jako pierwsza w historii przekroczyła próg 100 milionów sprzedanych egzemplarzy na całym świecie."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

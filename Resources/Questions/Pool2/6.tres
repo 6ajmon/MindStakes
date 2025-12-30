@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://ckr6qnnkkhs2r"]
+
+[ext_resource type="Resource" uid="uid://cgj4i171f8ors" path="res://Resources/Categories/Chemistry.tres" id="1_33ud6"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_sctbc"]
+
+[resource]
+script = ExtResource("2_sctbc")
+QuestionText = "Ile jest niemetali?"
+AnswersText = Array[String](["18", "12", "9", "25"])
+Category = ExtResource("1_33ud6")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

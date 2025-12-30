@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://b2lxa3ksv05qh"]
+
+[ext_resource type="Resource" uid="uid://cgj4i171f8ors" path="res://Resources/Categories/Chemistry.tres" id="1_6u1vi"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_mtl22"]
+
+[resource]
+script = ExtResource("2_mtl22")
+QuestionText = "Który minerał o wzorze chemicznym SiO2 stanowi wzorzec twardości 7 w skali Mohsa?"
+AnswersText = Array[String](["Kwarc", "Kalcyt", "Skaleń", "Apatyt"])
+Category = ExtResource("1_6u1vi")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://c40lelcq2k68"]
+
+[ext_resource type="Resource" uid="uid://rtboy44op3gh" path="res://Resources/Categories/History.tres" id="1_flb0m"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_24i1q"]
+
+[resource]
+script = ExtResource("2_24i1q")
+QuestionText = "W którym wieku umarł Czyngis-chan, zwany takze Temudżynem?"
+AnswersText = Array[String](["XIII", "XII", "XI", "XIV"])
+Category = ExtResource("1_flb0m")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

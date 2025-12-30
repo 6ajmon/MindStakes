@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://duu6dcnthecs8"]
+
+[ext_resource type="Resource" uid="uid://b4ahg1p8bcg02" path="res://Resources/Categories/Biology.tres" id="1_gx1gg"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_ad88d"]
+
+[resource]
+script = ExtResource("2_ad88d")
+QuestionText = "Jaki jest największy narząd ludzkiego ciała?"
+AnswersText = Array[String](["Skóra", "Wątroba", " Jelito cienkie", "Mózg"])
+Category = ExtResource("1_gx1gg")
+FunFact = "Skóra dorosłego człowieka waży kilka kilogramów i zajmuje powierzchnię od 1,5 do 2 metrów kwadratowych. Choć tradycyjnie to ją uznaje się za największy narząd, współczesne badania wskazują na strukturę o nazwie interstitium, która może zajmować nawet 20% objętości całego ciała."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

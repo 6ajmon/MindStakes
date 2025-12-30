@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://c4n4bbxkrogc"]
+
+[ext_resource type="Resource" uid="uid://b4ahg1p8bcg02" path="res://Resources/Categories/Biology.tres" id="1_464y2"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_irau6"]
+
+[resource]
+script = ExtResource("2_irau6")
+QuestionText = "W jakich komórkach roślin typu C4 dochodzi do ostatecznego związania CO2 w cyklu Calvina?"
+AnswersText = Array[String]([" Pochew okołowiązkowych", "Mezofilu", " Skórki dolnej", "Włośnikach"])
+Category = ExtResource("1_464y2")
+FunFact = "Rośliny C4 (np. kukurydza) wykształciły ten mechanizm, aby zminimalizować proces fotooddychania i wydajniej przeprowadzać fotosyntezę w wysokich temperaturach."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

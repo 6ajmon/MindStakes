@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://bywc2mmihpn5q"]
+
+[ext_resource type="Resource" uid="uid://b0i36vk6wvm5q" path="res://Resources/Categories/Jedzenie.tres" id="1_b25li"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_2n71t"]
+
+[resource]
+script = ExtResource("2_2n71t")
+QuestionText = "Który z wymienionych smaków jest sygnałem dla mózgu, że spożywany pokarm jest bogaty w białko?"
+AnswersText = Array[String](["Umami", "Słodki", "Słony", "Gorzki"])
+Category = ExtResource("1_b25li")
+FunFact = " Receptory umami reagują na aminokwasy, co ewolucyjnie pozwalało ludziom identyfikować wysokobiałkowe i odżywcze źródła pożywienia."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

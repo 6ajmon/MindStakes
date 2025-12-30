@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://kda8lthpimlw"]
+
+[ext_resource type="Resource" uid="uid://rtboy44op3gh" path="res://Resources/Categories/History.tres" id="1_r1iko"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_dayhq"]
+
+[resource]
+script = ExtResource("2_dayhq")
+QuestionText = " Ile minut trwała najkrótsza wojna w historii?"
+AnswersText = Array[String]([" 38 minut", " Sześć dni", " Dziesięć dni", " Dwie godziny"])
+Category = ExtResource("1_r1iko")
+FunFact = " Wojna angielsko-zanzibarska z 1896 roku zakończyła się niemal natychmiast po tym, jak brytyjskie okręty zniszczyły pałac sułtana i jego jedyny okręt wojenny."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

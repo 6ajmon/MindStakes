@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://b36uk7oygnh5g"]
+
+[ext_resource type="Resource" uid="uid://bydeieg4hrnev" path="res://Resources/Categories/Astronomy.tres" id="1_12ikk"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_cmv3l"]
+
+[resource]
+script = ExtResource("2_cmv3l")
+QuestionText = "Gdzie znajduje się najzimniejsze znane miejsce w całym Wszechświecie?"
+AnswersText = Array[String]([" Mgławica Bumerang", " Wnętrze czarnej dziury", " Ciemna strona Plutona", " Mgławica Oriona"])
+Category = ExtResource("1_12ikk")
+FunFact = " W tej mgławicy temperatura wynosi zaledwie 1 Kelwin (-272 °C), co czyni ją chłodniejszą nawet od mikrofalowego promieniowania tła Wszechświata."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

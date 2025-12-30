@@ -7,8 +7,5 @@
 script = ExtResource("2_cf2he")
 QuestionText = "W jakiej kategorii speedrun Minecraft rekord wynosi 16m 59s"
 AnswersText = Array[String](["Full Inventory Crafting Tables", "Random Seed Glitchless bez F3", "Deepslate Emerald Ore", "Elytra"])
-IsBettingGameQuestion = true
-IsSabotageGameQuestion = true
-IsFraudGameQuestion = true
 Category = ExtResource("1_4cycc")
 metadata/_custom_type_script = "uid://d1obhtdryuoak"

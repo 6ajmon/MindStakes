@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://b5hwmpqyo5uoi"]
+
+[ext_resource type="Resource" uid="uid://b0i36vk6wvm5q" path="res://Resources/Categories/Jedzenie.tres" id="1_48326"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_o36xc"]
+
+[resource]
+script = ExtResource("2_o36xc")
+QuestionText = "W jakiej skali mierzy się poziom ostrości potraw oraz zawartość kapsaicyny w paprykach?"
+AnswersText = Array[String]([" Skala Scoville’a", " Skala Beauforta", " Skala Richtera", " Skala Kelvina"])
+Category = ExtResource("1_48326")
+FunFact = " Skalę tę wprowadził w 1912 roku amerykański chemik, a czysta kapsaicyna osiąga w niej 16 milionów jednostek."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

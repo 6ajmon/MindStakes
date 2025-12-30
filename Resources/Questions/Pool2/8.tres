@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://mhph3gn1afvf"]
+
+[ext_resource type="Resource" uid="uid://cgj4i171f8ors" path="res://Resources/Categories/Chemistry.tres" id="1_qont3"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_2h07f"]
+
+[resource]
+script = ExtResource("2_2h07f")
+QuestionText = "Jaki jest główny składnik patyny?"
+AnswersText = Array[String](["Hydroksowęglan miedzi(II)", "Wodorotlenek żelaza(III)", "Wodorotlenek magnezu", "Chlorek kobaltu(II)"])
+Category = ExtResource("1_qont3")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

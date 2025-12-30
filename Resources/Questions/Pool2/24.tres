@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://cb5qx5d2sx3a2"]
+
+[ext_resource type="Resource" uid="uid://cl0xvvkt5quxf" path="res://Resources/Categories/Math.tres" id="1_klpq4"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_h5mas"]
+
+[resource]
+script = ExtResource("2_h5mas")
+QuestionText = " Jaka jest reszta dzielenia wielomianu W(z) = z^4 + z^2 + 1 przez z-i? gdzie z e C"
+AnswersText = Array[String](["1", "0", "-1", "Nie można dzielić przez (z - i)"])
+Category = ExtResource("1_klpq4")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

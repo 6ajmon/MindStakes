@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://cjyha878j8wvu"]
+
+[ext_resource type="Resource" uid="uid://rtboy44op3gh" path="res://Resources/Categories/History.tres" id="1_dr610"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_l2k8o"]
+
+[resource]
+script = ExtResource("2_l2k8o")
+QuestionText = " Kim był Stanisław Pietrow, znany jako \"człowiek, który uratował świat\"?"
+AnswersText = Array[String]([" Radzieckim oficerem wczesnego ostrzegania", " Amerykańskim szpiegiem w Moskwie", " Twórcą pierwszej bomby atomowej", " Dyplomatą ONZ podczas kryzysu"])
+Category = ExtResource("1_dr610")
+FunFact = " W 1983 roku Pietrow zignorował alarm o rzekomym ataku jądrowym z USA, uznając go słusznie za błąd systemu, czym zapobiegł wybuchowi III wojny światowej."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

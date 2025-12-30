@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://nt50woqs70qf"]
+
+[ext_resource type="Resource" uid="uid://cqoriyv3t234d" path="res://Resources/Categories/PolskiYouTube.tres" id="1_sdptt"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_3tk4k"]
+
+[resource]
+script = ExtResource("2_3tk4k")
+QuestionText = "Po czym wspinał się bohater słynnego filmu „Jestem Hardkorem”?"
+AnswersText = Array[String]([" Po kablu od piorunochronu", " Po rynnie bloku", "Po kablu od internetu", "Po kablu satelitarnym"])
+Category = ExtResource("1_sdptt")
+FunFact = "Nagranie z 2009 roku przedstawia Konrada, który wspina się na blok, podczas gdy sąsiadka krzyczy, że „urwie on kabel od internetu”."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

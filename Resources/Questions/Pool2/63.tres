@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=4 format=3 uid="uid://cv7vqopgeatgt"]
+
+[ext_resource type="Resource" uid="uid://by4wilrchdfuh" path="res://Resources/Categories/Memy.tres" id="1_8fhmp"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_l8p3v"]
+[ext_resource type="Texture2D" uid="uid://cin8yelklcxfh" path="res://Assets/Images/hide-the-pain-harold-pain.png" id="2_wsi37"]
+
+[resource]
+script = ExtResource("2_l8p3v")
+QuestionText = "Jak nazywa się mężczyzna znany jako \"Hide the Pain Harold\"?"
+AnswersText = Array[String](["András Arató", "Tamás Sulyok", " Viktor Orbán", "Ádám Récsey"])
+Category = ExtResource("1_8fhmp")
+FunFact = "Harold z zawodu jest inżynierem elektrykiem i pochodzi z Węgier, a sławę zyskał dzięki sesji zdjęciowej do bazy zdjęć stockowych."
+Photo = ExtResource("2_wsi37")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

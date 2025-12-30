@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://cdmap6fm0fa1a"]
+
+[ext_resource type="Resource" uid="uid://b4ahg1p8bcg02" path="res://Resources/Categories/Biology.tres" id="1_8f27w"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_slv37"]
+
+[resource]
+script = ExtResource("2_slv37")
+QuestionText = "Która grupa krwi jest nazywana uniwersalnym dawcą?"
+AnswersText = Array[String]([" 0 Rh-", " AB Rh+", " AB Rh-", " 0 Rh+"])
+Category = ExtResource("1_8f27w")
+FunFact = "Krew grupy 0 Rh- nie posiada antygenów A i B ani czynnika D, więc nie wywołuje reakcji odpornościowej."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

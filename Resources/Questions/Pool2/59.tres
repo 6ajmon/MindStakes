@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://hnaa4bp86yha"]
+
+[ext_resource type="Resource" uid="uid://cqoriyv3t234d" path="res://Resources/Categories/PolskiYouTube.tres" id="1_h8nq4"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_n54k7"]
+
+[resource]
+script = ExtResource("2_n54k7")
+QuestionText = "Jak brzmiało najsłynniejsze hasło wyborcze Krzysztofa Kononowicza z 2006 roku?"
+AnswersText = Array[String]([" Żeby nie było niczego", " Polska dla Polaków", " Prezydent wszystkich Polaków", " Zmieńmy Białystok razem"])
+Category = ExtResource("1_h8nq4")
+FunFact = " Krzysztof Kononowicz startował na prezydenta Białegostoku, a jego przemówienie w TV Jard stało się jednym z pierwszych ogromnych virali w Polsce."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

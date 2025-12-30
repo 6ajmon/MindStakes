@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=4 format=3 uid="uid://dl0vrhvnq2knr"]
+
+[ext_resource type="Resource" uid="uid://by4wilrchdfuh" path="res://Resources/Categories/Memy.tres" id="1_272yd"]
+[ext_resource type="Texture2D" uid="uid://cx5bydglhgert" path="res://Assets/Images/Charli_XCX_-_Brat_(album_cover).png" id="2_ebsho"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_ynxq6"]
+
+[resource]
+script = ExtResource("2_ynxq6")
+QuestionText = "Jaki kod szesnastkowy (Hex) ma kolor \"Brat Green\"?"
+AnswersText = Array[String](["#8ACE00", "#39FF14", "#ADFF2F", "#457095"])
+Category = ExtResource("1_272yd")
+FunFact = "Kolor ten stał się symbolem lata 2024 roku po premierze albumu \"Brat\" piosenkarki Charli XCX i wyparł popularny wcześniej styl \"clean girl\"."
+Photo = ExtResource("2_ebsho")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

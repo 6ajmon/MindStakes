@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://c15442cojiwgx"]
+
+[ext_resource type="Resource" uid="uid://cl0xvvkt5quxf" path="res://Resources/Categories/Math.tres" id="1_iwa2d"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_vnl5b"]
+
+[resource]
+script = ExtResource("2_vnl5b")
+QuestionText = "Ile rozwiązań ma równanie z^6 + z^4 + z^2 + 1 = 0, gdzie z e R"
+AnswersText = Array[String](["0", "12", "24", "6"])
+Category = ExtResource("1_iwa2d")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

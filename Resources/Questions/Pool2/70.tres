@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://dl4b60q0i5bj4"]
+
+[ext_resource type="Resource" uid="uid://b0i36vk6wvm5q" path="res://Resources/Categories/Jedzenie.tres" id="1_bfy0f"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_116r2"]
+
+[resource]
+script = ExtResource("2_116r2")
+QuestionText = "Jak nazywa się technika polegająca na wlaniu zimnego płynu na gorącą patelnię, aby rozpuścić i zebrać aromatyczne pozostałości po smażeniu mięsa?"
+AnswersText = Array[String](["Deglasowanie", " Karmelizowanie", " Blanszowanie", "Redukowanie"])
+Category = ExtResource("1_bfy0f")
+FunFact = " Płyn (wino, bulion lub woda) uwalnia skarmelizowane białka i cukry z dna naczynia, tworząc bazę do niezwykle intensywnego w smaku sosu."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

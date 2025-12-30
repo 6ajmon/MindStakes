@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://b4ipl2eo6ixmp"]
+
+[ext_resource type="Resource" uid="uid://cqoriyv3t234d" path="res://Resources/Categories/PolskiYouTube.tres" id="1_tr405"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_cwl54"]
+
+[resource]
+script = ExtResource("2_cwl54")
+QuestionText = "W jakiej produkcji internetowej z 2008 roku zadebiutowała Barbara Kwarc?"
+AnswersText = Array[String]([" Klatka B", " Blog Baśki", " Szymon Majewski Show", " Rozmowy w toku"])
+Category = ExtResource("1_tr405")
+FunFact = " Serial „Klatka B” był pionierskim polskim mockumentem, opowiadającym o specyficznych relacjach mieszkańców wrocławskiego wieżowca."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

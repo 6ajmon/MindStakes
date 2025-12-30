@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://hx5qr7fe2lq1"]
+
+[ext_resource type="Resource" uid="uid://bv5k4a5r00c3d" path="res://Resources/Categories/Geography.tres" id="1_dlxfw"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_txn8d"]
+
+[resource]
+script = ExtResource("2_txn8d")
+QuestionText = "Z czym łączy się tornado, poza powierzchnią ziemi?"
+AnswersText = Array[String](["podstawą cumulonimbusa", "podstawą stratocumulusa", "podstawą nimbostratusa", "podstawą altostratusa"])
+Category = ExtResource("1_dlxfw")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://cn7fue1nnpcy8"]
+
+[ext_resource type="Resource" uid="uid://cl0xvvkt5quxf" path="res://Resources/Categories/Math.tres" id="1_y3jcw"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_4d843"]
+
+[resource]
+script = ExtResource("2_4d843")
+QuestionText = "Czy zbiór liczb naturalnych jest większy od zbioru liczb parzystych?"
+AnswersText = Array[String](["Nie, są sobie równe", "Tak, różni się o 2*10^9 + 1 ", "Tak jest większy, ale nie można określić o ile", "Nie można tego jednoznacznie określić"])
+Category = ExtResource("1_y3jcw")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

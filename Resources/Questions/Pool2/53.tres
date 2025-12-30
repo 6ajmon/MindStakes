@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://daer8p66pktyk"]
+
+[ext_resource type="Resource" uid="uid://bydeieg4hrnev" path="res://Resources/Categories/Astronomy.tres" id="1_jd8x0"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_0ohd2"]
+
+[resource]
+script = ExtResource("2_0ohd2")
+QuestionText = "Ile wynosi przybliżona temperatura mikrofalowego promieniowania tła wypełniającego Wszechświat?"
+AnswersText = Array[String](["3 Kelwiny", "0 Kelwinów", "273 Kelwiny", " 15 Kelwinów"])
+Category = ExtResource("1_jd8x0")
+FunFact = " Dokładniej: 2,73 Kelwina. To reliktowe promieniowanie jest pozostałością po wczesnym etapie ewolucji Wszechświata i niemal idealnie pasuje do widma ciała doskonale czarnego."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

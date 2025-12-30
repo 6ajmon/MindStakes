@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://bhrbfa5dmr07h"]
+
+[ext_resource type="Resource" uid="uid://liiojtc0d1s5" path="res://Resources/Categories/Psychology.tres" id="1_ecnh8"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="3_02ie6"]
+
+[resource]
+script = ExtResource("3_02ie6")
+QuestionText = "Ile % badanych osób poraziło drugą osobę najsilniejszym, śmiertelnym wstrząsem w Eksperymencie Milgrama?"
+AnswersText = Array[String](["65%", "1%", "80%", "23%"])
+Category = ExtResource("1_ecnh8")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

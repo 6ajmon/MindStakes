@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://c0rm0y0hvn0xm"]
+
+[ext_resource type="Resource" uid="uid://b4ahg1p8bcg02" path="res://Resources/Categories/Biology.tres" id="1_i86mp"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_6grdn"]
+
+[resource]
+script = ExtResource("2_6grdn")
+QuestionText = "Który ludzki chromosom jest największy pod względem DNA?"
+AnswersText = Array[String](["1", "X", "21", "Y"])
+Category = ExtResource("1_i86mp")
+FunFact = "Chromosom 1 składa się z około 249 milionów par zasad i zawiera około 8% materiału genetycznego człowieka."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

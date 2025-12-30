@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://duq24b73kicht"]
+
+[ext_resource type="Resource" uid="uid://cl0xvvkt5quxf" path="res://Resources/Categories/Math.tres" id="1_ja8o8"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_8bxk4"]
+
+[resource]
+script = ExtResource("2_8bxk4")
+QuestionText = "Czy mogą istnieć dwie granicę jednego ciągu?"
+AnswersText = Array[String](["nie, z definicji ciągu", "tak, ale tylko pod warunkiem, że jest to ciąg malejący", "nie, z aksjomatu ciągu liczbowego ", "tak, np. e^(pi) + n!/n jest takim ciągiem"])
+Category = ExtResource("1_ja8o8")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

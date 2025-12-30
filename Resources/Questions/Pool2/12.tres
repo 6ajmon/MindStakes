@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://cc0fongmffjlo"]
+
+[ext_resource type="Resource" uid="uid://bydeieg4hrnev" path="res://Resources/Categories/Astronomy.tres" id="1_pdthe"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_ux1a1"]
+
+[resource]
+script = ExtResource("2_ux1a1")
+QuestionText = "Na podstawie jakiej zasady zero bezwzględne uznawane jest za granicę temperatury?"
+AnswersText = Array[String](["Trzecia zasada termodynamiki", "Pierwsza zasada termodynamiki", "Zasada akcji i reakcji", "Zasada bezwładności"])
+Category = ExtResource("1_pdthe")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

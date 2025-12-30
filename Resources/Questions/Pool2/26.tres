@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://pvfvvovt3e5w"]
+
+[ext_resource type="Resource" uid="uid://cl0xvvkt5quxf" path="res://Resources/Categories/Math.tres" id="1_o4oyr"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_w7pxr"]
+
+[resource]
+script = ExtResource("2_w7pxr")
+QuestionText = "Czy każdą liczbę pierwszą większa od 3 możemy określić za pomocą wzoru 6k+1 albo 6k+5? gdzie k e Z"
+AnswersText = Array[String](["Tak, wszystkie", "Nie, ponieważ wtedy byśmy znali każdą liczbę pierwszą", "Tak, ale nie pokryjemy całego zbioru, bo jest ich nieskonczoność", "Nie, bo np. liczba 6k+1=25 dla k = 4 "])
+Category = ExtResource("1_o4oyr")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

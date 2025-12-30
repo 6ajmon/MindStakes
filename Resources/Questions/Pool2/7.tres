@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://dpfdndv0ru42o"]
+
+[ext_resource type="Resource" uid="uid://cgj4i171f8ors" path="res://Resources/Categories/Chemistry.tres" id="1_xnhjp"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_tq6qv"]
+
+[resource]
+script = ExtResource("2_tq6qv")
+QuestionText = "Jaki pierwiastek nie jest metalem (chemicznie), ale jest metalem w sensie astronomicznym?"
+AnswersText = Array[String](["Fosfor", "Żelazo", "Hel", "Sód"])
+Category = ExtResource("1_xnhjp")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

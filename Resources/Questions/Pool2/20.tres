@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://bkx5yqelft67w"]
+
+[ext_resource type="Resource" uid="uid://cl0xvvkt5quxf" path="res://Resources/Categories/Math.tres" id="1_7q7od"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_swl5n"]
+
+[resource]
+script = ExtResource("2_swl5n")
+QuestionText = "Zbiór punktów wspólnych dwóch sfer, które się przecinają (nie są styczne) to:"
+AnswersText = Array[String](["Okrąg", "Elipsa (a =/= b)", "Krzywa", "Hiperbola"])
+Category = ExtResource("1_7q7od")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

@@ -22,6 +22,8 @@ public partial class QuestionScreen : Control
     private AnswerBox _correctAnswerBox;
     private float _timeLeft;
     private bool _isTimerRunning;
+    private ColorRect _funFactOverlay;
+    private Label _funFactLabel;
 
     public override void _Ready()
     {
@@ -181,6 +183,78 @@ public partial class QuestionScreen : Control
     private void OnCheckButtonPressed()
     {
         RevealAnswer();
+
+        var question = QuestionsManager.Instance.RandomQuestion;
+        if (question != null && !string.IsNullOrWhiteSpace(question.FunFact))
+        {
+            CheckButton.Text = "CIEKAWOSTKA";
+            CheckButton.Pressed -= OnCheckButtonPressed;
+            CheckButton.Pressed += OnFunFactButtonPressed;
+        }
+    }
+
+    private void OnFunFactButtonPressed()
+    {
+        if (_funFactOverlay == null) SetupFunFactUI();
+        
+        var question = QuestionsManager.Instance.RandomQuestion;
+        if (question != null)
+        {
+            _funFactLabel.Text = question.FunFact;
+            _funFactOverlay.Visible = true;
+        }
+    }
+
+    private void SetupFunFactUI()
+    {
+        _funFactOverlay = new ColorRect();
+        _funFactOverlay.Name = "FunFactOverlay";
+        _funFactOverlay.Color = new Color(0, 0, 0, 0.8f);
+        _funFactOverlay.SetAnchorsPreset(LayoutPreset.FullRect);
+        _funFactOverlay.Visible = false;
+        _funFactOverlay.ZIndex = 100;
+        AddChild(_funFactOverlay);
+
+        var panel = new PanelContainer();
+        panel.SetAnchorsPreset(LayoutPreset.Center);
+        panel.AnchorLeft = 0.5f;
+        panel.AnchorTop = 0.5f;
+        panel.AnchorRight = 0.5f;
+        panel.AnchorBottom = 0.5f;
+        panel.GrowHorizontal = GrowDirection.Both;
+        panel.GrowVertical = GrowDirection.Both;
+        panel.CustomMinimumSize = new Vector2(800, 0);
+        _funFactOverlay.AddChild(panel);
+
+        var marginContainer = new MarginContainer();
+        marginContainer.AddThemeConstantOverride("margin_top", 20);
+        marginContainer.AddThemeConstantOverride("margin_bottom", 20);
+        marginContainer.AddThemeConstantOverride("margin_left", 20);
+        marginContainer.AddThemeConstantOverride("margin_right", 20);
+        panel.AddChild(marginContainer);
+
+        var vbox = new VBoxContainer();
+        vbox.AddThemeConstantOverride("separation", 20);
+        marginContainer.AddChild(vbox);
+
+        var titleLabel = new Label();
+        titleLabel.Text = "CIEKAWOSTKA";
+        titleLabel.HorizontalAlignment = HorizontalAlignment.Center;
+        titleLabel.AddThemeFontSizeOverride("font_size", 42);
+        vbox.AddChild(titleLabel);
+
+        _funFactLabel = new Label();
+        _funFactLabel.AutowrapMode = TextServer.AutowrapMode.WordSmart;
+        _funFactLabel.HorizontalAlignment = HorizontalAlignment.Center;
+        _funFactLabel.AddThemeFontSizeOverride("font_size", 28);
+        vbox.AddChild(_funFactLabel);
+
+        var closeButton = new Button();
+        closeButton.Text = "ZAMKNIJ";
+        closeButton.CustomMinimumSize = new Vector2(200, 60);
+        closeButton.SizeFlagsHorizontal = SizeFlags.ShrinkCenter;
+        closeButton.Pressed += () => _funFactOverlay.Visible = false;
+        vbox.AddChild(closeButton);
     }
     private void OnResetTimerButtonPressed()
     {

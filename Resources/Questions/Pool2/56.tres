@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://b78cwm43ybkei"]
+
+[ext_resource type="Resource" uid="uid://bydeieg4hrnev" path="res://Resources/Categories/Astronomy.tres" id="1_g1ku0"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_jswd3"]
+
+[resource]
+script = ExtResource("2_jswd3")
+QuestionText = "Która planeta Układu Słonecznego obraca się tak wolno, że jej dzień trwa dłużej niż rok?"
+AnswersText = Array[String](["Wenus", "Merkury", "Uran", "Mars"])
+Category = ExtResource("1_g1ku0")
+FunFact = " Pełny obrót Wenus wokół własnej osi zajmuje 243 dni ziemskie, podczas gdy jej obieg dookoła Słońca trwa tylko 225 dni."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

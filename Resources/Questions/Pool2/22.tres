@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://ce6ncku5xbr24"]
+
+[ext_resource type="Resource" uid="uid://cl0xvvkt5quxf" path="res://Resources/Categories/Math.tres" id="1_h8bw1"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_vw831"]
+
+[resource]
+script = ExtResource("2_vw831")
+QuestionText = "W której z odmian aksonometrii kąt pomiędzy wszystkimi trzema osiami na rzucie na płaszczyznę są sobie równe i wynoszą 120 stopni."
+AnswersText = Array[String](["Izometria", "Dimetria", "Trimetria", "Wojskowa"])
+Category = ExtResource("1_h8bw1")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

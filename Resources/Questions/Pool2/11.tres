@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://be3eikqbgigo5"]
+
+[ext_resource type="Resource" uid="uid://bydeieg4hrnev" path="res://Resources/Categories/Astronomy.tres" id="1_0pfa4"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_yfwpj"]
+
+[resource]
+script = ExtResource("2_yfwpj")
+QuestionText = "Której z tych rzeczy jeszcze NIE zaobserwowaliśmy?"
+AnswersText = Array[String](["czarny karzeł", "biały karzeł", "zderzenie dwóch czarnych dziur", "supernowa"])
+Category = ExtResource("1_0pfa4")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

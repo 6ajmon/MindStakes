@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://c57fetysqcflf"]
+
+[ext_resource type="Resource" uid="uid://rtboy44op3gh" path="res://Resources/Categories/History.tres" id="1_ax3ul"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_57fsl"]
+
+[resource]
+script = ExtResource("2_57fsl")
+QuestionText = " Kto był pierwszym koronowanym królem Polski?"
+AnswersText = Array[String]([" Bolesław I Chrobry", " Mieszko I", " Kazimierz Wielki", " Władysław Łokietek"])
+Category = ExtResource("1_ax3ul")
+FunFact = " Koronacja Bolesława Chrobrego odbyła się w 1025 roku w Gnieźnie, prawdopodobnie w dzień Wielkanocy, zaledwie kilka tygodni przed śmiercią władcy."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

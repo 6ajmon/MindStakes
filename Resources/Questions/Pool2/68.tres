@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://e5wcavx7v04b"]
+
+[ext_resource type="Resource" uid="uid://b0i36vk6wvm5q" path="res://Resources/Categories/Jedzenie.tres" id="1_5cpox"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_ls7xw"]
+
+[resource]
+script = ExtResource("2_ls7xw")
+QuestionText = "Dodanie jakiej przyprawy do potrawy najskuteczniej neutralizuje odczuwaną przez nas gorycz, na przykład w zbyt mocno wypalonej kawie?"
+AnswersText = Array[String]([" Sól kuchenna", " Cukier biały", " Sok z cytryny", " Miód pszczeli"])
+Category = ExtResource("1_5cpox")
+FunFact = " Jony sodu blokują receptory goryczy na języku szybciej i skuteczniej niż substancje słodzące, co sprawia, że smak staje się łagodniejszy."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

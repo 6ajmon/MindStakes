@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://b1oy3ieuuwikk"]
+
+[ext_resource type="Resource" uid="uid://bydeieg4hrnev" path="res://Resources/Categories/Astronomy.tres" id="1_lyo6l"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_rkxas"]
+
+[resource]
+script = ExtResource("2_rkxas")
+QuestionText = "Jak określa się teoretyczną granicę, po przekroczeniu której satelita rozpada się pod wpływem sił przypływowych planety?"
+AnswersText = Array[String]([" Granica Roche'a", " Horyzont zdarzeń", " Granica Chandrasekhara", " Pas Kuipera"])
+Category = ExtResource("1_lyo6l")
+FunFact = " Siły przypływowe działające na satelitę stają się silniejsze niż jego własna grawitacja, co prowadzi do jego fragmentacji i często tworzenia pierścieni wokół planety."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://dc56vrq0lns17"]
+
+[ext_resource type="Resource" uid="uid://liiojtc0d1s5" path="res://Resources/Categories/Psychology.tres" id="1_0r5as"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_u732g"]
+
+[resource]
+script = ExtResource("2_u732g")
+QuestionText = "Jak w psychologii nazywa się tendencję do nieudzielania pomocy, gdy w pobliżu znajdują się inni świadkowie?"
+AnswersText = Array[String]([" Efekt widza", " Efekt aureoli", " Efekt Lucyfera", " Efekt Pigmaliona"])
+Category = ExtResource("1_0r5as")
+FunFact = " Zjawisko to wynika z rozproszenia odpowiedzialności – im więcej osób widzi zdarzenie, tym mniejszą presję czuje każda z nich, by zareagować."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

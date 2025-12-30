@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://cofug856rj1gv"]
+
+[ext_resource type="Resource" uid="uid://liiojtc0d1s5" path="res://Resources/Categories/Psychology.tres" id="1_168ta"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_a5a1r"]
+
+[resource]
+script = ExtResource("2_a5a1r")
+QuestionText = "Co to jest Zespół nieuwagi stronnej?"
+AnswersText = Array[String](["niedostrzeganie i ignorowanie jednej strony przestrzeni", "wrażenie, że kończyna działa niezależnie od woli", "brak świadomości posiadania deficytu neurologicznego", "niezdolność do wskazywania części własnego ciała"])
+Category = ExtResource("1_168ta")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

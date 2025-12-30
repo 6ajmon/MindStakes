@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://dwpm34f5binx0"]
+
+[ext_resource type="Resource" uid="uid://by4wilrchdfuh" path="res://Resources/Categories/Memy.tres" id="1_g2nm7"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="3_pchtj"]
+
+[resource]
+script = ExtResource("3_pchtj")
+QuestionText = "Na którym polskim imageboardzie w 2009 roku narodził się mem \"Wojak\"?"
+AnswersText = Array[String](["Vichan", "Karachan", "Wykop", "4chan"])
+Category = ExtResource("1_g2nm7")
+FunFact = "Oryginalny plik graficzny nosił nazwę \"ciepłatwarz.jpg\", a nazwa \"Wojak\" pochodzi od pseudonimu użytkownika, który opublikował go później na forum Krautchan."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

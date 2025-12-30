@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://k8oo2ielpm5e"]
+
+[ext_resource type="Resource" uid="uid://bv5k4a5r00c3d" path="res://Resources/Categories/Geography.tres" id="1_jajxg"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_gr2c2"]
+
+[resource]
+script = ExtResource("2_gr2c2")
+QuestionText = " Która pustynia jest uznawana za najsuchsze miejsce na Ziemi?"
+AnswersText = Array[String]([" Pustynia Atakama", " Pustynia Sahara", " Pustynia Gobi", " Pustynia Namib"])
+Category = ExtResource("1_jajxg")
+FunFact = "Na chilijskiej pustyni Atakama istnieją stacje meteorologiczne, które nigdy w swojej historii nie odnotowały opadów deszczu. Ze względu na ekstremalną suchość i brak zanieczyszczenia światłem, obszar ten jest domem dla największych teleskopów astronomicznych, takich jak ALMA."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

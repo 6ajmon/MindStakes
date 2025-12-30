@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://bi1nh3ga8r3dh"]
+
+[ext_resource type="Resource" uid="uid://cl0xvvkt5quxf" path="res://Resources/Categories/Math.tres" id="1_cf0jv"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_cy512"]
+
+[resource]
+script = ExtResource("2_cy512")
+QuestionText = "Co jest większe sin(30pi) czy cosinus(7200pi)?"
+AnswersText = Array[String](["cosinus(7200pi)", "Sinus", "Są sobie równe", "Nie da się tego określić"])
+Category = ExtResource("1_cf0jv")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

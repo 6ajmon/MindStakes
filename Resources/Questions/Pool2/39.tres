@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://btvfou0s27fc4"]
+
+[ext_resource type="Resource" uid="uid://b4ahg1p8bcg02" path="res://Resources/Categories/Biology.tres" id="1_4kkbv"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_758uq"]
+
+[resource]
+script = ExtResource("2_758uq")
+QuestionText = "Jak nazywa się zjawisko polegające na spadku powinowactwa hemoglobiny do tlenu pod wpływem obniżenia pH?"
+AnswersText = Array[String]([" Efekt Bohra", " Efekt Haldane'a", " Reakcja akrosomowa", " Efekt metaboliczny"])
+Category = ExtResource("1_4kkbv")
+FunFact = "Dzięki temu mechanizmowi krew sprawniej uwalnia tlen w pracujących mięśniach, gdzie stężenie jonów wodorowych i dwutlenku węgla jest wyższe."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

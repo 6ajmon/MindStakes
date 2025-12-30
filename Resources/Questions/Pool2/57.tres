@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://b8d38uo2km6b0"]
+
+[ext_resource type="Resource" uid="uid://liiojtc0d1s5" path="res://Resources/Categories/Psychology.tres" id="1_hiegw"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_4y2yi"]
+
+[resource]
+script = ExtResource("2_4y2yi")
+QuestionText = "Na czym polega błąd poznawczy znany jako efekt Dunninga-Krugera?"
+AnswersText = Array[String]([" Przecenianiu własnych umiejętności", " Nagłym zapominaniu informacji podczas stresu", " Lęku przed oceną przez grupę", " Podświadomym naśladowaniu gestów rozmówcy"])
+Category = ExtResource("1_hiegw")
+FunFact = " Osoby o najniższych kompetencjach często uważają się za ekspertów, ponieważ brakuje im wiedzy, by dostrzec własne błędy."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

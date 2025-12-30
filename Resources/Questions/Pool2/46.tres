@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=4 format=3 uid="uid://ecu82jr17hma"]
+
+[ext_resource type="Resource" uid="uid://b3frp322s3ofp" path="res://Resources/Categories/Muzyka.tres" id="1_83hlt"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_rbvxq"]
+[ext_resource type="Texture2D" uid="uid://gu4gr084113" path="res://Assets/Images/Beatles_-_Abbey_Road.jpg" id="2_v87sj"]
+
+[resource]
+script = ExtResource("2_rbvxq")
+QuestionText = "Który z muzyków The Beatles idzie boso na okładce albumu „Abbey Road”?"
+AnswersText = Array[String]([" Paul McCartney", " John Lennon", " Ringo Starr", " George Harrison"])
+Category = ExtResource("1_83hlt")
+FunFact = " Brak butów u Paula stał się podstawą słynnej teorii spiskowej „Paul is dead”, według której artysta miał zginąć i zostać zastąpiony przez sobowtóra."
+Photo = ExtResource("2_v87sj")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=4 format=3 uid="uid://6nbhqwdq5e20"]
+
+[ext_resource type="Resource" uid="uid://liiojtc0d1s5" path="res://Resources/Categories/Psychology.tres" id="1_ewu0f"]
+[ext_resource type="Texture2D" uid="uid://pr1dn4ih6ohv" path="res://Assets/Images/flowpng.png" id="2_1jfsk"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="3_3kjn3"]
+
+[resource]
+script = ExtResource("3_3kjn3")
+QuestionText = "Który symbol na wykresie pokazuje obszar stanu FLOW?"
+AnswersText = Array[String](["♠", "♥", "♦", "♣"])
+Category = ExtResource("1_ewu0f")
+Photo = ExtResource("2_1jfsk")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

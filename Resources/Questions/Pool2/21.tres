@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://7364b6kibfjh"]
+
+[ext_resource type="Resource" uid="uid://cl0xvvkt5quxf" path="res://Resources/Categories/Math.tres" id="1_ymihk"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_cje82"]
+
+[resource]
+script = ExtResource("2_cje82")
+QuestionText = "Objętość równoległościanu rozpiętego przez wektory a = [1, 2, 3] b = [2, 3, 3] c = [1, 2, 1] jest równa:"
+AnswersText = Array[String](["2", "3", "1", "0"])
+Category = ExtResource("1_ymihk")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://di5ok8iloni7p"]
+
+[ext_resource type="Resource" uid="uid://b4ahg1p8bcg02" path="res://Resources/Categories/Biology.tres" id="1_t3vub"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_wewrr"]
+
+[resource]
+script = ExtResource("2_wewrr")
+QuestionText = "Głównym składnikiem ściany komórkowej bakterii właściwych jest mureina. Co jest jej odpowiednikiem u archeonów?"
+AnswersText = Array[String](["Pseudomureina", "Chityna", "Celuloza", "Peptydoglikan"])
+Category = ExtResource("1_t3vub")
+FunFact = "Brak mureiny w ścianach komórkowych archeonów sprawia, że są one naturalnie odporne na działanie antybiotyków z grupy penicylin."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

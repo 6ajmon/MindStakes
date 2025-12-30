@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://bpo0gw5ilqc1m"]
+
+[ext_resource type="Resource" uid="uid://cgj4i171f8ors" path="res://Resources/Categories/Chemistry.tres" id="1_owu7f"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_so3md"]
+
+[resource]
+script = ExtResource("2_so3md")
+QuestionText = "Jaki jest drugi według masy składnik fotosfery Słońca?"
+AnswersText = Array[String](["Hel", "Wodór", "Tlen", "Węgiel"])
+Category = ExtResource("1_owu7f")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

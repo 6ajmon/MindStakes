@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://c30asjmae0bg1"]
+
+[ext_resource type="Resource" uid="uid://rtboy44op3gh" path="res://Resources/Categories/History.tres" id="1_t78g4"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_ulckp"]
+
+[resource]
+script = ExtResource("2_ulckp")
+QuestionText = " Jaki oficjalny tytuł otrzymała Jadwiga Andegaweńska podczas koronacji?"
+AnswersText = Array[String]([" Król Polski", " Królowa Polski", " Wielka Księżna", " Regentka Królestwa"])
+Category = ExtResource("1_t78g4")
+FunFact = " Jadwiga została koronowana jako \"rex\" (król), ponieważ polskie prawo nie przewidywało wówczas sprawowania władzy przez kobietę jako samodzielnego monarchy."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

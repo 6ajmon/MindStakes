@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://bq28r86dqv0g7"]
+
+[ext_resource type="Resource" uid="uid://b4ahg1p8bcg02" path="res://Resources/Categories/Biology.tres" id="1_1pt2j"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_xdi1l"]
+
+[resource]
+script = ExtResource("2_xdi1l")
+QuestionText = "Jak nazywa się najmniejsza kość w ciele człowieka?"
+AnswersText = Array[String](["Strzemiączko", "Kowadełko", "Młoteczek", " Kość łzowa"])
+Category = ExtResource("1_1pt2j")
+FunFact = "Strzemiączko znajduje się w uchu środkowym i mierzy zaledwie od 2,5 do 3,5 milimetra długości."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

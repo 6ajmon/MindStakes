@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://h225v7bq5d5a"]
+
+[ext_resource type="Resource" uid="uid://b0i36vk6wvm5q" path="res://Resources/Categories/Jedzenie.tres" id="1_qkip1"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="3_o11os"]
+
+[resource]
+script = ExtResource("3_o11os")
+QuestionText = "Jaką nazwę nosi najdroższa wagowo przyprawa świata, pozyskiwana ze znamion słupków krokusa?"
+AnswersText = Array[String]([" Szafran uprawny", " Kardamon malabarski", " Wanilia płaskolistna", " Prawdziwy cynamon cejloński"])
+Category = ExtResource("1_qkip1")
+FunFact = " Do wyprodukowania jednego kilograma tej przyprawy potrzeba zebrać ręcznie około 150 tysięcy kwiatów."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

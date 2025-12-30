@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://dp2rymqqm3kt5"]
+
+[ext_resource type="Resource" uid="uid://bv5k4a5r00c3d" path="res://Resources/Categories/Geography.tres" id="1_h7csi"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_0t7vd"]
+
+[resource]
+script = ExtResource("2_0t7vd")
+QuestionText = "Co NIE jest kamieniem szlachetnym?	"
+AnswersText = Array[String](["Topaz", "Szmaragd", "Szafir", "Rubin"])
+Category = ExtResource("1_h7csi")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

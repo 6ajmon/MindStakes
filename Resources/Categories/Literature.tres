@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Category" load_steps=2 format=3 uid="uid://dbdfjnvf4ec8o"]
+
+[ext_resource type="Script" uid="uid://clol452ofmkx2" path="res://Source/Data/Category/Category.cs" id="1_8vme2"]
+
+[resource]
+script = ExtResource("1_8vme2")
+CategoryName = "Literatura"
+metadata/_custom_type_script = "uid://clol452ofmkx2"

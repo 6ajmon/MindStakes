@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://x2h4obbu5clx"]
+
+[ext_resource type="Resource" uid="uid://bydeieg4hrnev" path="res://Resources/Categories/Astronomy.tres" id="1_6qpqx"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_jq0yb"]
+
+[resource]
+script = ExtResource("2_jq0yb")
+QuestionText = "Jak nazywa się gwiazda położona najbliżej Ziemi, nie licząc Słońca?"
+AnswersText = Array[String]([" Proxima Centauri", "Syriusz", " Alfa Centauri A", " Gwiazda Polarna"])
+Category = ExtResource("1_6qpqx")
+FunFact = " Proxima Centauri to czerwony karzeł oddalony o około 4,24 lat świetlnych, którego nie da się dostrzec gołym okiem z Ziemi."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

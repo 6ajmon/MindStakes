@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=4 format=3 uid="uid://ccepxmnot7b2j"]
+
+[ext_resource type="Resource" uid="uid://cgj4i171f8ors" path="res://Resources/Categories/Chemistry.tres" id="1_h13s4"]
+[ext_resource type="Texture2D" uid="uid://bnmx0qawlt5r2" path="res://Assets/Images/Colorful_bottle.jpg" id="2_ivki5"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="3_lagdn"]
+
+[resource]
+script = ExtResource("3_lagdn")
+QuestionText = "Co jest odpowiedzialne za kolor szkła?"
+AnswersText = Array[String](["Specjalny barwnik", "Domieszka metali ciężkich", "Specjalny sposób chłodzenia ciekłego szkła", "Promieniowanie"])
+Category = ExtResource("1_h13s4")
+Photo = ExtResource("2_ivki5")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"
