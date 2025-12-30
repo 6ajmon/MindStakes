@@ -1,0 +1,132 @@
+[gd_scene load_steps=9 format=3 uid="uid://g0bp6jr75tih"]
+
+[ext_resource type="Theme" uid="uid://befyp5hugoswj" path="res://Assets/Themes/MainTheme.tres" id="1_3h2fp"]
+[ext_resource type="Shader" uid="uid://b285ljrn3wrt7" path="res://Source/Shaders/Perspective.gdshader" id="2_6geny"]
+[ext_resource type="PackedScene" uid="uid://ba1ry0xlyp0ir" path="res://Source/Components/Buttons/NextButton/NextButton.tscn" id="2_igwjc"]
+[ext_resource type="Script" uid="uid://c4t67pbglmc6c" path="res://Source/Screens/Title/TitleScreen.cs" id="2_uofdg"]
+[ext_resource type="Script" uid="uid://cyjgfwlnulaod" path="res://Source/Shaders/PerspectiveShader.cs" id="4_uofdg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8yhwj"]
+bg_color = Color(0.043137256, 0.0627451, 0.14901961, 1)
+border_color = Color(0.105882354, 0.13333334, 0.2509804, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1qknh"]
+bg_color = Color(0.043137256, 0.0627451, 0.14901961, 1)
+border_color = Color(0.105882354, 0.13333334, 0.2509804, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uofdg"]
+shader = ExtResource("2_6geny")
+shader_parameter/max_skew = 0.008
+shader_parameter/hover_intensity = 0.6
+shader_parameter/idle_wobble_speed = 0.8
+shader_parameter/idle_wobble_amount = 0.004
+shader_parameter/scale_on_hover = 1.10000000475
+shader_parameter/mouse_pos = Vector2(0.5, 0.5)
+shader_parameter/is_hovered = false
+shader_parameter/time = 0.0
+
+[node name="TitleScreen" type="Control" node_paths=PackedStringArray("TitleLabel")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_3h2fp")
+script = ExtResource("2_uofdg")
+TitleLabel = NodePath("Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/TitleLabel")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8yhwj")
+
+[node name="PanelContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/PanelContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Panel/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1qknh")
+
+[node name="VBoxContainer" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PanelContainer2" type="PanelContainer" parent="Panel/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="TitleLabel" type="Label" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer"]
+material = SubResource("ShaderMaterial_uofdg")
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 256
+text = "MIND STAKES"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+script = ExtResource("4_uofdg")
+
+[node name="ButtonsContainer" type="PanelContainer" parent="Panel/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 160)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 16
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 64
+
+[node name="ReadyButton" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer/HBoxContainer2" instance=ExtResource("2_igwjc")]
+layout_mode = 2
+text = "START"
+ScenePath = "uid://c864wsxq4to5s"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
