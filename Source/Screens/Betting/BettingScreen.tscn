@@ -1,28 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://c7wssf6dm7bsg"]
+[gd_scene load_steps=7 format=3 uid="uid://c7wssf6dm7bsg"]
 
 [ext_resource type="Theme" uid="uid://befyp5hugoswj" path="res://Assets/Themes/MainTheme.tres" id="1_tih6c"]
 [ext_resource type="Script" uid="uid://bkuul38p4afig" path="res://Source/Screens/Betting/BettingScreen.cs" id="2_28s67"]
 [ext_resource type="PackedScene" uid="uid://ba1ry0xlyp0ir" path="res://Source/Components/Buttons/NextButton/NextButton.tscn" id="3_n0b6d"]
 [ext_resource type="PackedScene" uid="uid://b41v0hfwix5gm" path="res://Source/Components/TeamCard/BettingTeamCard.tscn" id="4_n0b6d"]
+[ext_resource type="PackedScene" uid="uid://gvqucvlox5kx" path="res://Source/Components/ShaderedBackground/ShaderedBackground.tscn" id="4_n6hie"]
 [ext_resource type="PackedScene" uid="uid://0lg2utkqus1f" path="res://Source/Components/Labels/RoundCountLabel/RoundCountLabel.tscn" id="4_wsi0i"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ilaee"]
-bg_color = Color(0.043137256, 0.0627451, 0.14901961, 1)
-border_width_left = 16
-border_width_top = 16
-border_width_right = 16
-border_width_bottom = 16
-border_color = Color(0.105882354, 0.13333334, 0.2509804, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nikqu"]
-bg_color = Color(0.043137256, 0.0627451, 0.14901961, 1)
-corner_radius_top_left = 32
-corner_radius_top_right = 32
-corner_radius_bottom_right = 32
-corner_radius_bottom_left = 32
-
-[sub_resource type="Theme" id="Theme_nikqu"]
-PanelContainer/styles/panel = SubResource("StyleBoxFlat_nikqu")
 
 [node name="TeamCreateScreen" type="Control" node_paths=PackedStringArray("TeamCardsContainer")]
 layout_mode = 3
@@ -36,14 +19,9 @@ script = ExtResource("2_28s67")
 BettingTeamCardScene = ExtResource("4_n0b6d")
 TeamCardsContainer = NodePath("PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/ScrollContainer/TeamCardsContainer")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" parent="." instance=ExtResource("4_n6hie")]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_ilaee")
+theme = ExtResource("1_tih6c")
 
 [node name="PanelContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -52,7 +30,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_nikqu")
+theme = ExtResource("1_tih6c")
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
@@ -60,17 +38,21 @@ theme_override_constants/margin_bottom = 16
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
 layout_mode = 2
+theme = ExtResource("1_tih6c")
 
 [node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("1_tih6c")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer"]
 layout_mode = 2
+theme = ExtResource("1_tih6c")
 
 [node name="Title" type="RichTextLabel" parent="PanelContainer/VBoxContainer/PanelContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 6.0
+theme = ExtResource("1_tih6c")
 theme_override_font_sizes/bold_font_size = 64
 bbcode_enabled = true
 text = "[b]OBSTAWIANIE[/b]"
@@ -80,14 +62,17 @@ vertical_alignment = 1
 
 [node name="RoundCountLabel" parent="PanelContainer/VBoxContainer/PanelContainer/HBoxContainer" instance=ExtResource("4_wsi0i")]
 layout_mode = 2
+theme = ExtResource("1_tih6c")
 
 [node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("1_tih6c")
 metadata/_edit_use_anchors_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/PanelContainer2"]
 layout_mode = 2
+theme = ExtResource("1_tih6c")
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
@@ -95,27 +80,33 @@ theme_override_constants/margin_bottom = 16
 
 [node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/VBoxContainer/PanelContainer2/MarginContainer"]
 layout_mode = 2
+theme = ExtResource("1_tih6c")
 
 [node name="TeamCardsContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme = ExtResource("1_tih6c")
 theme_override_constants/separation = 8
 
 [node name="ButtonsContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 160)
 layout_mode = 2
+theme = ExtResource("1_tih6c")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/ButtonsContainer"]
 layout_mode = 2
+theme = ExtResource("1_tih6c")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme = ExtResource("1_tih6c")
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme = ExtResource("1_tih6c")
 theme_override_constants/margin_left = 64
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 64
@@ -124,15 +115,18 @@ theme_override_constants/margin_bottom = 16
 [node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme = ExtResource("1_tih6c")
 theme_override_constants/separation = 64
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme = ExtResource("1_tih6c")
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/HBoxContainer3"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme = ExtResource("1_tih6c")
 theme_override_constants/margin_left = 32
 theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 32
@@ -140,6 +134,7 @@ theme_override_constants/margin_bottom = 32
 
 [node name="ReadyButton" parent="PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/HBoxContainer3/MarginContainer" instance=ExtResource("3_n0b6d")]
 layout_mode = 2
+theme = ExtResource("1_tih6c")
 ScenePath = "uid://be1t67hhlom6s"
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/HBoxContainer3/MarginContainer/ReadyButton" to="." method="OnReadyButtonPressed"]

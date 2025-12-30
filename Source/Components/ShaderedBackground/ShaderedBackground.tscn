@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://gvqucvlox5kx"]
+
+[ext_resource type="Shader" uid="uid://dhm07ouwcxicm" path="res://Source/Shaders/Background.gdshader" id="1_awdap"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t84kq"]
+shader = ExtResource("1_awdap")
+shader_parameter/spin_rotation_speed = 2.0
+shader_parameter/move_speed = 7.0
+shader_parameter/offset = Vector2(0, 0)
+shader_parameter/colour_1 = Color(1, 0, 0.49803922, 1)
+shader_parameter/colour_2 = Color(0.105882354, 0.13333334, 0.2509804, 1)
+shader_parameter/colour_3 = Color(0.086, 0.137, 0.145, 1)
+shader_parameter/contrast = 3.5
+shader_parameter/lighting = 0.4
+shader_parameter/spin_amount = 0.25
+shader_parameter/pixel_filter = 740.0
+shader_parameter/is_rotating = false
+
+[node name="Panel" type="ColorRect"]
+material = SubResource("ShaderMaterial_t84kq")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

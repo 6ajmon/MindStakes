@@ -5,18 +5,11 @@
 [ext_resource type="Script" uid="uid://cyd7y2rq1qvna" path="res://Source/Screens/CategoryPick/CategoryPickScreen.cs" id="1_orqqi"]
 [ext_resource type="PackedScene" uid="uid://diaf2slniox2o" path="res://Source/Components/Buttons/CategoryButton/CategoryButton.tscn" id="2_ly0pc"]
 [ext_resource type="PackedScene" uid="uid://0lg2utkqus1f" path="res://Source/Components/Labels/RoundCountLabel/RoundCountLabel.tscn" id="5_1qknh"]
+[ext_resource type="PackedScene" uid="uid://gvqucvlox5kx" path="res://Source/Components/ShaderedBackground/ShaderedBackground.tscn" id="5_lmft0"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8yhwj"]
-bg_color = Color(0.043137256, 0.0627451, 0.14901961, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vm8vi"]
+bg_color = Color(0.043137256, 0.0627451, 0.14901961, 0.73333335)
 border_color = Color(0.105882354, 0.13333334, 0.2509804, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1qknh"]
-bg_color = Color(0.043137256, 0.0627451, 0.14901961, 1)
-border_color = Color(0.105882354, 0.13333334, 0.2509804, 1)
-corner_radius_top_left = 32
-corner_radius_top_right = 32
-corner_radius_bottom_right = 32
-corner_radius_bottom_left = 32
 
 [node name="CategoryPickScreen" type="Control" node_paths=PackedStringArray("TeamCardContainer", "CategoryButtonContainer", "RerollButton")]
 layout_mode = 3
@@ -33,6 +26,9 @@ CategoryButtonContainer = NodePath("Panel/PanelContainer/VBoxContainer/PanelCont
 CategoryButtonScene = ExtResource("2_ly0pc")
 RerollButton = NodePath("Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer/HBoxContainer2/RerollButton")
 
+[node name="Panel2" parent="." instance=ExtResource("5_lmft0")]
+layout_mode = 1
+
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -40,7 +36,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_8yhwj")
+theme_override_styles/panel = SubResource("StyleBoxFlat_vm8vi")
 
 [node name="PanelContainer" type="MarginContainer" parent="Panel"]
 layout_mode = 1
@@ -57,10 +53,9 @@ theme_override_constants/margin_bottom = 6
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/PanelContainer"]
 layout_mode = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="Panel/PanelContainer/VBoxContainer"]
+[node name="PanelContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_1qknh")
 
 [node name="VBoxContainer" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/PanelContainer"]
 layout_mode = 2

@@ -1,28 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://dccjx4kb6nd00"]
+[gd_scene load_steps=7 format=3 uid="uid://dccjx4kb6nd00"]
 
-[ext_resource type="Theme" uid="uid://befyp5hugoswj" path="res://Assets/Themes/MainTheme.tres" id="1_r684w"]
+[ext_resource type="Theme" uid="uid://befyp5hugoswj" path="res://Assets/Themes/MainTheme.tres" id="1_cfl5f"]
 [ext_resource type="Script" uid="uid://chgnu5ok343mi" path="res://Source/Screens/ScoreScreen/ScoreScreen.cs" id="2_f66h6"]
 [ext_resource type="PackedScene" uid="uid://3jda22dyfmvv" path="res://Source/Components/TeamCard/ScoreTeamCard.tscn" id="3_ykrth"]
+[ext_resource type="PackedScene" uid="uid://gvqucvlox5kx" path="res://Source/Components/ShaderedBackground/ShaderedBackground.tscn" id="4_cfl5f"]
 [ext_resource type="PackedScene" uid="uid://ba1ry0xlyp0ir" path="res://Source/Components/Buttons/NextButton/NextButton.tscn" id="4_os0li"]
 [ext_resource type="PackedScene" uid="uid://0lg2utkqus1f" path="res://Source/Components/Labels/RoundCountLabel/RoundCountLabel.tscn" id="4_wmctk"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ilaee"]
-bg_color = Color(0.043137256, 0.0627451, 0.14901961, 1)
-border_width_left = 16
-border_width_top = 16
-border_width_right = 16
-border_width_bottom = 16
-border_color = Color(0.105882354, 0.13333334, 0.2509804, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nikqu"]
-bg_color = Color(0.043137256, 0.0627451, 0.14901961, 1)
-corner_radius_top_left = 32
-corner_radius_top_right = 32
-corner_radius_bottom_right = 32
-corner_radius_bottom_left = 32
-
-[sub_resource type="Theme" id="Theme_nikqu"]
-PanelContainer/styles/panel = SubResource("StyleBoxFlat_nikqu")
 
 [node name="ScoreScreen" type="Control" node_paths=PackedStringArray("TeamCardsContainer", "ReadyButton")]
 layout_mode = 3
@@ -31,20 +14,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_r684w")
+theme = ExtResource("1_cfl5f")
 script = ExtResource("2_f66h6")
 ScoreTeamCardScene = ExtResource("3_ykrth")
 TeamCardsContainer = NodePath("PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/ScrollContainer/TeamCardsContainer")
 ReadyButton = NodePath("PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/HBoxContainer3/MarginContainer/ReadyButton")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel2" parent="." instance=ExtResource("4_cfl5f")]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_ilaee")
 
 [node name="PanelContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -53,7 +30,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_nikqu")
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
