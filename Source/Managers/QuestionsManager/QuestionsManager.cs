@@ -9,6 +9,10 @@ public partial class QuestionsManager : Node
 
     public List<Question> Questions { get; private set; } = new();
     public Question RandomQuestion { get; private set; }
+    
+    [Export(PropertyHint.Dir)]    
+    public string QuestionsPoolPath { get; set; } = "res://Resources/Questions";
+
     private bool _questionsLoaded = false;
 
     public override void _Ready()
@@ -21,7 +25,7 @@ public partial class QuestionsManager : Node
     {
         if (_questionsLoaded) return;
         
-        var dir = DirAccess.Open("res://Resources/Questions");
+        var dir = DirAccess.Open(QuestionsPoolPath);
         if (dir != null)
         {
             dir.ListDirBegin();
@@ -32,7 +36,7 @@ public partial class QuestionsManager : Node
                 {
                     if ((fileName.EndsWith(".tres") || fileName.EndsWith(".res")) && !fileName.EndsWith(".import"))
                     {
-                        var question = GD.Load<Question>($"res://Resources/Questions/{fileName}");
+                        var question = GD.Load<Question>($"{QuestionsPoolPath}/{fileName}");
                         if (question != null)
                         {
                             Questions.Add(question);
@@ -45,7 +49,7 @@ public partial class QuestionsManager : Node
         }
         else
         {
-            GD.PrintErr("Failed to open Resources/Questions directory.");
+            GD.PrintErr($"Failed to open {QuestionsPoolPath} directory.");
         }
     }
 

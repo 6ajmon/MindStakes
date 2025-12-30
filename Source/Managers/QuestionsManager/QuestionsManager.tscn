@@ -4,3 +4,4 @@
 
 [node name="QuestionsManager" type="Node"]
 script = ExtResource("1_dvn1r")
+QuestionsPoolPath = "res://Resources/Questions/Pool2"

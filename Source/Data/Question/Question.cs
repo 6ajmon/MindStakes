@@ -20,4 +20,6 @@ public partial class Question : Resource
     public Category Category { get; set; }
     [Export]
     public Texture2D Photo { get; set; }
+    [Export]
+    public AudioStream Audio { get; set; }
 }

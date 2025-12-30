@@ -10,7 +10,9 @@ public partial class QuestionScreen : Control
     [Export] public Label CategoryLabel { get; set; }
     [Export] public Label QuestionTextLabel { get; set; }
     [Export] public MarginContainer QuestionImageContainer { get; set; }
+    [Export] public MarginContainer QuestionPlayerContainer { get; set; }
     [Export] public GridContainer AnswersContainer { get; set; }
+    [Export] public PackedScene MusicPlayerScene { get; set; }
     [Export] public PackedScene AnswerBoxScene { get; set; }
     [Export] public Button CheckButton { get; set; }
     [Export] public Button ResetTimerButton { get; set; }
@@ -36,6 +38,7 @@ public partial class QuestionScreen : Control
         UpdateCategoryLabel();
 
         UpdateQuestionData();
+        LoadQuestionAudio();
         
         CheckButton.Pressed += OnCheckButtonPressed;
         ResetTimerButton.Pressed += OnResetTimerButtonPressed;
@@ -146,7 +149,33 @@ public partial class QuestionScreen : Control
         {
             TextureRect textureRect = new TextureRect();
             textureRect.Texture = question.Photo;
+            textureRect.ExpandMode = TextureRect.ExpandModeEnum.FitWidth;
+            textureRect.StretchMode = TextureRect.StretchModeEnum.KeepAspectCentered;
             QuestionImageContainer.AddChild(textureRect);
+
+            if (QuestionTextLabel != null)
+            {
+                QuestionTextLabel.AddThemeFontSizeOverride("font_size", 48);
+            }
+        }
+        else
+        {
+            QuestionImageContainer.SizeFlagsStretchRatio = 0;
+        }
+    }
+
+    private void LoadQuestionAudio()
+    {
+        var question = QuestionsManager.Instance.RandomQuestion;
+        if (question != null && question.Audio != null && MusicPlayerScene != null)
+        {
+            var musicPlayer = MusicPlayerScene.Instantiate<MusicPlayer>();
+            musicPlayer.SetAudio(question.Audio);
+            QuestionPlayerContainer.AddChild(musicPlayer);
+        }
+        else
+        {
+            QuestionPlayerContainer.SizeFlagsStretchRatio = 0;
         }
     }
     private void OnCheckButtonPressed()

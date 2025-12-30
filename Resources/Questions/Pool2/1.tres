@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=4 format=3 uid="uid://cg0fliwwc45ct"]
+
+[ext_resource type="Resource" uid="uid://b3frp322s3ofp" path="res://Resources/Categories/Muzyka.tres" id="1_1fqbx"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="1_t4llf"]
+[ext_resource type="Texture2D" uid="uid://besbd7riyue62" path="res://Assets/Images/Spotify_icon.svg.png" id="2_4pj8l"]
+
+[resource]
+script = ExtResource("1_t4llf")
+QuestionText = "Kto jest obecnie top 1 artystą na Spotify pod względem miesięcznych słuchaczy?"
+AnswersText = Array[String](["Ariana Grande", "The Weeknd", "Taylor Swift", "Ed Sheeran"])
+Category = ExtResource("1_1fqbx")
+Photo = ExtResource("2_4pj8l")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://bidb0awkb3c2c"]
+
+[ext_resource type="Script" uid="uid://b3tbapw5ggmts" path="res://Source/Components/MusicPlayer/MusicPlayer.cs" id="1_0pj06"]
+
+[node name="MusicPlayer" type="HBoxContainer" node_paths=PackedStringArray("PlayButton", "MusicProgressBar", "MusicTimeLabel")]
+script = ExtResource("1_0pj06")
+PlayButton = NodePath("Button")
+MusicProgressBar = NodePath("MarginContainer/ProgressBar")
+MusicTimeLabel = NodePath("MarginContainer/Label")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+text = "PLAY"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+text = "0:01/0:15"
+horizontal_alignment = 1
+vertical_alignment = 2

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Category" load_steps=2 format=3 uid="uid://bv5k4a5r00c3d"]
+
+[ext_resource type="Script" uid="uid://clol452ofmkx2" path="res://Source/Data/Category/Category.cs" id="1_ax7vu"]
+
+[resource]
+script = ExtResource("1_ax7vu")
+CategoryName = "Geografia"
+metadata/_custom_type_script = "uid://clol452ofmkx2"

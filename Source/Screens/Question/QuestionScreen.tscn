@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://be1t67hhlom6s"]
+[gd_scene load_steps=9 format=3 uid="uid://be1t67hhlom6s"]
 
 [ext_resource type="Theme" uid="uid://befyp5hugoswj" path="res://Assets/Themes/MainTheme.tres" id="1_lns2c"]
 [ext_resource type="Script" uid="uid://tai2u1ap1bj1" path="res://Source/Screens/Question/QuestionScreen.cs" id="2_jthmp"]
 [ext_resource type="PackedScene" uid="uid://hsae23h4mvxc" path="res://Source/Components/AnswerBox/AnswerBox.tscn" id="3_o5drp"]
+[ext_resource type="PackedScene" uid="uid://bidb0awkb3c2c" path="res://Source/Components/MusicPlayer/MusicPlayer.tscn" id="3_p4s2q"]
 [ext_resource type="PackedScene" uid="uid://ba1ry0xlyp0ir" path="res://Source/Components/Buttons/NextButton/NextButton.tscn" id="3_vl5k2"]
 [ext_resource type="PackedScene" uid="uid://0lg2utkqus1f" path="res://Source/Components/Labels/RoundCountLabel/RoundCountLabel.tscn" id="4_qjiql"]
 
@@ -18,7 +19,7 @@ corner_radius_top_right = 32
 corner_radius_bottom_right = 32
 corner_radius_bottom_left = 32
 
-[node name="QuestionScreen" type="Control" node_paths=PackedStringArray("TimeProgressBar", "TimeLabel", "CategoryLabel", "QuestionTextLabel", "QuestionImageContainer", "AnswersContainer", "CheckButton", "ResetTimerButton")]
+[node name="QuestionScreen" type="Control" node_paths=PackedStringArray("TimeProgressBar", "TimeLabel", "CategoryLabel", "QuestionTextLabel", "QuestionImageContainer", "QuestionPlayerContainer", "AnswersContainer", "CheckButton", "ResetTimerButton")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -32,7 +33,9 @@ TimeLabel = NodePath("Panel/PanelContainer/VBoxContainer/PanelContainer/VBoxCont
 CategoryLabel = NodePath("Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/CategoryLabel")
 QuestionTextLabel = NodePath("Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/QuestionTextLabel")
 QuestionImageContainer = NodePath("Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/ImageContainer")
+QuestionPlayerContainer = NodePath("Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/PlayerContainer")
 AnswersContainer = NodePath("Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/AnswersContainer")
+MusicPlayerScene = ExtResource("3_p4s2q")
 AnswerBoxScene = ExtResource("3_o5drp")
 CheckButton = NodePath("Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer3/HBoxContainer2/CheckButton")
 ResetTimerButton = NodePath("Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer2/HBoxContainer2/ResetTimeButton")
@@ -151,9 +154,15 @@ text = "ARE YOU STUPID"
 horizontal_alignment = 1
 autowrap_mode = 3
 
+[node name="PlayerContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+
 [node name="ImageContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
 
 [node name="AnswersContainer" type="GridContainer" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer"]
 layout_mode = 2
