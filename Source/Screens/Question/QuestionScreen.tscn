@@ -36,6 +36,7 @@ AnswersContainer = NodePath("Panel/PanelContainer/VBoxContainer/PanelContainer2/
 AnswerBoxScene = ExtResource("3_o5drp")
 CheckButton = NodePath("Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer3/HBoxContainer2/CheckButton")
 ResetTimerButton = NodePath("Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer2/HBoxContainer2/ResetTimeButton")
+TotalTime = 6.0
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1

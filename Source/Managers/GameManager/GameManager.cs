@@ -19,8 +19,8 @@ public partial class GameManager : Node
 
     public int MaxBetAmount { get; set; } = 20;
     public float StartingScore { get; set; } = 100f;
-    public int InitialRerollCount { get; set; } = 3;
-    public int RerollCount { get; set; } = 3;
+    public int InitialRerollCount { get; set; } = 1;
+    public int RerollCount { get; set; } = 1;
 
     public ulong GameSeed { get; private set; }
 

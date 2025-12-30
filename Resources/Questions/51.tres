@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://h5iuekb1lo0d"]
+
+[ext_resource type="Resource" uid="uid://ckepbdgtnrrh4" path="res://Resources/Categories/Anime.tres" id="1_krrt6"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_kfdx2"]
+
+[resource]
+script = ExtResource("2_kfdx2")
+QuestionText = "Sakuga w anime to termin oznaczający:"
+AnswersText = Array[String](["pięknie zanimowany fragment", "że akcja dzieje się głównie w szkole", "postać która jest nieśmiała", "okres dojrzewania, często dziwny"])
+IsBettingGameQuestion = true
+IsSabotageGameQuestion = true
+IsFraudGameQuestion = true
+Category = ExtResource("1_krrt6")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"
