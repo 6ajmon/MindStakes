@@ -7,6 +7,7 @@ public partial class ScoreTeamCard : TeamCard
     [Export] public SpinBox PointsSpinBox { get; set; }
     [Export] public Button AddPointsButton { get; set; }
     [Export] public Label TeamTypeLabel { get; set; }
+    [Export] public bool shouldShowTeamTypeLabel = true;
     private int betPoints = 0;
     public override void _Ready()
     {
@@ -21,11 +22,25 @@ public partial class ScoreTeamCard : TeamCard
 
     public void UpdateButtonsAndText()
     {
-        bool isFraudMode = GameManager.Instance.CurrentGameModeIndex == (int)GameManager.GameModeEnum.Fraud;
         RemovePointsButton.Text = $"- {betPoints}"; 
         AddPointsButton.Text = $"+ {betPoints}";
         PointsSpinBox.Value = TeamData.Score;
-        if (GameManager.Instance.CurrentGameModeIndex != (int)GameManager.GameModeEnum.Fraud)
+        if (shouldShowTeamTypeLabel)
+        {
+            UpdateLabels();
+        }
+        else
+        {
+            TeamTypeLabel.Visible = false;
+        }
+    }
+
+    private void UpdateLabels()
+    {
+        TeamTypeLabel.Visible = true;
+        bool isFraudMode = GameManager.Instance.CurrentGameModeIndex == (int)GameManager.GameModeEnum.Fraud;
+        if (GameManager.Instance.CurrentGameModeIndex != (int)GameManager.GameModeEnum.Fraud &&
+            GameManager.Instance.CurrentGameModeIndex != (int)GameManager.GameModeEnum.Sabotage)
         {
             TeamTypeLabel.Visible = false;
             return;

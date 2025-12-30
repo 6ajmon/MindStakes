@@ -51,7 +51,6 @@ public partial class GameManager : Node
 
     private void FinishGame()
     {
-        SceneManager.Instance.ChangeScene("res://Source/Screens/GameModePick/GameModePickScreen.tscn");
-        RoundCount = 10;
+        SceneManager.Instance.ChangeScene("res://Source/Screens/Summary/SummaryScreen.tscn");
     }
 }

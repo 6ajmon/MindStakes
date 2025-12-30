@@ -19,8 +19,10 @@ text = "A"
 horizontal_alignment = 1
 
 [node name="Answer" type="Label" parent="HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 6.0
 text = "YES"
 horizontal_alignment = 1
+autowrap_mode = 3
