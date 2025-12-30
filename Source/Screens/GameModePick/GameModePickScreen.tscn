@@ -9,7 +9,7 @@
 bg_color = Color(0.043137256, 0.0627451, 0.14901961, 0.73333335)
 border_color = Color(0.105882354, 0.13333334, 0.2509804, 1)
 
-[node name="GameModePickScreen" type="Control"]
+[node name="GameModePickScreen" type="Control" node_paths=PackedStringArray("RerollCountSpinBox", "QuestionTimeSpinBox")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -18,6 +18,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_2bbaf")
 script = ExtResource("2_8ytik")
+RerollCountSpinBox = NodePath("Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/RerollCountSpinBox")
+QuestionTimeSpinBox = NodePath("Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer2/PanelContainer/MarginContainer/HBoxContainer/QuestionTimeSpinBox")
 
 [node name="Panel2" parent="." instance=ExtResource("3_mv4mj")]
 layout_mode = 1
@@ -127,22 +129,80 @@ GameModeType = 2
 custom_minimum_size = Vector2(0, 160)
 layout_mode = 2
 theme = ExtResource("1_2bbaf")
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer"]
 layout_mode = 2
 theme = ExtResource("1_2bbaf")
+theme_override_constants/separation = 32
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("1_2bbaf")
 
+[node name="PanelContainer" type="PanelContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer/PanelContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.6
+theme_override_font_sizes/font_size = 48
+text = "Reroll count:"
+autowrap_mode = 3
+
+[node name="RerollCountSpinBox" type="SpinBox" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/set_min_buttons_width_from_icons = 32
+alignment = 1
+update_on_text_changed = true
+
 [node name="MarginContainer2" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("1_2bbaf")
 
-[node name="MarginContainer3" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer2/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer2/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer2/PanelContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("1_2bbaf")
+size_flags_stretch_ratio = 1.6
+theme_override_font_sizes/font_size = 48
+text = "Question Time (s): "
+autowrap_mode = 3
+
+[node name="QuestionTimeSpinBox" type="SpinBox" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer2/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/set_min_buttons_width_from_icons = 32
+alignment = 1
+update_on_text_changed = true

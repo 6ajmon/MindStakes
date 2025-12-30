@@ -27,6 +27,7 @@ public partial class QuestionScreen : Control
 
     public override void _Ready()
     {
+        TotalTime = GameManager.Instance.QuestionTime;
         _timeLeft = TotalTime;
         _isTimerRunning = AutostartTimer;
         if (TimeProgressBar != null)
