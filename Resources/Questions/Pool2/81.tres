@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://de5l6b81bnaxh"]
+
+[ext_resource type="Resource" uid="uid://dbdfjnvf4ec8o" path="res://Resources/Categories/Literature.tres" id="1_cs031"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_mltpg"]
+
+[resource]
+script = ExtResource("2_mltpg")
+QuestionText = "Do czego nawiązuje liczba 451 w tytule słynnej antyutopii Raya Bradbury'ego?"
+AnswersText = Array[String]([" Temperatury zapłonu papieru", " Numeru jednostki straży pożarnej", " Liczby stron zakazanej książki", " Daty, w której dzieje się akcja"])
+Category = ExtResource("1_cs031")
+FunFact = " Tytuł odnosi się do 451 stopni w skali Fahrenheita, czyli temperatury, w której papier zaczyna samoistnie płonąć."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

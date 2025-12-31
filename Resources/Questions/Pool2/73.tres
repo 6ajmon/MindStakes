@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=4 format=3 uid="uid://csjgkofssjhn0"]
+
+[ext_resource type="Resource" uid="uid://cnp0tbt3ysi7e" path="res://Resources/Categories/RandomWikipedia.tres" id="1_qdb70"]
+[ext_resource type="Texture2D" uid="uid://cmasrh2oc8kaj" path="res://Assets/Images/Lichtenberg_figure_in_block_of_Plexiglas.jpg" id="2_qdb70"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="3_knlxe"]
+
+[resource]
+script = ExtResource("3_knlxe")
+QuestionText = "Jak nazywają się wzory na skórze (lub innym materiale) przypominające paprocie lub rozgałęzione drzewa, które powstają po uderzeniu pioruna?"
+AnswersText = Array[String]([" Figury Lichtenberga", " Blizny Franklina", " Znaki Tesli", " Kwiaty galwaniczne"])
+Category = ExtResource("1_qdb70")
+FunFact = " Te charakterystyczne, sinoczerwone wzory powstają w wyniku pękania naczyń włosowatych pod wpływem ogromnego napięcia elektrycznego."
+Photo = ExtResource("2_qdb70")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

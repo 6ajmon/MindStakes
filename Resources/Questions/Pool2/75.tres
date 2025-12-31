@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://blv36nt55xnig"]
+
+[ext_resource type="Resource" uid="uid://cnp0tbt3ysi7e" path="res://Resources/Categories/RandomWikipedia.tres" id="1_tpp47"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_7mbwe"]
+
+[resource]
+script = ExtResource("2_7mbwe")
+QuestionText = "Czym jest Cicada 3301?"
+AnswersText = Array[String]([" Serią trudnych zagadek kryptograficznych.", " Sektą rekrutującą członków przez gry wideo.", " Wirusem komputerowym niszczącym dyski twarde.", "Projektem rządu USA do walki z hakerami."])
+Category = ExtResource("1_tpp47")
+FunFact = " Zagadki te łączyły wiedzę z zakresu teorii liczb, filozofii i literatury klasycznej, a ich autorzy do dziś pozostają nieznani."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

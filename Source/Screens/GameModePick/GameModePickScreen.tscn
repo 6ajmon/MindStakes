@@ -105,16 +105,6 @@ theme = ExtResource("1_2bbaf")
 layout_mode = 1
 theme = ExtResource("1_2bbaf")
 
-[node name="CategoryButtonContainer" type="Panel" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("1_2bbaf")
-
-[node name="GameModeCard" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer/CategoryButtonContainer" instance=ExtResource("3_8ytik")]
-layout_mode = 1
-theme = ExtResource("1_2bbaf")
-GameModeType = 1
-
 [node name="Panel3" type="Panel" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -124,6 +114,15 @@ theme = ExtResource("1_2bbaf")
 layout_mode = 1
 theme = ExtResource("1_2bbaf")
 GameModeType = 2
+
+[node name="CategoryButtonContainer" type="Panel" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameModeCard" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer/CategoryButtonContainer" instance=ExtResource("3_8ytik")]
+layout_mode = 1
+theme = ExtResource("1_2bbaf")
+GameModeType = 1
 
 [node name="ButtonsContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 160)

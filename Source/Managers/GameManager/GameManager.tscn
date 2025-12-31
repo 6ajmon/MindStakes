@@ -4,3 +4,4 @@
 
 [node name="GameManager" type="Node"]
 script = ExtResource("1_itnt6")
+MaxRounds = 28

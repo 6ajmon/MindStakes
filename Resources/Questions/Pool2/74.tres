@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://beg4fqyjk1pfd"]
+
+[ext_resource type="Resource" uid="uid://cnp0tbt3ysi7e" path="res://Resources/Categories/RandomWikipedia.tres" id="1_d866n"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_tbchg"]
+
+[resource]
+script = ExtResource("2_tbchg")
+QuestionText = "Jaka lepka substancja zalała ulice Bostonu w 1919 roku, zabijając 21 osób?"
+AnswersText = Array[String]([" Gorąca melasa z pękniętego zbiornika", " Woda morska po tsunami", " Ścieki z uszkodzonej rury", " Płynna czekolada z fabryki"])
+Category = ExtResource("1_d866n")
+FunFact = " Fala melasy o wysokości 7 metrów poruszała się z prędkością 56 km/h, niszcząc budynki i porywając ludzi na swojej drodze."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

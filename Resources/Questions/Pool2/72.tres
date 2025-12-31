@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=4 format=3 uid="uid://cfub65jraoi1g"]
+
+[ext_resource type="Resource" uid="uid://cnp0tbt3ysi7e" path="res://Resources/Categories/RandomWikipedia.tres" id="1_4om3b"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_4om3b"]
+[ext_resource type="Texture2D" uid="uid://cnui63rqxw36c" path="res://Assets/Images/960px-Voynich_Manuscript_(172).jpg" id="2_ymg3n"]
+
+[resource]
+script = ExtResource("2_4om3b")
+QuestionText = "W jakim języku został spisany tajemniczy Manuskrypt Wojnicza z XV wieku?"
+AnswersText = Array[String]([" W nieznanym języku i piśmie", " W łacinie kuchennej", " W starożytnym greckim", " W kodzie Leonarda da Vinci"])
+Category = ExtResource("1_4om3b")
+FunFact = " Mimo wielu prób podjętych przez najlepszych kryptologów świata, język i autorstwo tego bogato ilustrowanego rękopisu pozostają zagadką do dziś."
+Photo = ExtResource("2_ymg3n")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

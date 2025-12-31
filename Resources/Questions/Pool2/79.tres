@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://dur88ngetxkay"]
+
+[ext_resource type="Resource" uid="uid://dbdfjnvf4ec8o" path="res://Resources/Categories/Literature.tres" id="1_opi73"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_tj83r"]
+
+[resource]
+script = ExtResource("2_tj83r")
+QuestionText = "Jak brzmiało prawdziwe imię i nazwisko Bolesława Prusa, autora „Lalki” i „Faraona”?"
+AnswersText = Array[String]([" Aleksander Głowacki", " Aleksander Świętochowski", " Henryk Goldszmit", " Józef Korzeniowski"])
+Category = ExtResource("1_opi73")
+FunFact = " Pseudonim „Prus” pochodził od nazwy rodowego herbu pisarza, którym posługiwała się jego rodzina."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

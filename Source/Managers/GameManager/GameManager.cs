@@ -15,7 +15,7 @@ public partial class GameManager : Node
     public int CurrentGameModeIndex { get; set; } = 0;
 
     public int RoundCount { get; set; } = 0;
-    public int MaxRounds { get; set; } = 10;
+    [Export] public int MaxRounds { get; set; } = 10;
 
     public int MaxBetAmount { get; set; } = 20;
     public float StartingScore { get; set; } = 100f;

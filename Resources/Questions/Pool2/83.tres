@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://fhok28rfhw26"]
+
+[ext_resource type="Resource" uid="uid://ce08st5kjg0yj" path="res://Resources/Categories/NerdHard.tres" id="1_rbha4"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_54tc5"]
+
+[resource]
+script = ExtResource("2_54tc5")
+QuestionText = "Komu NIE dał nominacji Klocuch w akcji charytatywnej #hot16challange2"
+AnswersText = Array[String](["Jako Tako (Taco Hemingway)", "Norbi", "Rafał Brzozowski", "ksiądz Mateusz"])
+Category = ExtResource("1_rbha4")
+FunFact = "Klocuch dostał nominacje od wąsacza. Sam nominował 3 osoby: Norbi, Rafał Brzozowski i ksiądz Mateusz. Dwóch pierwszych muzyków nagrało swoje zwrotki po nominacji, jednak Artur Żmijewski, aktor grający w Ojcu Mateuszu, nie."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

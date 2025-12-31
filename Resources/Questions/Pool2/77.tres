@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://m5mlxdaf8hy2"]
+
+[ext_resource type="Resource" uid="uid://dbdfjnvf4ec8o" path="res://Resources/Categories/Literature.tres" id="1_uoiwt"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_dpwe0"]
+
+[resource]
+script = ExtResource("2_dpwe0")
+QuestionText = "Jaki był pierwotny, roboczy tytuł słynnej antyutopii George’a Orwella „Rok 1984”?"
+AnswersText = Array[String]([" Ostatni człowiek w Europie", " Wielki Brat patrzy", " Nowy wspaniały świat", " Folwark zwierzęcy"])
+Category = ExtResource("1_uoiwt")
+FunFact = " Pisarz zmienił tytuł za namową wydawcy, który uznał, że „Rok 1984” będzie bardziej chwytliwy komercyjnie."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

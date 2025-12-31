@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://brm3bwj2l30sf"
+path="res://.godot/imported/【東方】Bad Apple__ ＰＶ【影絵】 [FtutLA63Cp8_00_00_00_00_00_05_part].mp3-bffd6c8d7af49ed70084c07e2699ed03.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Sounds/【東方】Bad Apple__ ＰＶ【影絵】 [FtutLA63Cp8_00_00_00_00_00_05_part].mp3"
+dest_files=["res://.godot/imported/【東方】Bad Apple__ ＰＶ【影絵】 [FtutLA63Cp8_00_00_00_00_00_05_part].mp3-bffd6c8d7af49ed70084c07e2699ed03.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

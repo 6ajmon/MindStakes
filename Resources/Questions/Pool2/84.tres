@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=4 format=3 uid="uid://4xjmay87ds7i"]
+
+[ext_resource type="AudioStream" uid="uid://brm3bwj2l30sf" path="res://Assets/Audio/Sounds/【東方】Bad Apple__ ＰＶ【影絵】 [FtutLA63Cp8_00_00_00_00_00_05_part].mp3" id="1_kxvfk"]
+[ext_resource type="Resource" uid="uid://ce08st5kjg0yj" path="res://Resources/Categories/NerdHard.tres" id="2_oxp8m"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="3_xq8ct"]
+
+[resource]
+script = ExtResource("3_xq8ct")
+QuestionText = "Jaki jest tytuł tej piosenki?"
+AnswersText = Array[String](["Bad Apple!!", "PoPiPo", "Angel With A Shotgun", "Capirinha"])
+Category = ExtResource("2_oxp8m")
+FunFact = "„Bad Apple!!” to jeden z najbardziej ikonicznych utworów w kulturze internetowej, którego historia sięga japońskiej serii gier typu bullet hell o nazwie Touhou Project. Dzięki swojej minimalistycznej, dwukolorowej formie (tylko czerń i biel), wideo stało się swoistym benchmarkiem i dalej powstaje mnóstwo przeróbek."
+Audio = ExtResource("1_kxvfk")
+metadata/_custom_type_script = "uid://d1obhtdryuoak"

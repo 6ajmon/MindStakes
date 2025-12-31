@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=3 format=3 uid="uid://3cyxpyn837pq"]
+
+[ext_resource type="Resource" uid="uid://ce08st5kjg0yj" path="res://Resources/Categories/NerdHard.tres" id="1_q74mo"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_j8vpi"]
+
+[resource]
+script = ExtResource("2_j8vpi")
+QuestionText = "Ile minimalnie oczu kresu trzeba rzucić aby znaleźć dokładną lokalizację twierdzy w Minecraft, zakładając że nie znajdziemy jej przypadkiem?"
+AnswersText = Array[String](["1", "2", "Zależy od seeda", "3"])
+Category = ExtResource("1_q74mo")
+FunFact = "Rozsądnym jest założyć, że musimy rzucić 2 oka, które stworzą nam dwie proste i przetną się w punkcie gdzie jest twierdza. Jednak sposób w jaki twierdza generuje się w świecie, ułatwia sprawę i za pomocą matematycznego bota (lub własnych, dokładnych obliczeń) da się określić dokładną pozycję po jednym rzucie."
+metadata/_custom_type_script = "uid://d1obhtdryuoak"
