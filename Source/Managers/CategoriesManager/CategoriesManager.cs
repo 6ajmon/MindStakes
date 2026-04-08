@@ -65,4 +65,8 @@ public partial class CategoriesManager : Node
             RandomCategory = validCategories[(int)randomIndex];
         }
     }
+    public List<Category> GetAllCategories()
+    {
+        return Categories;
+    }
 }
