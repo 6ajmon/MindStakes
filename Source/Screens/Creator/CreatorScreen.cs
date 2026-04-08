@@ -784,11 +784,6 @@ public partial class CreatorScreen : Control
         _editingQuestionPath = null;
         SaveButton.Text = "SAVE";
 
-        if (CategoryOptionButton.ItemCount > 0)
-        {
-            CategoryOptionButton.Select(0);
-        }
-
         _selectedImage = null;
         _selectedAudio = null;
 
