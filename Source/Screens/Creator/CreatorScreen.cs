@@ -31,6 +31,8 @@ public partial class CreatorScreen : Control
     private bool _isQuestionsExplorerSplitResizeConnected;
     private ItemList _questionsFolderItemList;
     private readonly List<string> _currentFolderQuestionPaths = new();
+    private string _openedFolderPath;
+    private string _selectedQuestionPath;
 
     public override void _Ready()
     {
@@ -215,6 +217,9 @@ public partial class CreatorScreen : Control
             return;
         }
 
+        var preservedFolderPath = _openedFolderPath;
+        var preservedQuestionPath = _selectedQuestionPath;
+
         QuestionsExplorerTree.Clear();
         var root = QuestionsExplorerTree.CreateItem();
 
@@ -242,10 +247,10 @@ public partial class CreatorScreen : Control
         {
             var poolItem = QuestionsExplorerTree.CreateItem(root);
             poolItem.SetText(0, poolDirectory);
-            poolItem.SetMetadata(0, $"{questionsRootPath}/{poolDirectory}");
-            poolItem.Collapsed = true;
-
             var poolPath = $"{questionsRootPath}/{poolDirectory}";
+            poolItem.SetMetadata(0, poolPath);
+            poolItem.Collapsed = poolPath != preservedFolderPath;
+
             var poolDir = DirAccess.Open(poolPath);
             if (poolDir == null)
             {
@@ -272,7 +277,43 @@ public partial class CreatorScreen : Control
             }
         }
 
-        ClearFolderList();
+        if (!string.IsNullOrEmpty(preservedFolderPath))
+        {
+            ShowFolderContents(preservedFolderPath);
+
+            var pathToSelect = !string.IsNullOrEmpty(preservedQuestionPath) ? preservedQuestionPath : preservedFolderPath;
+            var itemToSelect = FindTreeItemByPath(root, pathToSelect);
+            itemToSelect?.Select(0);
+        }
+        else
+        {
+            ClearFolderList();
+        }
+    }
+
+    private TreeItem FindTreeItemByPath(TreeItem parent, string path)
+    {
+        if (parent == null)
+        {
+            return null;
+        }
+
+        for (var item = parent.GetFirstChild(); item != null; item = item.GetNext())
+        {
+            var metadata = item.GetMetadata(0);
+            if (metadata.VariantType != Variant.Type.Nil && metadata.AsString() == path)
+            {
+                return item;
+            }
+
+            var foundInChildren = FindTreeItemByPath(item, path);
+            if (foundInChildren != null)
+            {
+                return foundInChildren;
+            }
+        }
+
+        return null;
     }
 
     private int GetPoolNumberFromName(string poolName)
@@ -331,6 +372,7 @@ public partial class CreatorScreen : Control
             return;
         }
 
+        _selectedQuestionPath = null;
         ShowFolderContents(itemPath);
     }
 
@@ -364,6 +406,8 @@ public partial class CreatorScreen : Control
         {
             return;
         }
+
+        _openedFolderPath = folderPath;
 
         _questionsFolderItemList.Clear();
         _currentFolderQuestionPaths.Clear();
@@ -419,16 +463,20 @@ public partial class CreatorScreen : Control
     {
         _questionsFolderItemList?.Clear();
         _currentFolderQuestionPaths.Clear();
+        _openedFolderPath = null;
+        _selectedQuestionPath = null;
     }
 
     private void LoadQuestionForEditing(string questionPath)
     {
-        var question = GD.Load<Question>(questionPath);
+        var question = ResourceLoader.Load(questionPath, string.Empty, ResourceLoader.CacheMode.Replace) as Question;
         if (question == null)
         {
             GD.PushWarning($"Failed to load question from '{questionPath}'.");
             return;
         }
+
+        _selectedQuestionPath = questionPath;
 
         _editingQuestionPath = questionPath;
         SaveButton.Text = "UPDATE";
@@ -573,14 +621,10 @@ public partial class CreatorScreen : Control
             return;
         }
 
+        _openedFolderPath = poolPath;
+        _selectedQuestionPath = savePath;
         GD.Print($"Question saved to {savePath}");
         RefreshQuestionsExplorer();
-
-        var selectedItem = QuestionsExplorerTree?.GetSelected();
-        if (selectedItem != null && TryGetItemPath(selectedItem, out var selectedPath))
-        {
-            ShowFolderContents(IsQuestionFilePath(selectedPath) ? GetParentFolderPath(selectedPath) : selectedPath);
-        }
     }
 
     private void OnNewPressed()
@@ -738,6 +782,7 @@ public partial class CreatorScreen : Control
         Answer3LineEdit.Text = string.Empty;
         Answer4LineEdit.Text = string.Empty;
         _editingQuestionPath = null;
+        SaveButton.Text = "SAVE";
 
         if (CategoryOptionButton.ItemCount > 0)
         {
