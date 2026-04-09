@@ -29,6 +29,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource("1_3h2fp")
 script = ExtResource("2_uofdg")
 TitleLabel = NodePath("Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/TitleLabel")
@@ -47,9 +49,10 @@ theme = ExtResource("1_3h2fp")
 theme_override_styles/panel = SubResource("StyleBoxFlat_3jf3j")
 
 [node name="PanelContainer" type="MarginContainer" parent="Panel" unique_id=638341755]
-layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_3h2fp")

@@ -10,7 +10,7 @@
 bg_color = Color(0.043137256, 0.0627451, 0.14901961, 0.73333335)
 border_color = Color(0.105882354, 0.13333334, 0.2509804, 1)
 
-[node name="CreatorScreen" type="Control" unique_id=2136104962 node_paths=PackedStringArray("QuestionLineEdit", "CategoryOptionButton", "ImageFileSelectButton", "ImageFilePreviewContainer", "AudioFileSelectButton", "AudioFilePreviewContainer", "CorrectAnswerLineEdit", "Answer2LineEdit", "Answer3LineEdit", "Answer4LineEdit", "PoolSpinBox", "SaveButton", "NewButton", "QuestionsExplorerTree")]
+[node name="CreatorScreen" type="Control" unique_id=2136104962 node_paths=PackedStringArray("QuestionLineEdit", "CategoryOptionButton", "ImageFileSelectButton", "ImageFilePreviewContainer", "AudioFileSelectButton", "AudioFilePreviewContainer", "CorrectAnswerLineEdit", "Answer2LineEdit", "Answer3LineEdit", "Answer4LineEdit", "FunFactLineEdit", "PoolSpinBox", "SaveButton", "NewButton", "QuestionsExplorerTree")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -29,6 +29,7 @@ CorrectAnswerLineEdit = NodePath("Panel/PanelContainer/VBoxContainer/PanelContai
 Answer2LineEdit = NodePath("Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer/Panel2/MarginContainer/VBoxContainer/AnswerHBoxContainer3/LineEdit")
 Answer3LineEdit = NodePath("Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer/Panel2/MarginContainer/VBoxContainer/AnswerHBoxContainer4/LineEdit")
 Answer4LineEdit = NodePath("Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer/Panel2/MarginContainer/VBoxContainer/AnswerHBoxContainer5/LineEdit")
+FunFactLineEdit = NodePath("Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer/Panel2/MarginContainer/VBoxContainer/FunfactHBoxContainer6/LineEdit")
 PoolSpinBox = NodePath("Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer/PanelContainer/HBoxContainer/SpinBox")
 SaveButton = NodePath("Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer2/SaveButton")
 NewButton = NodePath("Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer3/NewButton")
@@ -262,10 +263,6 @@ text = "SELECT"
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="TextureRect" type="TextureRect" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer/Panel2/MarginContainer/VBoxContainer/AudioFileHBoxContainer3/PreviewPanelContainer" unique_id=1415804776]
-layout_mode = 2
-size_flags_horizontal = 3
-
 [node name="CorrectHBoxContainer2" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer/Panel2/MarginContainer/VBoxContainer" unique_id=623824143]
 layout_mode = 2
 size_flags_vertical = 3
@@ -323,6 +320,21 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="LineEdit" type="LineEdit" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer/Panel2/MarginContainer/VBoxContainer/AnswerHBoxContainer5" unique_id=223231835]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FunfactHBoxContainer6" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer/Panel2/MarginContainer/VBoxContainer" unique_id=2020900163]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer/Panel2/MarginContainer/VBoxContainer/FunfactHBoxContainer6" unique_id=356370601]
+layout_mode = 2
+size_flags_vertical = 1
+text = "FUNFACT:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer/Panel2/MarginContainer/VBoxContainer/FunfactHBoxContainer6" unique_id=2088001336]
 layout_mode = 2
 size_flags_horizontal = 3
 

@@ -5,6 +5,9 @@ using System.Linq;
 
 public partial class CreatorScreen : Control
 {
+    private const string SelectButtonText = "SELECT";
+    private const string ClearButtonText = "CLEAR";
+
     [Export] public LineEdit QuestionLineEdit { get; set; }
     [Export] public OptionButton CategoryOptionButton { get; set; }
     [Export] public Button ImageFileSelectButton { get; set; }
@@ -15,6 +18,7 @@ public partial class CreatorScreen : Control
     [Export] public LineEdit Answer2LineEdit { get; set; }
     [Export] public LineEdit Answer3LineEdit { get; set; }
     [Export] public LineEdit Answer4LineEdit { get; set; }
+    [Export] public LineEdit FunFactLineEdit { get; set; }
     [Export] public SpinBox PoolSpinBox { get; set; }
     [Export] public Button SaveButton { get; set; }
     [Export] public Button NewButton { get; set; }
@@ -75,30 +79,34 @@ public partial class CreatorScreen : Control
 
     private void SetupFileDialogs()
     {
-        _imageFileDialog = new FileDialog();
-        _imageFileDialog.Name = "ImageFileDialog";
-        _imageFileDialog.Access = FileDialog.AccessEnum.Resources;
-        _imageFileDialog.FileMode = FileDialog.FileModeEnum.OpenFile;
-        _imageFileDialog.Title = "Select image";
-        _imageFileDialog.Filters = new string[]
+        _imageFileDialog = new FileDialog
         {
-            "*.png ; PNG",
-            "*.jpg, *.jpeg ; JPG/JPEG",
-            "*.webp ; WEBP"
+            Name = "ImageFileDialog",
+            Access = FileDialog.AccessEnum.Resources,
+            FileMode = FileDialog.FileModeEnum.OpenFile,
+            Title = "Select image",
+            Filters = new string[]
+            {
+                "*.png ; PNG",
+                "*.jpg, *.jpeg ; JPG/JPEG",
+                "*.webp ; WEBP"
+            }
         };
         _imageFileDialog.FileSelected += OnImageFileSelected;
         AddChild(_imageFileDialog);
 
-        _audioFileDialog = new FileDialog();
-        _audioFileDialog.Name = "AudioFileDialog";
-        _audioFileDialog.Access = FileDialog.AccessEnum.Resources;
-        _audioFileDialog.FileMode = FileDialog.FileModeEnum.OpenFile;
-        _audioFileDialog.Title = "Select audio";
-        _audioFileDialog.Filters = new string[]
+        _audioFileDialog = new FileDialog
         {
-            "*.mp3 ; MP3",
-            "*.wav ; WAV",
-            "*.ogg ; OGG"
+            Name = "AudioFileDialog",
+            Access = FileDialog.AccessEnum.Resources,
+            FileMode = FileDialog.FileModeEnum.OpenFile,
+            Title = "Select audio",
+            Filters = new string[]
+            {
+                "*.mp3 ; MP3",
+                "*.wav ; WAV",
+                "*.ogg ; OGG"
+            }
         };
         _audioFileDialog.FileSelected += OnAudioFileSelected;
         AddChild(_audioFileDialog);
@@ -247,6 +255,7 @@ public partial class CreatorScreen : Control
         {
             var poolItem = QuestionsExplorerTree.CreateItem(root);
             poolItem.SetText(0, poolDirectory);
+
             var poolPath = $"{questionsRootPath}/{poolDirectory}";
             poolItem.SetMetadata(0, poolPath);
             poolItem.Collapsed = poolPath != preservedFolderPath;
@@ -280,7 +289,6 @@ public partial class CreatorScreen : Control
         if (!string.IsNullOrEmpty(preservedFolderPath))
         {
             ShowFolderContents(preservedFolderPath);
-
             var pathToSelect = !string.IsNullOrEmpty(preservedQuestionPath) ? preservedQuestionPath : preservedFolderPath;
             var itemToSelect = FindTreeItemByPath(root, pathToSelect);
             itemToSelect?.Select(0);
@@ -444,8 +452,7 @@ public partial class CreatorScreen : Control
             return;
         }
 
-        var questionPath = _currentFolderQuestionPaths[(int)index];
-        LoadQuestionForEditing(questionPath);
+        LoadQuestionForEditing(_currentFolderQuestionPaths[(int)index]);
     }
 
     private void OnFolderListItemSelected(long index)
@@ -455,8 +462,7 @@ public partial class CreatorScreen : Control
             return;
         }
 
-        var questionPath = _currentFolderQuestionPaths[(int)index];
-        LoadQuestionForEditing(questionPath);
+        LoadQuestionForEditing(_currentFolderQuestionPaths[(int)index]);
     }
 
     private void ClearFolderList()
@@ -469,7 +475,7 @@ public partial class CreatorScreen : Control
 
     private void LoadQuestionForEditing(string questionPath)
     {
-        var question = ResourceLoader.Load(questionPath, string.Empty, ResourceLoader.CacheMode.Replace) as Question;
+        var question = ResourceLoader.Load(questionPath, string.Empty, ResourceLoader.CacheMode.Ignore) as Question;
         if (question == null)
         {
             GD.PushWarning($"Failed to load question from '{questionPath}'.");
@@ -477,7 +483,6 @@ public partial class CreatorScreen : Control
         }
 
         _selectedQuestionPath = questionPath;
-
         _editingQuestionPath = questionPath;
         SaveButton.Text = "UPDATE";
 
@@ -488,6 +493,7 @@ public partial class CreatorScreen : Control
         Answer2LineEdit.Text = answers.Count > 1 ? answers[1] : string.Empty;
         Answer3LineEdit.Text = answers.Count > 2 ? answers[2] : string.Empty;
         Answer4LineEdit.Text = answers.Count > 3 ? answers[3] : string.Empty;
+        FunFactLineEdit.Text = question.FunFact ?? string.Empty;
 
         SetCategorySelection(question.Category);
         SetPoolFromQuestionPath(questionPath);
@@ -497,6 +503,8 @@ public partial class CreatorScreen : Control
 
         _selectedAudio = question.Audio;
         ShowAudioPreview(_selectedAudio);
+
+        UpdateFileButtonsState();
     }
 
     private void SetCategorySelection(Category category)
@@ -541,11 +549,23 @@ public partial class CreatorScreen : Control
 
     private void OnImageSelectPressed()
     {
+        if (_selectedImage != null)
+        {
+            ClearSelectedImage();
+            return;
+        }
+
         _imageFileDialog.PopupCenteredRatio(0.65f);
     }
 
     private void OnAudioSelectPressed()
     {
+        if (_selectedAudio != null)
+        {
+            ClearSelectedAudio();
+            return;
+        }
+
         _audioFileDialog.PopupCenteredRatio(0.65f);
     }
 
@@ -559,6 +579,7 @@ public partial class CreatorScreen : Control
         }
 
         SetImagePreviewTexture(_selectedImage);
+        UpdateFileButtonsState();
     }
 
     private void OnAudioFileSelected(string path)
@@ -571,6 +592,34 @@ public partial class CreatorScreen : Control
         }
 
         ShowAudioPreview(_selectedAudio);
+        UpdateFileButtonsState();
+    }
+
+    private void ClearSelectedImage()
+    {
+        _selectedImage = null;
+        SetImagePreviewTexture(null);
+        UpdateFileButtonsState();
+    }
+
+    private void ClearSelectedAudio()
+    {
+        _selectedAudio = null;
+        ShowAudioPreview(null);
+        UpdateFileButtonsState();
+    }
+
+    private void UpdateFileButtonsState()
+    {
+        if (ImageFileSelectButton != null)
+        {
+            ImageFileSelectButton.Text = _selectedImage == null ? SelectButtonText : ClearButtonText;
+        }
+
+        if (AudioFileSelectButton != null)
+        {
+            AudioFileSelectButton.Text = _selectedAudio == null ? SelectButtonText : ClearButtonText;
+        }
     }
 
     private void OnSavePressed()
@@ -601,7 +650,7 @@ public partial class CreatorScreen : Control
             IsSabotageGameQuestion = true,
             IsFraudGameQuestion = true,
             Category = selectedCategory,
-            FunFact = string.Empty,
+            FunFact = FunFactLineEdit.Text.Trim(),
             Photo = _selectedImage,
             Audio = _selectedAudio
         };
@@ -614,7 +663,6 @@ public partial class CreatorScreen : Control
         }
 
         var error = ResourceSaver.Save(question, savePath);
-
         if (error != Error.Ok)
         {
             GD.PushWarning($"Failed to save question at '{savePath}'. Error: {error}");
@@ -623,6 +671,7 @@ public partial class CreatorScreen : Control
 
         _openedFolderPath = poolPath;
         _selectedQuestionPath = savePath;
+
         GD.Print($"Question saved to {savePath}");
         RefreshQuestionsExplorer();
     }
@@ -735,9 +784,18 @@ public partial class CreatorScreen : Control
             return false;
         }
 
-        if (string.IsNullOrWhiteSpace(CorrectAnswerLineEdit.Text))
+        if (CategoryOptionButton == null || CategoryOptionButton.ItemCount == 0 || CategoryOptionButton.Selected < 0)
         {
-            GD.PushWarning("Correct answer field cannot be empty.");
+            GD.PushWarning("Category must be selected.");
+            return false;
+        }
+
+        if (string.IsNullOrWhiteSpace(CorrectAnswerLineEdit.Text)
+            || string.IsNullOrWhiteSpace(Answer2LineEdit.Text)
+            || string.IsNullOrWhiteSpace(Answer3LineEdit.Text)
+            || string.IsNullOrWhiteSpace(Answer4LineEdit.Text))
+        {
+            GD.PushWarning("All answer fields are required.");
             return false;
         }
 
@@ -781,6 +839,7 @@ public partial class CreatorScreen : Control
         Answer2LineEdit.Text = string.Empty;
         Answer3LineEdit.Text = string.Empty;
         Answer4LineEdit.Text = string.Empty;
+        FunFactLineEdit.Text = string.Empty;
         _editingQuestionPath = null;
         SaveButton.Text = "SAVE";
 
@@ -789,5 +848,6 @@ public partial class CreatorScreen : Control
 
         SetImagePreviewTexture(null);
         ClearAudioPreview();
+        UpdateFileButtonsState();
     }
 }

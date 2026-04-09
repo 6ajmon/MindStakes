@@ -1,15 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://c864wsxq4to5s"]
+[gd_scene format=3 uid="uid://c864wsxq4to5s"]
 
 [ext_resource type="Theme" uid="uid://befyp5hugoswj" path="res://Assets/Themes/MainTheme.tres" id="1_2bbaf"]
 [ext_resource type="Script" uid="uid://ul502vr2pu03" path="res://Source/Screens/GameModePick/GameModePickScreen.cs" id="2_8ytik"]
 [ext_resource type="PackedScene" uid="uid://blw4qh1ca5ow3" path="res://Source/Components/GameModeCard/GameModeCard.tscn" id="3_8ytik"]
 [ext_resource type="PackedScene" uid="uid://gvqucvlox5kx" path="res://Source/Components/ShaderedBackground/ShaderedBackground.tscn" id="3_mv4mj"]
+[ext_resource type="Script" uid="uid://bic87bo6givcp" path="res://Source/Components/Buttons/NextButton/NextButton.cs" id="4_mv4mj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ytik"]
 bg_color = Color(0.043137256, 0.0627451, 0.14901961, 0.73333335)
 border_color = Color(0.105882354, 0.13333334, 0.2509804, 1)
 
-[node name="GameModePickScreen" type="Control" node_paths=PackedStringArray("RerollCountSpinBox", "QuestionTimeSpinBox")]
+[node name="GameModePickScreen" type="Control" unique_id=187402918 node_paths=PackedStringArray("RerollCountSpinBox", "PoolNumberSpinBox", "QuestionTimeSpinBox")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,13 +20,14 @@ grow_vertical = 2
 theme = ExtResource("1_2bbaf")
 script = ExtResource("2_8ytik")
 RerollCountSpinBox = NodePath("Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/RerollCountSpinBox")
+PoolNumberSpinBox = NodePath("Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer3/PanelContainer/MarginContainer/HBoxContainer/PoolNumberSpinBox")
 QuestionTimeSpinBox = NodePath("Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer2/PanelContainer/MarginContainer/HBoxContainer/QuestionTimeSpinBox")
 
-[node name="Panel2" parent="." instance=ExtResource("3_mv4mj")]
+[node name="Panel2" parent="." unique_id=758575530 instance=ExtResource("3_mv4mj")]
 layout_mode = 1
 theme = ExtResource("1_2bbaf")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=1021791309]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -35,7 +37,7 @@ grow_vertical = 2
 theme = ExtResource("1_2bbaf")
 theme_override_styles/panel = SubResource("StyleBoxFlat_8ytik")
 
-[node name="PanelContainer" type="MarginContainer" parent="Panel"]
+[node name="PanelContainer" type="MarginContainer" parent="Panel" unique_id=304877725]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -48,24 +50,24 @@ theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 6
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/PanelContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/PanelContainer" unique_id=1188334786]
 layout_mode = 2
 theme = ExtResource("1_2bbaf")
 
-[node name="PanelContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer"]
+[node name="PanelContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer" unique_id=1017789382]
 layout_mode = 2
 theme = ExtResource("1_2bbaf")
 
-[node name="VBoxContainer" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/PanelContainer"]
+[node name="VBoxContainer" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/PanelContainer" unique_id=1260910478]
 layout_mode = 2
 theme = ExtResource("1_2bbaf")
 
-[node name="VBoxContainer" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer"]
+[node name="VBoxContainer" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer" unique_id=2038753914]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("1_2bbaf")
 
-[node name="Title" type="Label" parent="Panel/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer"]
+[node name="Title" type="Label" parent="Panel/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer" unique_id=316773539]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
@@ -75,13 +77,23 @@ text = "PICK GAME MODE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PanelContainer2" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer"]
+[node name="BackButton" type="Button" parent="Panel/PanelContainer/VBoxContainer/PanelContainer" unique_id=1395220454]
+z_index = 99
+z_as_relative = false
+layout_mode = 2
+size_flags_horizontal = 0
+text = "<- BACK"
+script = ExtResource("4_mv4mj")
+ScenePath = "uid://g0bp6jr75tih"
+metadata/_custom_type_script = "uid://bic87bo6givcp"
+
+[node name="PanelContainer2" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer" unique_id=587710242]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("1_2bbaf")
 metadata/_edit_use_anchors_ = true
 
-[node name="MarginContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2"]
+[node name="MarginContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2" unique_id=1921349444]
 layout_mode = 2
 theme = ExtResource("1_2bbaf")
 theme_override_constants/margin_left = 32
@@ -89,42 +101,42 @@ theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 16
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer" unique_id=1792885992]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource("1_2bbaf")
 theme_override_constants/separation = 32
 
-[node name="Panel" type="Panel" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer"]
+[node name="Panel" type="Panel" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer" unique_id=1498775648]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("1_2bbaf")
 
-[node name="GameModeCard" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer/Panel" instance=ExtResource("3_8ytik")]
+[node name="GameModeCard" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer/Panel" unique_id=239153333 instance=ExtResource("3_8ytik")]
 layout_mode = 1
 theme = ExtResource("1_2bbaf")
 
-[node name="Panel3" type="Panel" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer"]
+[node name="Panel3" type="Panel" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer" unique_id=1690536766]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("1_2bbaf")
 
-[node name="GameModeCard" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer/Panel3" instance=ExtResource("3_8ytik")]
+[node name="GameModeCard" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer/Panel3" unique_id=729902646 instance=ExtResource("3_8ytik")]
 layout_mode = 1
 theme = ExtResource("1_2bbaf")
 GameModeType = 2
 
-[node name="CategoryButtonContainer" type="Panel" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer"]
+[node name="CategoryButtonContainer" type="Panel" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer" unique_id=1472222521]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="GameModeCard" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer/CategoryButtonContainer" instance=ExtResource("3_8ytik")]
+[node name="GameModeCard" parent="Panel/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer/CategoryButtonContainer" unique_id=1523865019 instance=ExtResource("3_8ytik")]
 layout_mode = 1
 theme = ExtResource("1_2bbaf")
 GameModeType = 1
 
-[node name="ButtonsContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer"]
+[node name="ButtonsContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer" unique_id=658657898]
 custom_minimum_size = Vector2(0, 160)
 layout_mode = 2
 theme = ExtResource("1_2bbaf")
@@ -133,30 +145,30 @@ theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer" unique_id=2069323882]
 layout_mode = 2
 theme = ExtResource("1_2bbaf")
 theme_override_constants/separation = 32
 
-[node name="MarginContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer" unique_id=582254120]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("1_2bbaf")
 
-[node name="PanelContainer" type="PanelContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer" unique_id=167937792]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer/PanelContainer" unique_id=429913812]
 layout_mode = 2
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer/PanelContainer/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer/PanelContainer/MarginContainer" unique_id=181370020]
 layout_mode = 2
 
-[node name="Label2" type="Label" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer/PanelContainer/MarginContainer/HBoxContainer"]
+[node name="Label2" type="Label" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=132117424]
 custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -165,32 +177,66 @@ theme_override_font_sizes/font_size = 48
 text = "Reroll count:"
 autowrap_mode = 3
 
-[node name="RerollCountSpinBox" type="SpinBox" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer/PanelContainer/MarginContainer/HBoxContainer"]
+[node name="RerollCountSpinBox" type="SpinBox" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=1014544397]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/set_min_buttons_width_from_icons = 32
 alignment = 1
 update_on_text_changed = true
 
-[node name="MarginContainer2" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer"]
+[node name="MarginContainer3" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer" unique_id=34394567]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("1_2bbaf")
 
-[node name="PanelContainer" type="PanelContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer2"]
+[node name="PanelContainer" type="PanelContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer3" unique_id=742079424]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer2/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer3/PanelContainer" unique_id=365389058]
 layout_mode = 2
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer2/PanelContainer/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer3/PanelContainer/MarginContainer" unique_id=782249441]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer2/PanelContainer/MarginContainer/HBoxContainer"]
+[node name="Label2" type="Label" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer3/PanelContainer/MarginContainer/HBoxContainer" unique_id=417668540]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.6
+theme_override_font_sizes/font_size = 48
+text = "Pool number:"
+autowrap_mode = 3
+
+[node name="PoolNumberSpinBox" type="SpinBox" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer3/PanelContainer/MarginContainer/HBoxContainer" unique_id=1945890430]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/set_min_buttons_width_from_icons = 32
+alignment = 1
+update_on_text_changed = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer" unique_id=1084855406]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_2bbaf")
+
+[node name="PanelContainer" type="PanelContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer2" unique_id=2041293690]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer2/PanelContainer" unique_id=1934149629]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer2/PanelContainer/MarginContainer" unique_id=1554747462]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer2/PanelContainer/MarginContainer/HBoxContainer" unique_id=2058096560]
 custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -199,7 +245,7 @@ theme_override_font_sizes/font_size = 48
 text = "Question Time (s): "
 autowrap_mode = 3
 
-[node name="QuestionTimeSpinBox" type="SpinBox" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer2/PanelContainer/MarginContainer/HBoxContainer"]
+[node name="QuestionTimeSpinBox" type="SpinBox" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer2/PanelContainer/MarginContainer/HBoxContainer" unique_id=445108086]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/set_min_buttons_width_from_icons = 32
