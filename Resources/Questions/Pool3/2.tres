@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Question" format=3 uid="uid://dq6qqe5uinmib"]
+
+[ext_resource type="Resource" uid="uid://c6r1cdsnj1wrb" path="res://Resources/Categories/FunFacts.tres" id="1_ionsh"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_om3fa"]
+
+[resource]
+script = ExtResource("2_om3fa")
+QuestionText = "Kto lub co to jest hipokorystyk?"
+AnswersText = Array[String](["Wyraz pieszczotliwy", "Lekarz zajmujący się alergiami", "Historyk skupiający się na Czarnej śmierci", "Osoba chora na hipokorię"])
+Category = ExtResource("1_ionsh")

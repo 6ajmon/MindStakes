@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Question" format=3]
+
+[ext_resource type="Resource" path="res://Resources/Categories/Michael.tres" id="1_ujq0d"]
+[ext_resource type="Script" path="res://Source/Data/Question/Question.cs" id="2_7jtqp"]
+
+[resource]
+script = ExtResource("2_7jtqp")
+QuestionText = "W jakim filmie NIE grał Michael Cera?"
+AnswersText = Array[String](["Baby Driver", "Scott Pilgrim kontra świat", "Supersamiec", "Juno"])
+Category = ExtResource("1_ujq0d")

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Question" format=3]
+
+[ext_resource type="Resource" path="res://Resources/Categories/FunFacts.tres" id="1_5wx2r"]
+[ext_resource type="Script" path="res://Source/Data/Question/Question.cs" id="2_7erc4"]
+
+[resource]
+script = ExtResource("2_7erc4")
+QuestionText = "Do czego wykorzystywana była Garota?"
+AnswersText = Array[String](["Do szybkiego duszenia ofiar przez zabójców", "Do szyfrowania wiadomości między piratami", "Do mierzenia wilgotności powietrza w dawnych bibliotekach klasztornych", "Do przewożenia soli przez Andy na grzbiecie mechanicznym"])
+Category = ExtResource("1_5wx2r")

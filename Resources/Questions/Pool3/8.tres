@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Question" format=3]
+
+[ext_resource type="Resource" path="res://Resources/Categories/Michael.tres" id="1_0abfw"]
+[ext_resource type="Script" path="res://Source/Data/Question/Question.cs" id="2_y8180"]
+
+[resource]
+script = ExtResource("2_y8180")
+QuestionText = "Kim był Michał w Biblii?"
+AnswersText = Array[String](["Archaniołem", "Apostołem", "Nieudacznikiem", "Bóg ma tak na imię"])
+Category = ExtResource("1_0abfw")

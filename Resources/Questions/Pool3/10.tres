@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Question" format=3]
+
+[ext_resource type="Resource" path="res://Resources/Categories/Michael.tres" id="1_1yg0w"]
+[ext_resource type="Script" path="res://Source/Data/Question/Question.cs" id="2_ktsau"]
+
+[resource]
+script = ExtResource("2_ktsau")
+QuestionText = "Kto nie obchodzi imienin 11 kwietnia?"
+AnswersText = Array[String](["Michał", "Anioł", "Hildebrand", "Filip"])
+Category = ExtResource("1_1yg0w")

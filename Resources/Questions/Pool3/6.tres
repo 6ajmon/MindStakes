@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Question" format=3]
+
+[ext_resource type="Resource" path="res://Resources/Categories/Michael.tres" id="1_fv7hg"]
+[ext_resource type="Script" path="res://Source/Data/Question/Question.cs" id="2_q8coy"]
+
+[resource]
+script = ExtResource("2_q8coy")
+QuestionText = "O czym jest film pt. \"Kim jest Michael\"?"
+AnswersText = Array[String](["o historii homoseksualisty, aktywisty LGBT, który nawraca się i zostaje chrześcijańskim pastorem", "To komedia sensacyjna o roztargnionym sobowtórze Michaela Jacksona, który jest przekonany, że nim jest", "o grupie studentów archeologii, którzy podczas wykopalisk w Egipcie znajdują starożytną mumię, Michaela", "o pierwszym na świecie AI odkurzaczu, który zyskuje samoświadomość, nadaje sobie imię Michael i próbuje przejąć kontrolę"])
+Category = ExtResource("1_fv7hg")

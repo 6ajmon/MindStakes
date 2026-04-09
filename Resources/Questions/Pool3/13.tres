@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Question" format=3]
+
+[ext_resource type="Resource" path="res://Resources/Categories/Michael.tres" id="1_tgjyf"]
+[ext_resource type="Script" path="res://Source/Data/Question/Question.cs" id="2_xqff5"]
+
+[resource]
+script = ExtResource("2_xqff5")
+QuestionText = "11 kwietnia 2003 roku George W. Bush ogłosił upadek reżimu którego prezydenta Iraku?"
+AnswersText = Array[String](["Saddam Husajn", "Abdul Latif Raszid", "Muhammad Nadżib ar-Rubaji", "Muhammad Avdol"])
+Category = ExtResource("1_tgjyf")

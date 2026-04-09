@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Question" format=3]
+
+[ext_resource type="Resource" path="res://Resources/Categories/Anime.tres" id="1_lup0v"]
+[ext_resource type="Script" path="res://Source/Data/Question/Question.cs" id="2_qqelc"]
+
+[resource]
+script = ExtResource("2_qqelc")
+QuestionText = "Ile odcinków ma My Hero Academia (główna seria)?"
+AnswersText = Array[String](["170", "119", "87", "144"])
+Category = ExtResource("1_lup0v")

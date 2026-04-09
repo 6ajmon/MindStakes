@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Question" format=3 uid="uid://bic7o4vko34ry"]
+
+[ext_resource type="Resource" uid="uid://ckepbdgtnrrh4" path="res://Resources/Categories/Anime.tres" id="1_686le"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_b0ket"]
+
+[resource]
+script = ExtResource("2_b0ket")
+QuestionText = "W jakim anime pojawiła się piosenka Scatman Jhona?"
+AnswersText = Array[String](["Wandance", "Blue Period", "Welcome to the Ballroom", "Dance Dance Danseur"])
+Category = ExtResource("1_686le")

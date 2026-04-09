@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Question" format=3]
+
+[ext_resource type="Resource" path="res://Resources/Categories/Fiction.tres" id="1_ih0hk"]
+[ext_resource type="Script" path="res://Source/Data/Question/Question.cs" id="2_kjd86"]
+
+[resource]
+script = ExtResource("2_kjd86")
+QuestionText = "Jaką postać z Invincible, tytułowy bohater nazywa w memach Sea Salt?"
+AnswersText = Array[String](["Cecil", "Sea Salt", "Caesar", "Invincible"])
+Category = ExtResource("1_ih0hk")

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Question" format=3]
+
+[ext_resource type="Resource" path="res://Resources/Categories/Anime.tres" id="1_gaem1"]
+[ext_resource type="Script" path="res://Source/Data/Question/Question.cs" id="2_ys4b0"]
+
+[resource]
+script = ExtResource("2_ys4b0")
+QuestionText = "Ile w zaokrągleniu do setek lat trwała petryfikacja w Dr. Stone?"
+AnswersText = Array[String](["3700 lat", "5000 lat", "1600 lat", "2100 lat"])
+Category = ExtResource("1_gaem1")

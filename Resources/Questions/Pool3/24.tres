@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" format=3]
+
+[ext_resource type="Resource" path="res://Resources/Categories/Fiction.tres" id="1_8rwj6"]
+[ext_resource type="Script" path="res://Source/Data/Question/Question.cs" id="2_shi7x"]
+
+[resource]
+script = ExtResource("2_shi7x")
+QuestionText = "Co NIE jest elementem w Pora na przygodę?"
+AnswersText = Array[String](["Earth", "Ice", "Slime", "Candy"])
+Category = ExtResource("1_8rwj6")
+FunFact = "Są 4 elementy z których składa się Ooo: Ice, Fire, Slime i Candy. Jest jeszcze antyelement - grudki - są one z innego świata, grudkowego kosmosu"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" format=3]
+
+[ext_resource type="Resource" path="res://Resources/Categories/Anime.tres" id="1_rrl4r"]
+[ext_resource type="Texture2D" path="res://Assets/Images/MuhammadAvdol.webp" id="2_jiu85"]
+[ext_resource type="Script" path="res://Source/Data/Question/Question.cs" id="3_7b41f"]
+
+[resource]
+script = ExtResource("3_7b41f")
+QuestionText = "Do czego nawiązuje imię postaci Mohhamed Avdol?"
+AnswersText = Array[String](["Do amerykańskiej piosenkarki Paula Abdul", "Nie jest nawiązaniem, jest to połączenie prawdziwego imienia i nazwiska", "Do karty tarota Avdol Arcana", "Do postaci historycznej o takim samym imieniu"])
+Category = ExtResource("1_rrl4r")
+Photo = ExtResource("2_jiu85")

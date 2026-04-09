@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" format=3 uid="uid://4fbrphpc7u1v"]
+
+[ext_resource type="Resource" uid="uid://c6r1cdsnj1wrb" path="res://Resources/Categories/FunFacts.tres" id="1_ocdbc"]
+[ext_resource type="Script" uid="uid://d1obhtdryuoak" path="res://Source/Data/Question/Question.cs" id="2_frb0g"]
+
+[resource]
+script = ExtResource("2_frb0g")
+QuestionText = "Płodozmian to"
+AnswersText = Array[String](["system zagospodarowania ziemi uprawnej", "anomalia ułożenia płodu u ssaków hodowlanych", "nowoczesna metoda modyfikacji drzew", "faza fermentacji przy produkcji win owocowych"])
+Category = ExtResource("1_ocdbc")
+FunFact = "Płodozmian – system zagospodarowania ziemi uprawnej, oparty na zaplanowanym z góry na wiele lat następstwie roślin po sobie"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Question" format=3]
+
+[ext_resource type="Resource" path="res://Resources/Categories/Michael.tres" id="1_1onw4"]
+[ext_resource type="Script" path="res://Source/Data/Question/Question.cs" id="2_qu64b"]
+
+[resource]
+script = ExtResource("2_qu64b")
+QuestionText = "Które miasto otrzymało prawa miejskie 11 kwietnia w XVIII wieku?"
+AnswersText = Array[String](["Niepołomice", "Krakówek", "Boryczów", "Staszów"])
+Category = ExtResource("1_1onw4")

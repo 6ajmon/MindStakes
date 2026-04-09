@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Question" format=3]
+
+[ext_resource type="Resource" path="res://Resources/Categories/Fiction.tres" id="1_5v827"]
+[ext_resource type="Script" path="res://Source/Data/Question/Question.cs" id="2_tsr1g"]
+
+[resource]
+script = ExtResource("2_tsr1g")
+QuestionText = "Czym NIE był Finn z Pory na przygodę w poprzednich życiach?"
+AnswersText = Array[String](["Fiona", "Catalyst Comet", "Pink Interdimensional Creature", "Shoko"])
+Category = ExtResource("1_5v827")

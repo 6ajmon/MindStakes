@@ -555,6 +555,7 @@ public partial class CreatorScreen : Control
             return;
         }
 
+        _imageFileDialog.CurrentDir = "res://Assets/Images";
         _imageFileDialog.PopupCenteredRatio(0.65f);
     }
 
@@ -566,6 +567,7 @@ public partial class CreatorScreen : Control
             return;
         }
 
+        _audioFileDialog.CurrentDir = "res://Assets/Audio";
         _audioFileDialog.PopupCenteredRatio(0.65f);
     }
 

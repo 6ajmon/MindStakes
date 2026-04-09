@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" format=3]
+
+[ext_resource type="Resource" path="res://Resources/Categories/Michael.tres" id="1_1ju6f"]
+[ext_resource type="Script" path="res://Source/Data/Question/Question.cs" id="2_vfj35"]
+
+[resource]
+script = ExtResource("2_vfj35")
+QuestionText = "Jakim rodzajem statku żaglowego był Szkocki Michał, zwany również Great Michael?"
+AnswersText = Array[String](["karaka", "galeon", "bryg", "fregata"])
+Category = ExtResource("1_1ju6f")
+FunFact = "był zbudowany z myślą o krucjacie przeciw Imperium osmańskiemu. Plany związane z \"Michaelem\" uległy zmianie, gdy rozpoczęły się Wojny włoskie – na mocy Sojuszu z Auld Szkocja była zobowiązana prowadzić działania przeciwko Anglii."

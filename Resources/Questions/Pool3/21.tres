@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Question" format=3]
+
+[ext_resource type="Resource" path="res://Resources/Categories/Memy.tres" id="1_0mu6k"]
+[ext_resource type="Script" path="res://Source/Data/Question/Question.cs" id="2_xltdm"]
+
+[resource]
+script = ExtResource("2_xltdm")
+QuestionText = "Jakie piwo lubi Adrian Nowak Żalno?"
+AnswersText = Array[String](["Henken (lecha też lubi)", "Tyskie", "Żubr", "Harnaś"])
+Category = ExtResource("1_0mu6k")

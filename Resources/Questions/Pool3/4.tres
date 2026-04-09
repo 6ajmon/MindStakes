@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" format=3]
+
+[ext_resource type="Resource" path="res://Resources/Categories/Geography.tres" id="1_tk6sb"]
+[ext_resource type="Script" path="res://Source/Data/Question/Question.cs" id="2_274ox"]
+
+[resource]
+script = ExtResource("2_274ox")
+QuestionText = "Jak nazywa się największy w Europie zbiornik odpadów poflotacyjnych?"
+AnswersText = Array[String](["Żelazny Most", "Jezioro Czerwone", "Morze Bałtyckie", "Zbiornik NordFjord"])
+Category = ExtResource("1_tk6sb")
+FunFact = "Nazwa pochodzi od miejscowości, w pobliżu której jest położony. Usytuowany jest między miejscowościami Rudna, Polkowice, Lubin w Legnicko-Głogowskim Okręgu Miedziowym."
