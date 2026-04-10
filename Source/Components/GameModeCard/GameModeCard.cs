@@ -33,5 +33,6 @@ public partial class GameModeCard : MarginContainer
     {
         GameManager.Instance.CurrentGameModeIndex = (int)GameModeType;
         GameManager.Instance.RoundCount = 0;
+        CategoriesManager.Instance.SetUpCategories();
     }
 }

@@ -12,6 +12,11 @@ public partial class CategoriesManager : Node
         LoadCategories();
         SetRandomCategory();
     }
+    public void SetUpCategories()
+    {
+        LoadCategories();
+        SetRandomCategory();
+    }
     private void LoadCategories()
     {
         var dir = DirAccess.Open("res://Resources/Categories");

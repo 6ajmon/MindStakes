@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Question" format=3]
+
+[ext_resource type="Resource" path="res://Resources/Categories/GryKomputerowe.tres" id="1_5yb3h"]
+[ext_resource type="Script" path="res://Source/Data/Question/Question.cs" id="2_lkxmy"]
+
+[resource]
+script = ExtResource("2_lkxmy")
+QuestionText = "Jaki polski władca jest do wyboru w grze Cywilizacja V?"
+AnswersText = Array[String](["Kazimierz III Wielki", "królowa Jadwiga", "Bolesław I Chrobry", "Mieszko I"])
+Category = ExtResource("1_5yb3h")

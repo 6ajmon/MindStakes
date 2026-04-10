@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" format=3]
+
+[ext_resource type="Resource" path="res://Resources/Categories/GryKomputerowe.tres" id="1_yc2de"]
+[ext_resource type="Script" path="res://Source/Data/Question/Question.cs" id="2_3t0hd"]
+
+[resource]
+script = ExtResource("2_3t0hd")
+QuestionText = "Ile jest wszystkich secret roomów na piętrze w TBoIsaac: Repentance?"
+AnswersText = Array[String](["3", "4", "2", "1"])
+Category = ExtResource("1_yc2de")
+FunFact = "Secret Room, Super Secret Room i Ultra Secret Room. Są sposoby które dodają dodatkowe secret roomy."

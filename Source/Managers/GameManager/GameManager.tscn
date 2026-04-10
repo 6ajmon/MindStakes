@@ -1,7 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dmt7srjgl41ts"]
+[gd_scene format=3 uid="uid://dmt7srjgl41ts"]
 
 [ext_resource type="Script" uid="uid://cy3kwoxcekduj" path="res://Source/Managers/GameManager/GameManager.cs" id="1_itnt6"]
 
-[node name="GameManager" type="Node"]
+[node name="GameManager" type="Node" unique_id=2062692477]
 script = ExtResource("1_itnt6")
 MaxRounds = 28
+IsShaderedBackgroundEnabled = false
