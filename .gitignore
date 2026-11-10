@@ -25,3 +25,9 @@ Exports/
 
 *.csproj.user
 *.user
+
+# Question data is kept outside the repository (see "Question data" in README.md).
+# Only the sample pool stays tracked so the project runs from a fresh clone.
+Resources/Questions/Pool*/*
+!Resources/Questions/Pool1/1.tres
+!Resources/Questions/Pool1/2.tres

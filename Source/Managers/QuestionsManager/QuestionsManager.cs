@@ -9,12 +9,18 @@ public partial class QuestionsManager : Node
 
     public List<Question> Questions { get; private set; } = new();
     public Question RandomQuestion { get; private set; }
-    
-    private const string QuestionsRootPath = "res://Resources/Questions";
 
     public override void _Ready()
     {
+        GD.Print($"Question storage root: '{QuestionStorage.RootPath}'.");
         SetRandomQuestion();
+
+        if (!OS.HasFeature("editor") && !QuestionStorage.IsExternal)
+        {
+            GD.PushWarning(
+                "Questions are loaded from res:// and are bundled into the exported build. " +
+                $"Set {QuestionStorage.EnvironmentVariableName} or pass --questions-dir=<path> to keep them outside the project.");
+        }
     }
 
     public bool HasQuestionsForCategory(Category category)
@@ -54,7 +60,7 @@ public partial class QuestionsManager : Node
 
     public int GetMaxPoolNumber()
     {
-        var dir = DirAccess.Open(QuestionsRootPath);
+        var dir = DirAccess.Open(QuestionStorage.RootPath);
         if (dir == null)
         {
             return 1;
@@ -83,7 +89,9 @@ public partial class QuestionsManager : Node
     {
         Questions.Clear();
 
-        var poolPath = $"{QuestionsRootPath}/Pool{poolNumber}";
+        var poolPath = QuestionStorage.GetPoolPath(poolNumber);
+        GD.Print($"Loading questions from '{poolPath}'.");
+
         var dir = DirAccess.Open(poolPath);
         if (dir != null)
         {

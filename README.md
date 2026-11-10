@@ -42,6 +42,31 @@ MindStakes is a tool for quiz show hosts, made in Godot.
 - Save questions after creating or updating them.
 - Modify existing question entries whenever needed.
 
+# Question data
+Question sets are **not** part of this repository. Only a two-question sample pool (`Resources/Questions/Pool1/1.tres` and `2.tres`) is tracked; every other file under `Resources/Questions/Pool*` is ignored by Git.
+
+The question folder is resolved at startup, in this order:
+
+1. `--questions-dir=<path>` user command line argument (passed after `--`).
+2. `MINDSTAKES_QUESTIONS_DIR` environment variable.
+3. `mindstakes/questions_dir` project setting (Project Settings → Mindstakes → Questions Dir).
+4. `<folder of the executable>/questions`, in exported builds, when the folder exists.
+5. `user://questions`, when it exists.
+6. `res://Resources/Questions` (fallback).
+
+Options 1–3 accept any folder, including one outside the project. To keep answers out of the repository *and* out of exported builds, point them at a folder outside the project:
+
+```powershell
+$env:MINDSTAKES_QUESTIONS_DIR = "C:\MindStakes-data\questions"
+godot --path "C:\Github\MindStakes"
+```
+
+Start Godot (or the exported game) from that shell. The Question Creator writes new questions to the same folder, so nothing lands in `Resources/Questions` while it is set.
+
+If the folder stays on `res://`, the files present on disk are packed into the exported game. Either keep the data outside the project or add `Resources/Questions/*` to the export preset's *exclude filter*.
+
+A client-side game has to know the correct answer in order to reveal it, so anyone with full access to the machine running the game can recover the data. Keeping it out of the repository and out of the exported `.pck` is what prevents accidental disclosure.
+
 ### This project is still a work in progress.
 
 What I want to add:

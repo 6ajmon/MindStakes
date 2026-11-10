@@ -231,7 +231,7 @@ public partial class CreatorScreen : Control
         QuestionsExplorerTree.Clear();
         var root = QuestionsExplorerTree.CreateItem();
 
-        const string questionsRootPath = "res://Resources/Questions";
+        var questionsRootPath = QuestionStorage.RootPath;
         var rootDir = DirAccess.Open(questionsRootPath);
         if (rootDir == null)
         {
@@ -639,7 +639,7 @@ public partial class CreatorScreen : Control
         }
 
         var poolNumber = (int)Math.Round(PoolSpinBox.Value);
-        var poolPath = $"res://Resources/Questions/Pool{poolNumber}";
+        var poolPath = QuestionStorage.GetPoolPath(poolNumber);
 
         EnsurePoolDirectoryExists(poolPath);
 
@@ -734,17 +734,7 @@ public partial class CreatorScreen : Control
 
     private void EnsurePoolDirectoryExists(string poolPath)
     {
-        var questionsRootPath = "res://Resources/Questions";
-        var poolFolderName = $"Pool{(int)Math.Round(PoolSpinBox.Value)}";
-
-        var questionsRootDir = DirAccess.Open(questionsRootPath);
-        if (questionsRootDir == null)
-        {
-            GD.PushWarning($"Failed to open '{questionsRootPath}' directory.");
-            return;
-        }
-
-        var makeDirError = questionsRootDir.MakeDirRecursive(poolFolderName);
+        var makeDirError = DirAccess.MakeDirRecursiveAbsolute(poolPath);
         if (makeDirError != Error.Ok)
         {
             GD.PushWarning($"Failed to create folder '{poolPath}'. Error: {makeDirError}");
