@@ -11,6 +11,7 @@ public partial class TeamCreateScreen : Control
     public override void _Ready()
     {
         SceneManager.Instance.RegisterFirstScene();
+        ReadyButton.Text = LocalizationManager.Translate("SAVE_AND_EXIT");
         LoadTeamCards();
     }
 
@@ -48,6 +49,11 @@ public partial class TeamCreateScreen : Control
 
     public void OnReadyButtonPressed()
     {
+        foreach (TeamCard teamCard in TeamCardsContainer.GetChildren())
+        {
+            teamCard.SaveTeamPicture();
+        }
+        TeamsManager.Instance.SaveTeams();
         SignalManager.Instance.EmitSignal(nameof(SignalManager.TeamsCreated));
     }
 }

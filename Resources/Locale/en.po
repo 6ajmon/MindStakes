@@ -145,6 +145,9 @@ msgstr "Pool"
 msgid "SAVE"
 msgstr "SAVE"
 
+msgid "SAVE_AND_EXIT"
+msgstr "SAVE AND EXIT"
+
 msgid "UPDATE"
 msgstr "UPDATE"
 

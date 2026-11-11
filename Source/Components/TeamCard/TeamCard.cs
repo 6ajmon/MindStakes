@@ -7,10 +7,12 @@ public partial class TeamCard : Panel
     [Export] public LineEdit TeamNameLineEdit;
     [Export] public ColorPickerButton ColorPicker;
     private PanelContainer _pictureFrame;
+    private TextureRect _teamPicture;
 
     public override void _Ready()
     {
         _pictureFrame = GetNode<PanelContainer>("VBoxContainer/Panel/MarginContainer/PictureFrame");
+        _teamPicture = GetNode<TextureRect>("VBoxContainer/Panel/MarginContainer/PictureFrame/TeamPicture");
 
         if (TeamNameLineEdit != null)
         {
@@ -23,6 +25,7 @@ public partial class TeamCard : Panel
             ColorPicker.Color = TeamData.Color;
         }
 
+        ApplySavedTeamPicture();
         ApplyTeamColorBorder();
     }
 
@@ -46,6 +49,32 @@ public partial class TeamCard : Panel
     {
         TeamData.Color = newColor;
         ApplyTeamColorBorder();
+    }
+
+    public void SaveTeamPicture()
+    {
+        if (_teamPicture.Texture is Resource texture && !string.IsNullOrEmpty(texture.ResourcePath))
+        {
+            TeamData.ImagePath = texture.ResourcePath;
+        }
+    }
+
+    private void ApplySavedTeamPicture()
+    {
+        if (string.IsNullOrEmpty(TeamData.ImagePath))
+        {
+            SaveTeamPicture();
+            return;
+        }
+
+        Texture2D texture = ResourceLoader.Load<Texture2D>(TeamData.ImagePath);
+        if (texture == null)
+        {
+            GD.PushWarning($"Failed to load team picture '{TeamData.ImagePath}'.");
+            return;
+        }
+
+        _teamPicture.Texture = texture;
     }
 
     private void ApplyTeamColorBorder()

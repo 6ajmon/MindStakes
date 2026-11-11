@@ -145,6 +145,9 @@ msgstr "Pula"
 msgid "SAVE"
 msgstr "ZAPISZ"
 
+msgid "SAVE_AND_EXIT"
+msgstr "ZAPISZ I WYJDŹ"
+
 msgid "UPDATE"
 msgstr "AKTUALIZUJ"
 
