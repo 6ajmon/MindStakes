@@ -1,6 +1,13 @@
 <img width="1909" height="1071" alt="image" src="https://github.com/user-attachments/assets/59abccb0-1bba-4b69-a4fd-07afbf391f9b" />
 
 # MindStakes
+
+[![CI](https://github.com/6ajmon/MindStakes/actions/workflows/ci.yml/badge.svg)](https://github.com/6ajmon/MindStakes/actions/workflows/ci.yml)
+[![Godot export](https://github.com/6ajmon/MindStakes/actions/workflows/godot-export.yml/badge.svg)](https://github.com/6ajmon/MindStakes/actions/workflows/godot-export.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+[![Godot 4.6.1 .NET](https://img.shields.io/badge/Godot-4.6.1%20.NET-478cbf?logo=godotengine&logoColor=white)](https://godotengine.org)
+[![.NET 8](https://img.shields.io/badge/.NET-8.0-512bd4?logo=dotnet&logoColor=white)](https://dotnet.microsoft.com)
+
 MindStakes is a tool for quiz show hosts, made in Godot.
 
 # Features:
@@ -74,6 +81,35 @@ What I want to add:
 - import and export for questions
 - dual-language support
 - custom game modes creator
+
+# Download
+
+Every tagged release ships prebuilt Windows and Linux builds. Each push and pull request also produces downloadable build artifacts in the [Godot export](https://github.com/6ajmon/MindStakes/actions/workflows/godot-export.yml) workflow.
+
+# Building from source
+
+Requirements:
+
+- [Godot 4.6.1 **.NET**](https://godotengine.org/download) (the standard build cannot run C#),
+- [.NET 8 SDK](https://dotnet.microsoft.com/download),
+- Git LFS, because images and audio are stored with LFS.
+
+```powershell
+git lfs install
+git clone https://github.com/6ajmon/MindStakes.git
+cd MindStakes
+dotnet build MindStakes.sln
+```
+
+Then open `project.godot` in the Godot .NET editor and press <kbd>F5</kbd>.
+
+# Contributing
+
+Bug reports, feature requests and pull requests are welcome. Start with the issues, follow [CONTRIBUTING.md](./CONTRIBUTING.md) for setup, branching and code style, and read [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) before participating. Security issues go through [SECURITY.md](./SECURITY.md) - never a public issue.
+
+# License
+
+MindStakes is released under the [MIT License](./LICENSE).
 
 
 <details>
