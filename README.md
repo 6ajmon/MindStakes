@@ -48,6 +48,9 @@ MindStakes is a tool for quiz show hosts, made in Godot.
 - Edit existing questions.
 - Save questions after creating or updating them.
 - Modify existing question entries whenever needed.
+- Bulk import questions from CSV or JSON.
+
+The first answer field is always the correct answer; the game shuffles the answers when it displays them. All four answers are required, and two answers with the same text are rejected, because the correct answer is matched by its text.
 
 # Question data
 Question sets are **not** part of this repository. Only a two-question sample pool (`Resources/Questions/Pool1/1.tres` and `2.tres`) is tracked; every other file under `Resources/Questions/Pool*` is ignored by Git.
@@ -74,11 +77,74 @@ If the folder stays on `res://`, the files present on disk are packed into the e
 
 A client-side game has to know the correct answer in order to reveal it, so anyone with full access to the machine running the game can recover the data. Keeping it out of the repository and out of the exported `.pck` is what prevents accidental disclosure.
 
+## Pool sizing
+
+One game session consumes as many questions as `MaxRounds` (28 by default in `Source/Managers/GameManager/GameManager.tscn`), which is about 30 minutes per mode at the default answer time.
+
+The pool is reloaded from disk every time the game-mode screen is opened. Questions can therefore repeat across modes when one pool is shared by all of them. To play all three modes for 30 minutes each without repeats, use one pool per mode and select it in the game-mode screen:
+
+| Pool | Mode | Questions |
+|------|------|-----------|
+| `Pool1` | Betting | 30-35 |
+| `Pool2` | Sabotage | 30-35 |
+| `Pool3` | Fraud | 30-35 |
+
+That is roughly 90-105 questions for 90 minutes. Categories without unused questions are dropped from the random category draw, so no round is wasted on an exhausted category. A pool smaller than the round count still runs out and leaves a round without a question, so keep at least as many questions as rounds.
+
+## Bulk import
+
+The importer writes `.tres` files through `ResourceSaver`, so the output is identical to what the Question Creator saves. It validates every row first and writes nothing when any row is invalid.
+
+```powershell
+$env:MINDSTAKES_QUESTIONS_DIR = "C:\MindStakes-data\questions"
+godot --headless --path "C:\Github\MindStakes" -- --import-questions=C:\MindStakes-data\questions.csv
+```
+
+Optional flags:
+
+- `--import-pool=<n>` - fallback pool when the file has no pool column.
+- `--import-dry-run` - validate the file and print the target paths without writing anything.
+
+CSV accepts comma, semicolon or tab delimiters and requires a header row:
+
+```csv
+pool,category,question,correct,answer2,answer3,answer4,fun_fact,image,audio
+1,Minecraft,"Jaki jest obecnie rekord świata w Minecraft (RSG)?",6m 50s,7m 01s,8m 18s,9m 33s,Rekord ustanowiono w 2024.,res://Assets/Images/foo.png,
+2,Anime,Kim jest Muhammad Avdol?,Postacią z JoJo,Nie wiem,Postacią z One Piece,Postacią z Naruto,,,
+```
+
+JSON is an array of objects with the same field names (camelCase works too):
+
+```json
+[
+  {
+    "pool": 1,
+    "category": "Minecraft",
+    "question": "Jaki jest obecnie rekord świata w Minecraft (RSG)?",
+    "correct": "6m 50s",
+    "answer2": "7m 01s",
+    "answer3": "8m 18s",
+    "answer4": "9m 33s",
+    "funFact": "Rekord ustanowiono w 2024."
+  }
+]
+```
+
+`category` is either a name from `Resources/Categories` or a `res://` path. `image` and `audio` must be `res://` paths. `fun_fact`, `image` and `audio` are optional.
+
+## Validating pools
+
+```powershell
+godot --headless --path "C:\Github\MindStakes" -- --validate-questions
+```
+
+Prints the question count and category split for every pool, and warns about pools below the session length, empty questions or answers, missing categories and duplicate answer text. The exit code is `1` when a pool contains invalid questions. The same summary is printed whenever a pool is loaded in game and after every save in the Question Creator.
+
 ### This project is still a work in progress.
 
 What I want to add:
 - custom category creator
-- import and export for questions
+- export for questions
 - dual-language support
 - custom game modes creator
 
