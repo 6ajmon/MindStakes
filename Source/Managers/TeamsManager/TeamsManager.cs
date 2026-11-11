@@ -40,7 +40,7 @@ public partial class TeamsManager : Node
         Team newTeam = new Team
         {
             Id = Teams.Count,
-            TeamName = "Team " + (Teams.Count + 1),
+            TeamName = LocalizationManager.Format("TEAM_NAME", Teams.Count + 1),
             Color = UniqueColors[Teams.Count % UniqueColors.Count],
             Score = GameManager.Instance.StartingScore
         };

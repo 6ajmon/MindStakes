@@ -1,0 +1,165 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MindStakes\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# Title screen / navigation
+msgid "START"
+msgstr "START"
+
+msgid "QUESTIONS"
+msgstr "PYTANIA"
+
+msgid "<- BACK"
+msgstr "<- WSTECZ"
+
+msgid "DALEJ"
+msgstr "DALEJ"
+
+# Game mode selection
+msgid "PICK GAME MODE"
+msgstr "WYBIERZ TRYB GRY"
+
+msgid "rounds:"
+msgstr "rundy:"
+
+msgid "Reroll count:"
+msgstr "Liczba przelosowań:"
+
+msgid "Pool number:"
+msgstr "Numer puli:"
+
+msgid "Question Time (s): "
+msgstr "Czas na pytanie (s): "
+
+msgid "GAME_MODE_BETTING"
+msgstr "OBSTAWIANIE"
+
+msgid "GAME_MODE_SABOTAGE"
+msgstr "SABOTAŻ"
+
+msgid "GAME_MODE_FRAUD"
+msgstr "OSZUST"
+
+msgid "GAME_MODE_UNKNOWN"
+msgstr "Nieznany tryb"
+
+# Team creation
+msgid "[b]TEAM CREATOR[/b]"
+msgstr "[b]KREATOR DRUŻYN[/b]"
+
+msgid "TEAM 1"
+msgstr "DRUŻYNA 1"
+
+msgid "TEAM_NAME"
+msgstr "Drużyna {0}"
+
+# Category selection
+msgid "PICK CATEGORY"
+msgstr "WYBIERZ KATEGORIĘ"
+
+msgid "REROLL"
+msgstr "PRZELOSUJ"
+
+msgid "REROLL_BUTTON"
+msgstr "Przelosuj ({0})"
+
+# Question screen
+msgid "CATEGORY_PREFIX"
+msgstr "KATEGORIA: "
+
+msgid "CHECK_BUTTON"
+msgstr "SPRAWDŹ"
+
+msgid "FUN_FACT"
+msgstr "CIEKAWOSTKA"
+
+msgid "CLOSE"
+msgstr "ZAMKNIJ"
+
+msgid "Sprawdza:"
+msgstr "Sprawdza:"
+
+msgid "Pytanie dla:"
+msgstr "Pytanie dla:"
+
+# Game screens
+msgid "[b]OBSTAWIANIE[/b]"
+msgstr "[b]OBSTAWIANIE[/b]"
+
+msgid "[b]PUNKTACJA[/b]"
+msgstr "[b]PUNKTACJA[/b]"
+
+msgid "[b]PODSUMOWANIE[/b]"
+msgstr "[b]PODSUMOWANIE[/b]"
+
+msgid "ROUND_COUNT"
+msgstr "Runda {0}/{1}"
+
+msgid "TEAM_TYPE_ANSWERER"
+msgstr "Odpowiadający"
+
+msgid "TEAM_TYPE_ASSIGNER"
+msgstr "Wyznaczający"
+
+msgid "TEAM_TYPE_CHECKER"
+msgstr "Sprawdzający"
+
+# Question creator
+msgid "CREATOR"
+msgstr "KREATOR"
+
+msgid "QUESTION:"
+msgstr "PYTANIE:"
+
+msgid "CATEGORY:"
+msgstr "KATEGORIA:"
+
+msgid "IMAGE:"
+msgstr "OBRAZ:"
+
+msgid "AUDIO:"
+msgstr "AUDIO:"
+
+msgid "SELECT"
+msgstr "WYBIERZ"
+
+msgid "CLEAR"
+msgstr "WYCZYŚĆ"
+
+msgid "CORRECT ANSWER:"
+msgstr "POPRAWNA ODPOWIEDŹ:"
+
+msgid "ANSWER:"
+msgstr "ODPOWIEDŹ:"
+
+msgid "FUNFACT:"
+msgstr "CIEKAWOSTKA:"
+
+msgid "Pool"
+msgstr "Pula"
+
+msgid "SAVE"
+msgstr "ZAPISZ"
+
+msgid "UPDATE"
+msgstr "AKTUALIZUJ"
+
+msgid "NEW"
+msgstr "NOWE"
+
+msgid "SELECT_IMAGE"
+msgstr "Wybierz obraz"
+
+msgid "SELECT_AUDIO"
+msgstr "Wybierz dźwięk"
+
+# Music player
+msgid "PLAY"
+msgstr "ODTWÓRZ"
+
+msgid "STOP"
+msgstr "ZATRZYMAJ"

@@ -48,15 +48,15 @@ public partial class ScoreTeamCard : TeamCard
         if (TeamData.Id == TeamsManager.Instance.CurrentTeam.Id && 
             TeamData.Id == TeamsManager.Instance.InitialTeam.Id)
         {
-            TeamTypeLabel.Text = isFraudMode ? "Odpowiadający" : "Odpowiadający";
+            TeamTypeLabel.Text = Tr("TEAM_TYPE_ANSWERER");
         }
         else if (TeamData.Id == TeamsManager.Instance.InitialTeam.Id)
         {
-            TeamTypeLabel.Text = isFraudMode ? "Odpowiadający" : "Wyznaczający";
+            TeamTypeLabel.Text = isFraudMode ? Tr("TEAM_TYPE_ANSWERER") : Tr("TEAM_TYPE_ASSIGNER");
         }
         else if (TeamData.Id == TeamsManager.Instance.CurrentTeam.Id)
         {
-            TeamTypeLabel.Text = isFraudMode ? "Sprawdzający" : "Odpowiadający";
+            TeamTypeLabel.Text = isFraudMode ? Tr("TEAM_TYPE_CHECKER") : Tr("TEAM_TYPE_ANSWERER");
         }
         else
         {

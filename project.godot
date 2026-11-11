@@ -21,6 +21,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+LocalizationManager="*res://Source/Managers/LocalizationManager/LocalizationManager.cs"
 GameManager="*res://Source/Managers/GameManager/GameManager.tscn"
 SignalManager="*res://Source/Managers/SignalManager/SignalManager.tscn"
 SceneManager="*res://Source/Managers/SceneManager/SceneManager.cs"
@@ -54,6 +55,12 @@ GoForward={
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":256,"position":Vector2(223, 34),"global_position":Vector2(237, 107),"factor":1.0,"button_index":9,"canceled":false,"pressed":true,"double_click":false,"script":null)
 ]
 }
+
+[internationalization]
+
+locale/fallback="pl"
+locale/translations=PackedStringArray("res://Resources/Locale/pl.po", "res://Resources/Locale/en.po")
+rendering/root_node_auto_translate=true
 
 [mindstakes]
 

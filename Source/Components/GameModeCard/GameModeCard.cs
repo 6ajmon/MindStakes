@@ -22,10 +22,10 @@ public partial class GameModeCard : MarginContainer
     {
         string modeText = GameModeType switch
         {
-            GameManager.GameModeEnum.Betting => "OBSTAWIANIE",
-            GameManager.GameModeEnum.Sabotage => "SABOTAŻ",
-            GameManager.GameModeEnum.Fraud => "OSZUST",
-            _ => "Unknown Mode"
+            GameManager.GameModeEnum.Betting => Tr("GAME_MODE_BETTING"),
+            GameManager.GameModeEnum.Sabotage => Tr("GAME_MODE_SABOTAGE"),
+            GameManager.GameModeEnum.Fraud => Tr("GAME_MODE_FRAUD"),
+            _ => Tr("GAME_MODE_UNKNOWN")
         };
         GameModeLabel.Text = modeText;
     }

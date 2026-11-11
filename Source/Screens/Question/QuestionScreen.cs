@@ -45,6 +45,7 @@ public partial class QuestionScreen : Control
         
         CheckButton.Pressed += OnCheckButtonPressed;
         ResetTimerButton.Pressed += OnResetTimerButtonPressed;
+        CheckButton.Text = Tr("CHECK_BUTTON");
     }
 
     public override void _Process(double delta)
@@ -67,7 +68,7 @@ public partial class QuestionScreen : Control
         var question = QuestionsManager.Instance.RandomQuestion;
         if (question != null && CategoryLabel != null)
         {
-            CategoryLabel.Text = "KATEGORIA: " + question.Category.CategoryName;
+            CategoryLabel.Text = Tr("CATEGORY_PREFIX") + question.Category.CategoryName;
         }
     }
 
@@ -188,7 +189,7 @@ public partial class QuestionScreen : Control
         var question = QuestionsManager.Instance.RandomQuestion;
         if (question != null && !string.IsNullOrWhiteSpace(question.FunFact))
         {
-            CheckButton.Text = "CIEKAWOSTKA";
+            CheckButton.Text = Tr("FUN_FACT");
             CheckButton.Pressed -= OnCheckButtonPressed;
             CheckButton.Pressed += OnFunFactButtonPressed;
         }
@@ -239,7 +240,7 @@ public partial class QuestionScreen : Control
         marginContainer.AddChild(vbox);
 
         var titleLabel = new Label();
-        titleLabel.Text = "CIEKAWOSTKA";
+        titleLabel.Text = Tr("FUN_FACT");
         titleLabel.HorizontalAlignment = HorizontalAlignment.Center;
         titleLabel.AddThemeFontSizeOverride("font_size", 42);
         vbox.AddChild(titleLabel);
@@ -251,7 +252,7 @@ public partial class QuestionScreen : Control
         vbox.AddChild(_funFactLabel);
 
         var closeButton = new Button();
-        closeButton.Text = "ZAMKNIJ";
+        closeButton.Text = Tr("CLOSE");
         closeButton.CustomMinimumSize = new Vector2(200, 60);
         closeButton.SizeFlagsHorizontal = SizeFlags.ShrinkCenter;
         closeButton.Pressed += () => _funFactOverlay.Visible = false;
