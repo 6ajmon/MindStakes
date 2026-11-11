@@ -3,6 +3,9 @@ using System;
 
 public partial class LanguageSwitcher : HBoxContainer
 {
+    private const string PolishButtonText = "PL";
+    private const string EnglishButtonText = "EN";
+
     [Export] public Button PolishButton { get; set; }
     [Export] public Button EnglishButton { get; set; }
 
@@ -17,8 +20,8 @@ public partial class LanguageSwitcher : HBoxContainer
             return;
         }
 
-        ConfigureButton(PolishButton, LocalizationManager.PolishLanguage);
-        ConfigureButton(EnglishButton, LocalizationManager.EnglishLanguage);
+        ConfigureButton(PolishButton, PolishButtonText);
+        ConfigureButton(EnglishButton, EnglishButtonText);
 
         PolishButton.Pressed += () => OnLanguageButtonPressed(LocalizationManager.PolishLanguage);
         EnglishButton.Pressed += () => OnLanguageButtonPressed(LocalizationManager.EnglishLanguage);
@@ -26,9 +29,9 @@ public partial class LanguageSwitcher : HBoxContainer
         UpdateButtons();
     }
 
-    private static void ConfigureButton(Button button, string language)
+    private static void ConfigureButton(Button button, string text)
     {
-        button.Text = language.ToUpperInvariant();
+        button.Text = text;
         button.ToggleMode = true;
     }
 
