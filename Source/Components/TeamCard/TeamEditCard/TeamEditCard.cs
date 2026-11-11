@@ -3,7 +3,6 @@ using System;
 
 public partial class TeamEditCard : TeamCard
 {
-    private const string AddPictureIconPath = "res://Assets/Icons/add_picture.svg";
     private const string PictureFolderPath = "user://team_pictures";
 
     [Export] public ColorPickerButton ColorPicker;
@@ -27,7 +26,6 @@ public partial class TeamEditCard : TeamCard
             return;
         }
 
-        addPictureButton.TextureNormal = GD.Load<Texture2D>(AddPictureIconPath);
         addPictureButton.Pressed += OnAddPictureButtonPressed;
 
         _pictureFileDialog = new FileDialog
