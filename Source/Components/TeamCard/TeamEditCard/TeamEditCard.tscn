@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bhv0mk0v5xf3p" path="res://Source/Components/TeamCard/TeamCard.tscn" id="1_jnjg8"]
 [ext_resource type="Script" uid="uid://d0puh3ivqawdw" path="res://Source/Components/TeamCard/TeamEditCard/TeamEditCard.cs" id="2_f70gk"]
+[ext_resource type="Texture2D" uid="uid://nkynjl7fvpgn" path="res://Assets/Icons/add_picture.svg" id="3_5lulx"]
 
 [node name="TeamEditCard" unique_id=1019438172 node_paths=PackedStringArray("ColorPicker") instance=ExtResource("1_jnjg8")]
 script = ExtResource("2_f70gk")
@@ -21,6 +22,8 @@ size_flags_horizontal = 3
 
 [node name="AddPictureButton" type="TextureButton" parent="VBoxContainer/TeamCardColorPicker/HBoxContainer/MarginContainer" index="0" unique_id=972907876]
 layout_mode = 2
+texture_normal = ExtResource("3_5lulx")
+stretch_mode = 3
 
 [node name="MarginContainer2" type="PanelContainer" parent="VBoxContainer/TeamCardColorPicker/HBoxContainer" index="1" unique_id=783315572]
 layout_mode = 2
