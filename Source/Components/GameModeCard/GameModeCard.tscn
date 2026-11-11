@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://blw4qh1ca5ow3"]
+[gd_scene format=4 uid="uid://blw4qh1ca5ow3"]
 
 [ext_resource type="Script" uid="uid://bmmb5obwx3x6y" path="res://Source/Components/GameModeCard/GameModeCard.cs" id="1_gbgmx"]
 [ext_resource type="PackedScene" uid="uid://ba1ry0xlyp0ir" path="res://Source/Components/Buttons/NextButton/NextButton.tscn" id="2_yiuo6"]
@@ -130,6 +130,15 @@ font_style = 4
 subpixel_positioning = 0
 msdf_pixel_range = 8
 msdf_size = 128
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
 cache/0/16/0/ascent = 14.0
 cache/0/16/0/descent = 4.0
 cache/0/16/0/underline_position = 3.59375
@@ -929,7 +938,7 @@ ColorPickerButton/styles/pressed = SubResource("StyleBoxFlat_lvlbj")
 Panel/styles/panel = SubResource("StyleBoxFlat_1of73")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_uuho2")
 
-[node name="GameModeCard" type="MarginContainer" node_paths=PackedStringArray("GameModeLabel", "RoundCountSpinBox", "StartButton")]
+[node name="GameModeCard" type="MarginContainer" unique_id=2128542481 node_paths=PackedStringArray("GameModeLabel", "RoundCountSpinBox", "StartButton")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -944,39 +953,39 @@ GameModeLabel = NodePath("VBoxContainer/Label")
 RoundCountSpinBox = NodePath("VBoxContainer/HBoxContainer/RoundCountSpinBox")
 StartButton = NodePath("VBoxContainer/ReadyButton")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1752432312]
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="Label" type="Label" parent="VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1877375617]
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
 text = "CATEGORY 1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer" unique_id=1902940453]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=2059393640]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=891467525]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
 theme_override_font_sizes/font_size = 48
 text = "rounds:"
 
-[node name="RoundCountSpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer"]
+[node name="RoundCountSpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer" unique_id=529879317]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_pjfgt")
 update_on_text_changed = true
 
-[node name="ReadyButton" parent="VBoxContainer" instance=ExtResource("2_yiuo6")]
+[node name="ReadyButton" parent="VBoxContainer" unique_id=1869514235 instance=ExtResource("2_yiuo6")]
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
 text = "START"
-ScenePath = "uid://dv21t8t45si2"
+ScenePath = "uid://do6p6iyo068ya"
