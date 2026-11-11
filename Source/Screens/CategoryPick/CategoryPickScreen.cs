@@ -25,7 +25,7 @@ public partial class CategoryPickScreen : Control
         }
         if (RerollButton != null)
         {
-            RerollButton.Text = $"Reroll ({GameManager.Instance.RerollCount})";
+            RerollButton.Text = LocalizationManager.Format("REROLL_BUTTON", GameManager.Instance.RerollCount);
         }
     }
 
@@ -55,7 +55,7 @@ public partial class CategoryPickScreen : Control
         }
         if (RerollButton != null)
         {
-            RerollButton.Text = $"Reroll ({GameManager.Instance.RerollCount})";
+            RerollButton.Text = LocalizationManager.Format("REROLL_BUTTON", GameManager.Instance.RerollCount);
         }
     }
 }

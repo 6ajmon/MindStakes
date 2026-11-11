@@ -5,9 +5,6 @@ using System.Linq;
 
 public partial class CreatorScreen : Control
 {
-    private const string SelectButtonText = "SELECT";
-    private const string ClearButtonText = "CLEAR";
-
     [Export] public LineEdit QuestionLineEdit { get; set; }
     [Export] public OptionButton CategoryOptionButton { get; set; }
     [Export] public Button ImageFileSelectButton { get; set; }
@@ -84,7 +81,7 @@ public partial class CreatorScreen : Control
             Name = "ImageFileDialog",
             Access = FileDialog.AccessEnum.Resources,
             FileMode = FileDialog.FileModeEnum.OpenFile,
-            Title = "Select image",
+            Title = Tr("SELECT_IMAGE"),
             Filters = new string[]
             {
                 "*.png ; PNG",
@@ -100,7 +97,7 @@ public partial class CreatorScreen : Control
             Name = "AudioFileDialog",
             Access = FileDialog.AccessEnum.Resources,
             FileMode = FileDialog.FileModeEnum.OpenFile,
-            Title = "Select audio",
+            Title = Tr("SELECT_AUDIO"),
             Filters = new string[]
             {
                 "*.mp3 ; MP3",
@@ -484,7 +481,7 @@ public partial class CreatorScreen : Control
 
         _selectedQuestionPath = questionPath;
         _editingQuestionPath = questionPath;
-        SaveButton.Text = "UPDATE";
+        SaveButton.Text = Tr("UPDATE");
 
         QuestionLineEdit.Text = question.QuestionText ?? string.Empty;
 
@@ -615,12 +612,12 @@ public partial class CreatorScreen : Control
     {
         if (ImageFileSelectButton != null)
         {
-            ImageFileSelectButton.Text = _selectedImage == null ? SelectButtonText : ClearButtonText;
+            ImageFileSelectButton.Text = _selectedImage == null ? Tr("SELECT") : Tr("CLEAR");
         }
 
         if (AudioFileSelectButton != null)
         {
-            AudioFileSelectButton.Text = _selectedAudio == null ? SelectButtonText : ClearButtonText;
+            AudioFileSelectButton.Text = _selectedAudio == null ? Tr("SELECT") : Tr("CLEAR");
         }
     }
 
@@ -834,7 +831,7 @@ public partial class CreatorScreen : Control
         Answer4LineEdit.Text = string.Empty;
         FunFactLineEdit.Text = string.Empty;
         _editingQuestionPath = null;
-        SaveButton.Text = "SAVE";
+        SaveButton.Text = Tr("SAVE");
 
         _selectedImage = null;
         _selectedAudio = null;

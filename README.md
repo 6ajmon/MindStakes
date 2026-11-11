@@ -18,6 +18,7 @@ MindStakes is a tool for quiz show hosts, made in Godot.
 - use questions with audio and sound
 - choose from three game modes
 - use question pools
+- switch between a Polish and an English interface
 
 #  Game modes
 ## Betting
@@ -42,6 +43,15 @@ MindStakes is a tool for quiz show hosts, made in Godot.
 - If they answer, they gain or lose 20 points based on their answer.
 - If they give the question to another player, the selected player gains or loses 20 points based on their answer.
 - If the selected player answers correctly, the current player loses 10 points. If the answer is incorrect, the current player gains 10 points.
+
+# Language
+The interface ships in Polish (the default) and English. The `LanguageSwitcher` component ([Source/Components/LanguageSwitcher](./Source/Components/LanguageSwitcher/)) renders the **PL** / **EN** buttons and is instanced in the main menu. The choice is saved to `user://settings.cfg` and applied on the next start.
+
+Translations live in `Resources/Locale/` as gettext catalogs (`pl.po`, `en.po`) and are registered in *Project Settings → Localization → Translations*. Text that comes from scenes uses the scene text as the translation key, while text created in C# uses keys such as `ROUND_COUNT`. A missing entry falls back to its key, so a label is never left empty.
+
+To add a language, copy one of the catalogs, set the `Language:` header to the new locale code, translate the `msgstr` entries and add the file to the translations list.
+
+Questions are separate data and are not part of the interface localization.
 
 # Question Creator
 - Create new questions.
@@ -145,7 +155,6 @@ Prints the question count and category split for every pool, and warns about poo
 What I want to add:
 - custom category creator
 - export for questions
-- dual-language support
 - custom game modes creator
 
 # Download

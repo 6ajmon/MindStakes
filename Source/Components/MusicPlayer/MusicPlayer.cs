@@ -67,14 +67,14 @@ public partial class MusicPlayer : HBoxContainer
         if (_audioPlayer.Playing)
         {
             _audioPlayer.Stop();
-            PlayButton.Text = "▶ PLAY";
+            PlayButton.Text = "▶ " + Tr("PLAY");
             MusicProgressBar.Value = 0;
             UpdateTimeLabel();
         }
         else
         {
             _audioPlayer.Play();
-            PlayButton.Text = "⏹ STOP";
+            PlayButton.Text = "⏹ " + Tr("STOP");
         }
     }
     
@@ -82,7 +82,7 @@ public partial class MusicPlayer : HBoxContainer
     {
         if (PlayButton != null)
         {
-            PlayButton.Text = "▶ PLAY";
+            PlayButton.Text = "▶ " + Tr("PLAY");
         }
         if (MusicProgressBar != null)
         {
