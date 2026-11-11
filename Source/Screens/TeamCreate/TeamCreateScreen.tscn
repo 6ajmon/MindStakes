@@ -2,8 +2,8 @@
 
 [ext_resource type="Theme" uid="uid://befyp5hugoswj" path="res://Assets/Themes/MainTheme.tres" id="1_bxfck"]
 [ext_resource type="Script" uid="uid://bf53vey4vxjg2" path="res://Source/Screens/TeamCreate/TeamCreateScreen.cs" id="1_mpcp3"]
-[ext_resource type="PackedScene" uid="uid://bhv0mk0v5xf3p" path="res://Source/Components/TeamCard/TeamCard.tscn" id="1_t3c45"]
 [ext_resource type="PackedScene" uid="uid://ba1ry0xlyp0ir" path="res://Source/Components/Buttons/NextButton/NextButton.tscn" id="2_58tjv"]
+[ext_resource type="PackedScene" uid="uid://bhxfeo15xpn3l" path="res://Source/Components/TeamCard/TeamEditCard/TeamEditCard.tscn" id="3_bxfck"]
 [ext_resource type="PackedScene" uid="uid://gvqucvlox5kx" path="res://Source/Components/ShaderedBackground/ShaderedBackground.tscn" id="4_bxfck"]
 
 [node name="TeamCreateScreen" type="Control" unique_id=2015414397 node_paths=PackedStringArray("TeamCardsContainer", "ReadyButton")]
@@ -16,7 +16,7 @@ grow_vertical = 2
 theme = ExtResource("1_bxfck")
 script = ExtResource("1_mpcp3")
 TeamCardsContainer = NodePath("PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/ScrollContainer/TeamCardsContainer")
-TeamCardScene = ExtResource("1_t3c45")
+TeamCardScene = ExtResource("3_bxfck")
 ReadyButton = NodePath("PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/HBoxContainer3/MarginContainer/SaveAndExitButton")
 
 [node name="Panel" parent="." unique_id=369572401 instance=ExtResource("4_bxfck")]
