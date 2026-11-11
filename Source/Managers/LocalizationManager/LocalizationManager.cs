@@ -3,8 +3,10 @@ using System;
 
 public partial class LocalizationManager : Node
 {
-    public const string DefaultLanguage = "pl";
-    public static readonly string[] SupportedLanguages = { "pl", "en" };
+    public const string PolishLanguage = "pl";
+    public const string EnglishLanguage = "en";
+    public const string DefaultLanguage = PolishLanguage;
+    public static readonly string[] SupportedLanguages = { PolishLanguage, EnglishLanguage };
 
     private const string SettingsPath = "user://settings.cfg";
     private const string SettingsSection = "locale";

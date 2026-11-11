@@ -45,7 +45,7 @@ MindStakes is a tool for quiz show hosts, made in Godot.
 - If the selected player answers correctly, the current player loses 10 points. If the answer is incorrect, the current player gains 10 points.
 
 # Language
-The interface ships in Polish (the default) and English. Use the **PL** / **EN** buttons in the top-right corner of the title screen to switch; the choice is saved to `user://settings.cfg` and applied on the next start.
+The interface ships in Polish (the default) and English. The `LanguageSwitcher` component ([Source/Components/LanguageSwitcher](./Source/Components/LanguageSwitcher/)) renders the **PL** / **EN** buttons and is instanced in the main menu. The choice is saved to `user://settings.cfg` and applied on the next start.
 
 Translations live in `Resources/Locale/` as gettext catalogs (`pl.po`, `en.po`) and are registered in *Project Settings → Localization → Translations*. Text that comes from scenes uses the scene text as the translation key, while text created in C# uses keys such as `ROUND_COUNT`. A missing entry falls back to its key, so a label is never left empty.
 
