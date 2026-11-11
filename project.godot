@@ -58,9 +58,8 @@ GoForward={
 
 [internationalization]
 
-locale/fallback="pl"
 locale/translations=PackedStringArray("res://Resources/Locale/pl.po", "res://Resources/Locale/en.po")
-rendering/root_node_auto_translate=true
+locale/fallback="pl"
 
 [mindstakes]
 

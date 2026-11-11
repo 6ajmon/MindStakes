@@ -74,7 +74,7 @@ public partial class LocalizationManager : Node
 
     private static string LoadSavedLanguage()
     {
-        var config = new ConfigFile();
+        using var config = new ConfigFile();
         if (config.Load(SettingsPath) != Error.Ok)
         {
             return DefaultLanguage;
@@ -85,7 +85,7 @@ public partial class LocalizationManager : Node
 
     private static void SaveLanguage(string language)
     {
-        var config = new ConfigFile();
+        using var config = new ConfigFile();
         config.Load(SettingsPath);
         config.SetValue(SettingsSection, LanguageSetting, language);
 

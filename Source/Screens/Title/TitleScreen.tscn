@@ -65,6 +65,11 @@ theme_override_constants/margin_bottom = 6
 layout_mode = 2
 theme = ExtResource("1_3h2fp")
 
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/PanelContainer/VBoxContainer" unique_id=218098765]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.3
+
 [node name="PanelContainer2" type="MarginContainer" parent="Panel/PanelContainer/VBoxContainer" unique_id=357408953]
 layout_mode = 2
 size_flags_vertical = 3

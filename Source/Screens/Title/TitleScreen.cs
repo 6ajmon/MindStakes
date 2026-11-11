@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Linq;
 
 public partial class TitleScreen : Control
 {
@@ -60,12 +61,9 @@ public partial class TitleScreen : Control
         }
 
         var currentLanguage = LocalizationManager.Instance.CurrentLanguage;
-        foreach (var child in switcher.GetChildren())
+        foreach (var button in switcher.GetChildren().OfType<Button>())
         {
-            if (child is Button button)
-            {
-                button.ButtonPressed = button.GetMeta("language").AsString() == currentLanguage;
-            }
+            button.ButtonPressed = button.GetMeta("language").AsString() == currentLanguage;
         }
     }
 }
