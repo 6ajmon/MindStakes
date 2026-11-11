@@ -12,6 +12,11 @@ public partial class QuestionsManager : Node
 
     public override void _Ready()
     {
+        if (QuestionImporter.TryRunFromCommandLine())
+        {
+            return;
+        }
+
         GD.Print($"Question storage root: '{QuestionStorage.RootPath}'.");
         SetRandomQuestion();
 
@@ -92,30 +97,19 @@ public partial class QuestionsManager : Node
         var poolPath = QuestionStorage.GetPoolPath(poolNumber);
         GD.Print($"Loading questions from '{poolPath}'.");
 
-        var dir = DirAccess.Open(poolPath);
-        if (dir != null)
-        {
-            dir.ListDirBegin();
-            string fileName = dir.GetNext();
-            while (!string.IsNullOrEmpty(fileName))
-            {
-                if (!dir.CurrentIsDir())
-                {
-                    if ((fileName.EndsWith(".tres") || fileName.EndsWith(".res")) && !fileName.EndsWith(".import"))
-                    {
-                        var question = GD.Load<Question>($"{poolPath}/{fileName}");
-                        if (question != null)
-                        {
-                            Questions.Add(question);
-                        }
-                    }
-                }
-                fileName = dir.GetNext();
-            }
-        }
-        else
+        var files = QuestionStorage.LoadPoolFiles(poolPath);
+        if (files == null)
         {
             GD.PrintErr($"Failed to open {poolPath} directory.");
+            return;
         }
+
+        foreach (var file in files)
+        {
+            Questions.Add(file.Question);
+        }
+
+        GD.Print($"Loaded {Questions.Count} question(s) from '{poolPath}'.");
+        QuestionValidator.ValidateAndReport($"Pool{poolNumber}", files);
     }
 }

@@ -676,6 +676,7 @@ public partial class CreatorScreen : Control
 
         GD.Print($"Question saved to {savePath}");
         RefreshQuestionsExplorer();
+        QuestionValidator.ValidatePoolDirectory(poolPath);
     }
 
     private void OnNewPressed()

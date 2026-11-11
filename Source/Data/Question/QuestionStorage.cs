@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Collections.Generic;
 using System.IO;
 
 public static class QuestionStorage
@@ -17,6 +18,37 @@ public static class QuestionStorage
     public static bool IsExternal => !RootPath.StartsWith("res://", StringComparison.Ordinal);
 
     public static string GetPoolPath(int poolNumber) => $"{RootPath}/Pool{poolNumber}";
+
+    public static List<(string FilePath, Question Question)> LoadPoolFiles(string poolPath)
+    {
+        var dir = DirAccess.Open(poolPath);
+        if (dir == null)
+        {
+            return null;
+        }
+
+        var files = new List<(string FilePath, Question Question)>();
+        dir.ListDirBegin();
+        var fileName = dir.GetNext();
+        while (!string.IsNullOrEmpty(fileName))
+        {
+            if (!dir.CurrentIsDir()
+                && (fileName.EndsWith(".tres") || fileName.EndsWith(".res"))
+                && !fileName.EndsWith(".import"))
+            {
+                var filePath = $"{poolPath}/{fileName}";
+                var question = GD.Load<Question>(filePath);
+                if (question != null)
+                {
+                    files.Add((filePath, question));
+                }
+            }
+
+            fileName = dir.GetNext();
+        }
+
+        return files;
+    }
 
     private static string ResolveRootPath()
     {
