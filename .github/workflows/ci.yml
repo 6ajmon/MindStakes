@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build solution
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          # Assets are stored with Git LFS.
+          lfs: true
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Restore
+        run: dotnet restore MindStakes.sln
+
+      - name: Build
+        run: dotnet build MindStakes.sln --no-restore --nologo
+
+  repo-guard:
+    name: Question data guard
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Fail when question data is committed
+        run: |
+          unexpected="$(git ls-files 'Resources/Questions/Pool*' | grep -v -E '^Resources/Questions/Pool1/(1|2)\.tres$' || true)"
+          if [ -n "$unexpected" ]; then
+            echo "::error::Question data must stay outside the repository. See README.md -> Question data."
+            printf '%s\n' "$unexpected"
+            exit 1
+          fi
+          echo "Only the sample pool is tracked."
