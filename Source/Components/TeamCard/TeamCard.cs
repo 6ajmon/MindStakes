@@ -5,7 +5,6 @@ public partial class TeamCard : Panel
 {
     public Team TeamData { get; set; } = new();
     [Export] public LineEdit TeamNameLineEdit;
-    [Export] public ColorPickerButton ColorPicker;
     private PanelContainer _pictureFrame;
     private TextureRect _teamPicture;
 
@@ -19,11 +18,6 @@ public partial class TeamCard : Panel
             TeamNameLineEdit.TextChanged += OnTeamNameLabelTextChanged;
             TeamNameLineEdit.Text = TeamData.TeamName;
         }
-        if (ColorPicker != null)
-        {
-            ColorPicker.ColorChanged += OnColorPickerColorChanged;
-            ColorPicker.Color = TeamData.Color;
-        }
 
         ApplySavedTeamPicture();
         ApplyTeamColorBorder();
@@ -35,20 +29,11 @@ public partial class TeamCard : Panel
         {
             TeamNameLineEdit.TextChanged -= OnTeamNameLabelTextChanged;
         }
-        if (ColorPicker != null)
-        {
-            ColorPicker.ColorChanged -= OnColorPickerColorChanged;
-        }
     }
     
     public void OnTeamNameLabelTextChanged(string newText)
     {
         TeamData.TeamName = newText;
-    }
-    public void OnColorPickerColorChanged(Color newColor)
-    {
-        TeamData.Color = newColor;
-        ApplyTeamColorBorder();
     }
 
     public void SaveTeamPicture()
@@ -59,6 +44,19 @@ public partial class TeamCard : Panel
         }
     }
 
+    public void SetTeamPicture(string path)
+    {
+        Texture2D texture = LoadPicture(path);
+        if (texture == null)
+        {
+            GD.PushWarning($"Failed to load team picture '{path}'.");
+            return;
+        }
+
+        TeamData.ImagePath = path;
+        _teamPicture.Texture = texture;
+    }
+
     private void ApplySavedTeamPicture()
     {
         if (string.IsNullOrEmpty(TeamData.ImagePath))
@@ -67,17 +65,21 @@ public partial class TeamCard : Panel
             return;
         }
 
-        Texture2D texture = ResourceLoader.Load<Texture2D>(TeamData.ImagePath);
-        if (texture == null)
-        {
-            GD.PushWarning($"Failed to load team picture '{TeamData.ImagePath}'.");
-            return;
-        }
-
-        _teamPicture.Texture = texture;
+        SetTeamPicture(TeamData.ImagePath);
     }
 
-    private void ApplyTeamColorBorder()
+    private static Texture2D LoadPicture(string path)
+    {
+        if (path.StartsWith("res://"))
+        {
+            return ResourceLoader.Load<Texture2D>(path);
+        }
+
+        Image image = new();
+        return image.Load(path) == Error.Ok ? ImageTexture.CreateFromImage(image) : null;
+    }
+
+    protected void ApplyTeamColorBorder()
     {
         StyleBoxFlat border = _pictureFrame.GetThemeStylebox("panel").Duplicate() as StyleBoxFlat;
         if (border == null)
