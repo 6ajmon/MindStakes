@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 public partial class TeamsManager : Node
 {
+    private const string TeamsSettingsPath = "user://teams.cfg";
+    private const string TeamsSettingsSection = "teams";
+
     public static TeamsManager Instance => ((SceneTree)Engine.GetMainLoop()).Root.GetNode<TeamsManager>("TeamsManager");
     public List<Team> Teams { get; set; } = new();
     public List<Color> UniqueColors { get; set; } = new()
@@ -26,7 +29,10 @@ public partial class TeamsManager : Node
     public int InitialTeamsCount { get; set; } = 4;
     public override void _Ready()
     {
-        CreateTeams(InitialTeamsCount);
+        if (!LoadSavedTeams())
+        {
+            CreateTeams(InitialTeamsCount);
+        }
     }
     public void CreateTeams(int numberOfTeams)
     {
@@ -46,6 +52,66 @@ public partial class TeamsManager : Node
         };
         Teams.Add(newTeam);
         return newTeam;
+    }
+
+    public void SaveTeams()
+    {
+        using var config = new ConfigFile();
+        config.SetValue(TeamsSettingsSection, "count", Teams.Count);
+
+        for (int i = 0; i < Teams.Count; i++)
+        {
+            Team team = Teams[i];
+            string section = $"team_{i}";
+            config.SetValue(section, "name", team.TeamName);
+            config.SetValue(section, "color", team.Color.ToHtml(true));
+            config.SetValue(section, "image_path", team.ImagePath);
+        }
+
+        Error error = config.Save(TeamsSettingsPath);
+        if (error != Error.Ok)
+        {
+            GD.PushError($"Failed to save teams to '{TeamsSettingsPath}'. Error: {error}");
+        }
+    }
+
+    private bool LoadSavedTeams()
+    {
+        using var config = new ConfigFile();
+        Error error = config.Load(TeamsSettingsPath);
+        if (error == Error.FileNotFound)
+        {
+            return false;
+        }
+        if (error != Error.Ok)
+        {
+            GD.PushError($"Failed to load teams from '{TeamsSettingsPath}'. Error: {error}");
+            return false;
+        }
+
+        int teamCount = config.GetValue(TeamsSettingsSection, "count", 0).AsInt32();
+        if (teamCount < 1)
+        {
+            GD.PushError($"Invalid team count in '{TeamsSettingsPath}'.");
+            return false;
+        }
+
+        Teams.Clear();
+        for (int i = 0; i < teamCount; i++)
+        {
+            string section = $"team_{i}";
+            Team team = new Team
+            {
+                Id = i,
+                TeamName = config.GetValue(section, "name", LocalizationManager.Format("TEAM_NAME", i + 1)).AsString(),
+                Color = Color.FromHtml(config.GetValue(section, "color", UniqueColors[i % UniqueColors.Count].ToHtml(true)).AsString()),
+                ImagePath = config.GetValue(section, "image_path", string.Empty).AsString(),
+                Score = GameManager.Instance.StartingScore
+            };
+            Teams.Add(team);
+        }
+
+        return true;
     }
     public void NextInitialTeam()
     {

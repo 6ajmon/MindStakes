@@ -10,6 +10,7 @@ public partial class Team : Resource
     public string TeamName { get; set; }    
     [Export]
     public Color Color { get; set; }
+    public string ImagePath { get; set; } = string.Empty;
     [Export]
     public float Score { get; set; } = 100f;
     [Export]
