@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bhxfeo15xpn3l"]
+
+[ext_resource type="PackedScene" uid="uid://bhv0mk0v5xf3p" path="res://Source/Components/TeamCard/TeamCard.tscn" id="1_jnjg8"]
+[ext_resource type="Script" uid="uid://d0puh3ivqawdw" path="res://Source/Components/TeamCard/TeamEditCard/TeamEditCard.cs" id="2_f70gk"]
+[ext_resource type="Texture2D" uid="uid://nkynjl7fvpgn" path="res://Assets/Icons/add_picture.svg" id="3_5lulx"]
+
+[node name="TeamEditCard" unique_id=1019438172 node_paths=PackedStringArray("ColorPicker") instance=ExtResource("1_jnjg8")]
+script = ExtResource("2_f70gk")
+ColorPicker = NodePath("VBoxContainer/TeamCardColorPicker/HBoxContainer/MarginContainer2/MarginContainer/ColorPickerButton")
+
+[node name="TeamCardColorPicker" type="MarginContainer" parent="VBoxContainer" parent_id_path=PackedInt32Array(1785627900) index="2" unique_id=557049422]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/TeamCardColorPicker" index="0" unique_id=585258042]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/TeamCardColorPicker/HBoxContainer" index="0" unique_id=1497258806]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AddPictureButton" type="TextureButton" parent="VBoxContainer/TeamCardColorPicker/HBoxContainer/MarginContainer" index="0" unique_id=972907876]
+layout_mode = 2
+texture_normal = ExtResource("3_5lulx")
+stretch_mode = 3
+
+[node name="MarginContainer2" type="PanelContainer" parent="VBoxContainer/TeamCardColorPicker/HBoxContainer" index="1" unique_id=783315572]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/TeamCardColorPicker/HBoxContainer/MarginContainer2" index="0" unique_id=624379005]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="VBoxContainer/TeamCardColorPicker/HBoxContainer/MarginContainer2/MarginContainer" index="0" unique_id=1208603997]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.3
+color = Color(0, 0.9019608, 0.4627451, 1)
+
+[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer/TeamCardColorPicker/HBoxContainer" index="2" unique_id=804609649]
+layout_mode = 2
+size_flags_horizontal = 3

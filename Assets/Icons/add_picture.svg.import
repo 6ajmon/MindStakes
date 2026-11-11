@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnmx0qawlt5r2"
-path="res://.godot/imported/Colorful_bottle.jpg-cc2ef342dd48d6eac1c9a24166114ec3.ctex"
+uid="uid://nkynjl7fvpgn"
+path="res://.godot/imported/add_picture.svg-0af3917becf63228710980b8115b4000.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Colorful_bottle.jpg"
-dest_files=["res://.godot/imported/Colorful_bottle.jpg-cc2ef342dd48d6eac1c9a24166114ec3.ctex"]
+source_file="res://Assets/Icons/add_picture.svg"
+dest_files=["res://.godot/imported/add_picture.svg-0af3917becf63228710980b8115b4000.ctex"]
 
 [params]
 
@@ -38,3 +38,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

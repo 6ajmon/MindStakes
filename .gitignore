@@ -17,6 +17,9 @@ dist/
 out/
 Exports/
 
+# Image assets are local-only.
+Assets/Images/*
+
 # IDE/Editor
 .vs/
 .vscode/

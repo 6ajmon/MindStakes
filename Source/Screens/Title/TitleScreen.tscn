@@ -146,6 +146,13 @@ theme = ExtResource("1_3h2fp")
 text = "START"
 ScenePath = "uid://c864wsxq4to5s"
 
+[node name="TeamEditButton" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer/VBoxContainer2" unique_id=1519345212 instance=ExtResource("2_igwjc")]
+layout_mode = 2
+size_flags_vertical = 0
+theme = ExtResource("1_3h2fp")
+text = "TEAM EDIT"
+ScenePath = "uid://dv21t8t45si2"
+
 [node name="QuestionsButton" parent="Panel/PanelContainer/VBoxContainer/ButtonsContainer/HBoxContainer/MarginContainer/VBoxContainer2" unique_id=1342393986 instance=ExtResource("2_igwjc")]
 layout_mode = 2
 size_flags_vertical = 0
